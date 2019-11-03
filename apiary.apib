@@ -5,7 +5,7 @@ HOST: https://api.soccersapi.com/v2.2/
 
 SoccersAPI is a RESTful service for soccer data sport. It is a PAID service with low price (started with $30 per month). Note that in order to access Soccer's API you must purchase related packages. Please contact us if you have any problem.
 
-## Countries List [/countries/?user=YOUR_USER&token=YOUR_TOKEN&t=list]
+## Countries List [/countries/{?user,token,t}]
 
 + Parameters
     + user - YOUR_USER
@@ -49,7 +49,7 @@ SoccersAPI is a RESTful service for soccer data sport. It is a PAID service with
             "code": "dz"
         }
 
-## Country Info [/countries/]    
+## Country Info [/countries/{?user,token,t,id}]    
 
 + Parameters
     + user - YOUR_USER
@@ -81,7 +81,7 @@ SoccersAPI is a RESTful service for soccer data sport. It is a PAID service with
     } 
  
 
-## All Leagues [/leagues]
+## All Leagues [/leagues{?user,token,t}]
 
 + Parameters
     + user - YOUR_USER
@@ -124,3 +124,66 @@ SoccersAPI is a RESTful service for soccer data sport. It is a PAID service with
             "is_cup": "0",
             "id_country": 2492
         }
+
+## League Info  [/leagues{?user,token,id,t}]
+
++ Parameters
+    + user - YOUR_USER
+    + token - YOUR_TOKEN
+    + t - list
+    + id - LEAGUE_ID
+ 
+
+### Get League Info by ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /leagues
+ 
+    
+    + Body
+
+ 
+       {
+    "data": {
+        "id": 210,
+        "name": "Superliga",
+        "is_cup": "0",
+        "id_current_season": 16589,
+        "id_current_stage": 77445682,
+        "id_current_round": 165,
+        "country": {
+            "id": 2492,
+            "name": "Albania",
+            "cc": "al"
+        },
+        "seasons": [
+            {
+                "id": 8278,
+                "name": "2017/2018",
+                "is_current": "0"
+            },
+            {
+                "id": 13156,
+                "name": "2018/2019",
+                "is_current": "0"
+            },
+            {
+                "id": 774,
+                "name": "2016/2017",
+                "is_current": "0"
+            },
+            {
+                "id": 16589,
+                "name": "2019/2020",
+                "is_current": "1"
+            }
+        ]
+    }
