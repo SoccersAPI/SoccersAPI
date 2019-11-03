@@ -5,11 +5,26 @@ HOST: https://api.soccersapi.com/v2.2/
 
 SoccersAPI is a RESTful service for soccer data sport. It is a PAID service with low price (started with $30 per month). Note that in order to access Soccer's API you must purchase related packages. Please contact us if you have any problem.
 
-## Countries [/countries]
+## Countries List [/countries/?user=YOUR_USER&token=YOUR_TOKEN&t=list]
+
++ Parameters
+    + user - YOUR_USER
+    + token - YOUR_TOKEN
+    + t - list
+
 
 ### List All Countries [GET] 
 
++ Request (application/json)
+
 + Response 200 (application/json)
+
+    + Headers
+
+            Location: /countries
+ 
+    
+    + Body
 
  
         {
@@ -33,12 +48,19 @@ SoccersAPI is a RESTful service for soccer data sport. It is a PAID service with
             "sub_region": "Northern Africa",
             "code": "dz"
         }
-        
+
+## Country Info [/countries/]    
+
++ Parameters
+    + user - YOUR_USER
+    + token - YOUR_TOKEN
+    + t - info
+    + id - COUNTRY_ID
+    
 ### Get country info by ID [GET]
 
 
 + Request (application/json)
-
 
 + Response 200 (application/json)
 
@@ -48,8 +70,7 @@ SoccersAPI is a RESTful service for soccer data sport. It is a PAID service with
 
     + Body
 
-            {
-    "data": {
+   {
         "id": 43482,
         "name": "Afghanistan",
         "continent": "Asia",
@@ -57,11 +78,49 @@ SoccersAPI is a RESTful service for soccer data sport. It is a PAID service with
         "long": "66.02528381347656",
         "lat": "33.833248138427734",
         "image": "/countries/43482.png"
-    },
-    "meta": {
-        "requests_left": null,
-        "user": "soccersapi1",
-        "pages": 1,
-        "page": 1
-    }
-}
+    } 
+ 
+
+## All Leagues [/leagues]
+
++ Parameters
+    + user - YOUR_USER
+    + token - YOUR_TOKEN
+    + t - list
+ 
+
+### Get a list of all leagues [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /leagues
+ 
+    
+    + Body
+
+ 
+       {
+            "id": 210,
+            "name": "Superliga",
+            "is_cup": "0",
+            "id_country": 2492
+        },
+        {
+            "id": 1397,
+            "name": "League 2 Group A",
+            "is_cup": "0",
+            "id_country": 2492
+        },
+        {
+            "id": 1398,
+            "name": "League 2 Group b",
+            "is_cup": "0",
+            "id_country": 2492
+        }
