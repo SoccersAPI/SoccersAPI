@@ -21,7 +21,7 @@ curl "ENDPOINT?user=YOURUSER&token=YOURTOKEN".
 
 To reduce response time in JSON delivery, some Enpoints are paginated.
 add the GET parameter page=NUMBER in the endpoint URL.
-"ENDPOINT?user=YOURUSER&token=YOURTOKEN&page=PAGENUMBER".
+"ENDPOINT?user=YOURUSER&token=YOURTOKEN&p=PAGENUMBER".
 
 ## Match Status Explanation
 
@@ -60,9 +60,12 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + user - YOUR USER
     + token - YOUR TOKEN
     + t - list
+    + p - PAGE NUMBER
+    + Example - https://api.soccersapi.com/v2.2/countries/?user=YOURUSER&token=YOURTOKEN&t=list&p=PAGENUMBER
 
 
 ### List All Countries [GET] 
+ 
 
 + Request (application/json)
 
@@ -120,6 +123,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - info
     + id - COUNTRY ID
+    + Example - https://api.soccersapi.com/v2.2/countries/?user=YOURUSER&token=YOURTOKEN&t=info&id=COUNTRYID
     
 ### Get country info by ID [GET]
 
@@ -151,7 +155,8 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + user - YOUR USER
     + token - YOUR TOKEN
     + t - list
-    + page - 1
+    + p - PAGENUMBER
+    + Example - https://api.soccersapi.com/v2.2/leagues/?user=YOURUSER&token=YOURTOKEN&t=list&p=PAGENUMBER
  
 
 ### Get a list of all leagues [GET] 
@@ -246,6 +251,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - list
     + id - LEAGUE ID
+    + Example - https://api.soccersapi.com/v2.2/leagues/?user=YOURUSER&token=YOURTOKEN&t=info&id=LEAGUEID
  
 
 ### Get League Info by ID [GET] 
@@ -308,6 +314,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - info
     + id - SEASON ID
+    + Example - https://api.soccersapi.com/v2.2/seasons/?user=YOURUSER&token=YOURTOKEN&t=info&id=SEASONID
  
 
 ### Get Season Info by Season ID [GET] 
@@ -380,6 +387,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - info
     + id - STAGE ID
+    + Example - https://api.soccersapi.com/v2.2/stages/?user=YOURUSER&token=YOURTOKEN&t=info&id=STAGEID
  
 
 ### Get Stage Info by Stage ID [GET] 
@@ -549,6 +557,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + t - standings
     + id_league - LEAGUE ID
     + id_season - SEASON ID
+    + Example - https://api.soccersapi.com/v2.2/leagues/?user=YOURUSER&token=YOURTOKEN&t=standings&id_league=LEAGUEID&id_season=SEASONID
     
     
 
@@ -787,6 +796,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - info
     + id_season - SEASON ID
+    + Example - https://api.soccersapi.com/v2.2/topscorers/?user=YOURUSER&token=YOURTOKEN&t=info&id=SEASONID
     
     
 
@@ -817,6 +827,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - info
     + id - TEAM ID
+    + Example - https://api.soccersapi.com/v2.2/teams/?user=YOURUSER&token=YOURTOKEN&t=info&id=TEAMID
     
     
 
@@ -860,6 +871,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + t - stats
     + id - TEAM ID
     + id_season - SEASON ID
+    + Example - https://api.soccersapi.com/v2.2/teams/?user=YOURUSER&token=YOURTOKEN&t=stats&id=TEAMID
     
     
 
@@ -1050,6 +1062,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - sidelined
     + id - TEAM ID
+    + Example - https://api.soccersapi.com/v2.2/teams/?user=YOURUSER&token=YOURTOKEN&t=sidelined&id=TEAMID
     
     
 
@@ -1080,6 +1093,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + t - transfers
     + id - TEAM ID
     + id_season - SEASON ID
+    + Example - https://api.soccersapi.com/v2.2/seasons/?user=YOURUSER&token=YOURTOKEN&t=transfers&id=TEAMID
     
     
 
@@ -1137,6 +1151,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - squad
     + id - TEAM ID
+    + Example - https://api.soccersapi.com/v2.2/seasons/?user=YOURUSER&token=YOURTOKEN&t=squad&id=TEAMID
  
     
     
@@ -1329,6 +1344,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - info
     + id - PLAYER ID
+    + Example - https://api.soccersapi.com/v2.2/players/?user=YOURUSER&token=YOURTOKEN&t=info&id=PLAYERID
  
     
     
@@ -1376,6 +1392,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - info
     + id - COACH ID
+    + Example - https://api.soccersapi.com/v2.2/coaches/?user=YOURUSER&token=YOURTOKEN&t=info&id=COACHID
  
     
     
@@ -1421,6 +1438,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - info
     + id - VENUE ID
+    + Example - https://api.soccersapi.com/v2.2/venues/?user=YOURUSER&token=YOURTOKEN&t=info&id=VENUEID
  
     
     
@@ -1458,6 +1476,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - schedule
     + d - YYY-MM-DD
+    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=schedule&d=YYY-MM-DD
  
     
     
@@ -1610,6 +1629,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + user - YOUR USER
     + token - YOUR TOKEN
     + t - live
+    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=live
  
  
  
@@ -1784,8 +1804,9 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
     + user - YOUR USER
     + token - YOUR TOKEN
-    + t - live
+    + t - ended
     + d - YYYY-MM-DD
+    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=ended&d=YYYY-MM-DD
  
  
  
@@ -1939,8 +1960,10 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
     + user - YOUR USER
     + token - YOUR TOKEN
-    + t - live
+    + t - stage
     + id - STAGE ID
+    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=stage&id=STAGEID
+    
  
  
  
@@ -2061,8 +2084,9 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
     + user - YOUR USER
     + token - YOUR TOKEN
-    + t - live
+    + t - round
     + id - ROUND ID
+    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=round&id=ROUNDID
  
  
  
@@ -2182,6 +2206,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - event
     + id - MATCH ID
+    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=event&id=MATCHID
  
  
  
@@ -2260,6 +2285,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - match_stats
     + id - MATCH ID
+    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=match_stats&id=MATCHID
  
  
  
@@ -2353,6 +2379,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - match_comments
     + id - MATCH ID
+    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=match_comments&id=MATCHID
  
  
  
@@ -2410,6 +2437,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - match_events
     + id - MATCH ID
+    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=match_events&id=MATCHID
  
  
  
@@ -2481,6 +2509,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - match_trends
     + id - MATCH ID
+    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=match_trends&id=MATCHID
  
  
  
@@ -2513,6 +2542,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - match_lineups
     + id - MATCH ID
+    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=match_lineups&id=MATCHID
  
  
  
@@ -2686,6 +2716,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - match_bench
     + id - MATCH ID
+    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=match_bench&id=MATCHID
  
  
  
@@ -2860,6 +2891,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - match_sidelined
     + id - MATCH ID
+    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=match_sidelined&id=MATCHID
  
  
  
@@ -2892,6 +2924,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - info
     + id - REFEREE ID
+    + Example - https://api.soccersapi.com/v2.2/referees/?user=YOURUSER&token=YOURTOKEN&t=info&id=REFEREEID
  
  
  
