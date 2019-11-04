@@ -5,6 +5,55 @@ HOST: https://api.soccersapi.com/v2.2/
 
 SoccersAPI is a RESTful service for soccer data sport. It is a PAID service with low price (started with $30 per month). Note that in order to access Soccer's API you must purchase related packages. Please contact us if you have any problem.
 
+## API Versions  
+
+       API : Soccers' API  
+       API Version : v 2.2  
+       API Contents : Football  
+
+## Authentication
+
+To authorize, use this code: 
+Make sure replace YOUR TOKEN with your real token. You can generate them in your user dashboard once you hire a Soccer's API plan.
+curl "ENDPOINT?user=YOURUSER&token=YOURTOKEN".
+
+## Pagination
+
+To reduce response time in JSON delivery, some Enpoints are paginated.
+add the GET parameter page=NUMBER in the endpoint URL.
+"ENDPOINT?user=YOURUSER&token=YOURTOKEN&page=PAGENUMBER".
+
+## Match Status Explanation
+
+| Name     | Character |
+| ---      | ---       |
+|  1       | The event is inplay         |
+| 11       | The event is in half-time        |
+| 12       | The event is in extra time          |
+| 13       | The event is in penalties because extra time didn't determinate a winner         |
+| 14       | Event is in break waiting for extra time or penalties          |
+| 15       | Awarding of a victory to a contestant because there are no other contestants.       |
+|  2       | Event will be updated later       |
+|  3       | Event has ended after 90 minutes       |
+| 31       | Event has ended after penalty shootout         |
+| 32       | The event has finished after extra time         |
+|  4       | The event has finished after extra time        |
+|  5       | The event has been postponed        |
+|  6       | The event has abandoned and will continue at a later time or day        |
+|  7       | The event has been interrupted. Can be due to bad weather for example          |
+|  8       | The event has been suspended           |
+|  9       | Winner is beeing decided externally          |
+| 10       | The event is delayed          |
+
+ 
+## Soccer API resources
+
+ Soccer API https://soccersapi.com  
+ Docs https://soccersapi.com/page/documentation  
+ Coverage  https://soccersapi.com/page/coverage  
+ Support https://soccersapi.com/page/support  
+ Plans & Pricing https://soccersapi.com/page/pricing  
+
 ## Countries List [/countries/{?user,token,t}]
 
 + Parameters
@@ -2865,6 +2914,7 @@ SoccersAPI is a RESTful service for soccer data sport. It is a PAID service with
     
     + Body
     
+ 
     {
         "id": 33775,
         "name": "Pierre Atcho",
