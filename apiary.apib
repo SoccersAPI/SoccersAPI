@@ -2295,3 +2295,580 @@ SoccersAPI is a RESTful service for soccer data sport. It is a PAID service with
             "free_kick": null,
             "throw_in": null
         }
+        
+## Match Commentary  [/fixtures{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match_comments
+    + id - MATCH ID
+ 
+ 
+ 
+ 
+
+
+### Get Commentary by MATCH ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+ {
+            "important": false,
+            "order": 2,
+            "goal": false,
+            "minute": 1,
+            "extra_minute": null,
+            "comment": "Casemiro  - Real Madrid -  won a free kick in defence."
+        },
+        {
+            "important": false,
+            "order": 3,
+            "goal": false,
+            "minute": 1,
+            "extra_minute": null,
+            "comment": "Fouled by Ivan Rakitic  - Barcelona"
+        },
+        {
+            "important": false,
+            "order": 4,
+            "goal": false,
+            "minute": 4,
+            "extra_minute": null,
+            "comment": "Shot blocked. Luis Suárez  - Barcelona -  shot with right foot from the right side of the box is blocked. Assist -  Lionel Messi."
+        },
+...
+
+
+## Match Events Summary [/fixtures{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match_events
+    + id - MATCH ID
+ 
+ 
+ 
+ 
+
+
+### Get Events Summary by MATCH ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+{
+            "team_id": 121,
+            "type": "substitution",
+            "player_id": 186133,
+            "player_name": "A. Paco",
+            "related_player_id": 985,
+            "related_player_name": "L. Suarez",
+            "minute": 90,
+            "extra_minute": 2,
+            "reason": null,
+            "injuried": null,
+            "result": null
+        },
+        {
+            "team_id": 121,
+            "type": "yellowcard",
+            "player_id": 30030,
+            "player_name": "I. Rakitic",
+            "related_player_id": null,
+            "related_player_name": null,
+            "minute": 85,
+            "extra_minute": null,
+            "reason": "Foul",
+            "injuried": null,
+            "result": null
+        },
+        {
+            "team_id": 3506,
+            "type": "substitution",
+            "player_id": 73185,
+            "player_name": "M. Kovacic",
+            "related_player_id": 30327,
+            "related_player_name": "T. Kroos",
+            "minute": 84,
+            "extra_minute": null,
+            "reason": null,
+            "injuried": null,
+            "result": null
+        },
+...
+
+## Match Trends [/fixtures{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match_trends
+    + id - MATCH ID
+ 
+ 
+ 
+ 
+
+
+### Get Trends by MATCH ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+[]
+
+## Match Lineups [/fixtures{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match_lineups
+    + id - MATCH ID
+ 
+ 
+ 
+ 
+
+
+### Get Lineups by MATCH ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+{
+            "team_id": 121,
+            "player_id": 31322,
+            "player_name": "Marc-André ter Stegen",
+            "number": 1,
+            "position": "G",
+            "formation_position": 1,
+            "posx": null,
+            "posy": null,
+            "stats": {
+                "shots": {
+                    "shots_total": 0,
+                    "shots_on_goal": 0
+                },
+                "goals": {
+                    "scored": 0,
+                    "conceded": 2
+                },
+                "fouls": {
+                    "drawn": 0,
+                    "committed": 0
+                },
+                "cards": {
+                    "yellowcards": 0,
+                    "redcards": 0
+                },
+                "passing": {
+                    "total_crosses": 0,
+                    "crosses_accuracy": 0,
+                    "passes": 13,
+                    "passes_accuracy": 54
+                },
+                "other": {
+                    "assists": 0,
+                    "offsides": 0,
+                    "saves": 3,
+                    "pen_scored": 0,
+                    "pen_missed": 0,
+                    "pen_saved": 0,
+                    "tackles": 0,
+                    "blocks": 0,
+                    "interceptions": 0,
+                    "clearances": 0,
+                    "minutes_played": 90
+                }
+            }
+        },
+        {
+            "team_id": 121,
+            "player_id": 186077,
+            "player_name": "Sergi Roberto",
+            "number": 20,
+            "position": "D",
+            "formation_position": 2,
+            "posx": null,
+            "posy": null,
+            "stats": {
+                "shots": {
+                    "shots_total": 0,
+                    "shots_on_goal": 0
+                },
+                "goals": {
+                    "scored": 0,
+                    "conceded": 0
+                },
+                "fouls": {
+                    "drawn": 0,
+                    "committed": 1
+                },
+                "cards": {
+                    "yellowcards": 0,
+                    "redcards": 1
+                },
+                "passing": {
+                    "total_crosses": 1,
+                    "crosses_accuracy": 1,
+                    "passes": 34,
+                    "passes_accuracy": 94
+                },
+                "other": {
+                    "assists": 1,
+                    "offsides": 0,
+                    "saves": 0,
+                    "pen_scored": 0,
+                    "pen_missed": 0,
+                    "pen_saved": 0,
+                    "tackles": 0,
+                    "blocks": 0,
+                    "interceptions": 0,
+                    "clearances": 0,
+                    "minutes_played": 90
+                }
+            }
+        },
+        {
+            "team_id": 121,
+            "player_id": 3817,
+            "player_name": "Gerard Piqué",
+            "number": 3,
+            "position": "D",
+            "formation_position": 3,
+            "posx": null,
+            "posy": null,
+            "stats": {
+                "shots": {
+                    "shots_total": 1,
+                    "shots_on_goal": 0
+                },
+                "goals": {
+                    "scored": 0,
+                    "conceded": 0
+                },
+                "fouls": {
+                    "drawn": 1,
+                    "committed": 0
+                },
+                "cards": {
+                    "yellowcards": 0,
+                    "redcards": 0
+                },
+                "passing": {
+                    "total_crosses": 0,
+                    "crosses_accuracy": 0,
+                    "passes": 36,
+                    "passes_accuracy": 83
+                },
+                "other": {
+                    "assists": 0,
+                    "offsides": 0,
+                    "saves": 0,
+                    "pen_scored": 0,
+                    "pen_missed": 0,
+                    "pen_saved": 0,
+                    "tackles": 4,
+                    "blocks": 1,
+                    "interceptions": 0,
+                    "clearances": 5,
+                    "minutes_played": 90
+                }
+            }
+        },
+...
+
+## Match Bench [/fixtures{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match_bench
+    + id - MATCH ID
+ 
+ 
+ 
+ 
+
+
+### Get Bench by MATCH ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+{
+            "team_id": 121,
+            "player_id": 23780,
+            "player_name": "Jasper Cillessen",
+            "number": 13,
+            "position": "G",
+            "formation_position": null,
+            "posx": null,
+            "posy": null,
+            "stats": {
+                "shots": {
+                    "shots_total": null,
+                    "shots_on_goal": null
+                },
+                "goals": {
+                    "scored": null,
+                    "conceded": null
+                },
+                "fouls": {
+                    "drawn": null,
+                    "committed": null
+                },
+                "cards": {
+                    "yellowcards": null,
+                    "redcards": null
+                },
+                "passing": {
+                    "total_crosses": null,
+                    "crosses_accuracy": null,
+                    "passes": null,
+                    "passes_accuracy": null
+                },
+                "other": {
+                    "assists": null,
+                    "offsides": null,
+                    "saves": null,
+                    "pen_scored": null,
+                    "pen_missed": null,
+                    "pen_saved": null,
+                    "tackles": null,
+                    "blocks": null,
+                    "interceptions": null,
+                    "clearances": null,
+                    "minutes_played": null
+                }
+            }
+        },
+        {
+            "team_id": 121,
+            "player_id": 596,
+            "player_name": "Thomas Vermaelen",
+            "number": 25,
+            "position": "D",
+            "formation_position": null,
+            "posx": null,
+            "posy": null,
+            "stats": {
+                "shots": {
+                    "shots_total": null,
+                    "shots_on_goal": null
+                },
+                "goals": {
+                    "scored": null,
+                    "conceded": null
+                },
+                "fouls": {
+                    "drawn": null,
+                    "committed": null
+                },
+                "cards": {
+                    "yellowcards": null,
+                    "redcards": null
+                },
+                "passing": {
+                    "total_crosses": null,
+                    "crosses_accuracy": null,
+                    "passes": null,
+                    "passes_accuracy": null
+                },
+                "other": {
+                    "assists": null,
+                    "offsides": null,
+                    "saves": null,
+                    "pen_scored": null,
+                    "pen_missed": null,
+                    "pen_saved": null,
+                    "tackles": null,
+                    "blocks": null,
+                    "interceptions": null,
+                    "clearances": null,
+                    "minutes_played": null
+                }
+            }
+        },
+        {
+            "team_id": 121,
+            "player_id": 160148,
+            "player_name": "Nélson Semedo",
+            "number": 2,
+            "position": "D",
+            "formation_position": null,
+            "posx": null,
+            "posy": null,
+            "stats": {
+                "shots": {
+                    "shots_total": 0,
+                    "shots_on_goal": 0
+                },
+                "goals": {
+                    "scored": 0,
+                    "conceded": 0
+                },
+                "fouls": {
+                    "drawn": 1,
+                    "committed": 0
+                },
+                "cards": {
+                    "yellowcards": 0,
+                    "redcards": 0
+                },
+                "passing": {
+                    "total_crosses": 0,
+                    "crosses_accuracy": 0,
+                    "passes": 17,
+                    "passes_accuracy": 89
+                },
+                "other": {
+                    "assists": 0,
+                    "offsides": 0,
+                    "saves": 0,
+                    "pen_scored": 0,
+                    "pen_missed": 0,
+                    "pen_saved": 0,
+                    "tackles": 0,
+                    "blocks": 0,
+                    "interceptions": 1,
+                    "clearances": 1,
+                    "minutes_played": 44
+                }
+            }
+        },
+...
+
+
+## Match Sidelined [/fixtures{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match_sidelined
+    + id - MATCH ID
+ 
+ 
+ 
+ 
+
+
+### Get Sidelined by MATCH ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+ []
+ 
+## Referees Info [/referees{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - info
+    + id - REFEREE ID
+ 
+ 
+ 
+ 
+
+
+### Get Info by REFEREE ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /referees
+ 
+    
+    + Body
+    
+    {
+        "id": 33775,
+        "name": "Pierre Atcho",
+        "common_name": "P. Atcho",
+        "firstname": "Pierre",
+        "lastname": "Atcho"
+    }
