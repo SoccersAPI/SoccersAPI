@@ -8,8 +8,8 @@ SoccersAPI is a RESTful service for soccer data sport. It is a PAID service with
 ## Countries List [/countries/{?user,token,t}]
 
 + Parameters
-    + user - YOUR_USER
-    + token - YOUR_TOKEN
+    + user - YOUR USER
+    + token - YOUR TOKEN
     + t - list
 
 
@@ -27,35 +27,50 @@ SoccersAPI is a RESTful service for soccer data sport. It is a PAID service with
     + Body
 
  
-        {
-            "id": 43482,
-            "name": "Afghanistan",
-            "continent": "Asia",
-            "sub_region": "Southern Asia",
-            "code": "af"
-        },
-        {
-            "id": 2492,
-            "name": "Albania",
-            "continent": "Europe",
-            "sub_region": "Southern Europe",
-            "code": "al"
-        },
-        {
-            "id": 652,
-            "name": "Algeria",
-            "continent": "Africa",
-            "sub_region": "Northern Africa",
-            "code": "dz"
-        }
+{
+    "id": 358,
+    "name": "Denmark",
+    "continent": "Europe",
+    "sub_region": "Northern Europe",
+    "code": "dk"
+},
+{
+    "id": 908821,
+    "name": "Djibouti",
+    "continent": "Africa",
+    "sub_region": "Eastern Africa",
+    "code": "dj"
+},
+{
+    "id": 380193,
+    "name": "Dominica",
+    "continent": "Americas",
+    "sub_region": "Caribbean",
+    "code": "dm"
+},
+{
+    "id": 79184,
+    "name": "Dominican Republic",
+    "continent": "Americas",
+    "sub_region": "Caribbean",
+    "code": "do"
+},
+{
+    "id": 10203167,
+    "name": "East Timor",
+    "continent": "Asia",
+    "sub_region": "South-Eastern Asia",
+    "code": null
+},
+...
 
 ## Country Info [/countries/{?user,token,t,id}]    
 
 + Parameters
-    + user - YOUR_USER
-    + token - YOUR_TOKEN
+    + user - YOUR USER
+    + token - YOUR TOKEN
     + t - info
-    + id - COUNTRY_ID
+    + id - COUNTRY ID
     
 ### Get country info by ID [GET]
 
@@ -70,23 +85,24 @@ SoccersAPI is a RESTful service for soccer data sport. It is a PAID service with
 
     + Body
 
-   {
-        "id": 43482,
-        "name": "Afghanistan",
-        "continent": "Asia",
-        "sub_region": "Southern Asia",
-        "long": "66.02528381347656",
-        "lat": "33.833248138427734",
-        "image": "/countries/43482.png"
-    } 
+    {
+        "id": 358,
+        "name": "Denmark",
+        "continent": "Europe",
+        "sub_region": "Northern Europe",
+        "long": "9.555907249450684",
+        "lat": "56.10176086425781",
+        "image": "/countries/358.png"
+    }
  
 
-## All Leagues [/leagues{?user,token,t}]
+## All Leagues [/leagues{?user,token,t,page}]
 
 + Parameters
-    + user - YOUR_USER
-    + token - YOUR_TOKEN
+    + user - YOUR USER
+    + token - YOUR TOKEN
     + t - list
+    + page - 1
  
 
 ### Get a list of all leagues [GET] 
@@ -106,32 +122,81 @@ SoccersAPI is a RESTful service for soccer data sport. It is a PAID service with
     + Body
 
  
-       {
-            "id": 210,
-            "name": "Superliga",
-            "is_cup": "0",
-            "id_country": 2492
-        },
-        {
-            "id": 1397,
-            "name": "League 2 Group A",
-            "is_cup": "0",
-            "id_country": 2492
-        },
-        {
-            "id": 1398,
-            "name": "League 2 Group b",
-            "is_cup": "0",
-            "id_country": 2492
-        }
+ {
+    "id": 1205,
+    "name": "2. Division Group West",
+    "is_cup": "0",
+    "id_country": 358
+},
+{
+    "id": 309,
+    "name": "Superliga",
+    "is_cup": "0",
+    "id_country": 358
+},
+{
+    "id": 1206,
+    "name": "Denmark Series Group 1",
+    "is_cup": "0",
+    "id_country": 358
+},
+{
+    "id": 1207,
+    "name": "Denmark Series Group 2",
+    "is_cup": "0",
+    "id_country": 358
+},
+{
+    "id": 315,
+    "name": "Landspokal Cup",
+    "is_cup": "1",
+    "id_country": 358
+},
+{
+    "id": 1201,
+    "name": "2. Division Group 1",
+    "is_cup": "0",
+    "id_country": 358
+},
+{
+    "id": 1208,
+    "name": "Denmark Series Group 3",
+    "is_cup": "0",
+    "id_country": 358
+},
+{
+    "id": 1202,
+    "name": "2. Division Group 2",
+    "is_cup": "0",
+    "id_country": 358
+},
+{
+    "id": 1209,
+    "name": "Denmark Series Group 4",
+    "is_cup": "0",
+    "id_country": 358
+},
+{
+    "id": 1203,
+    "name": "2. Division Group 3",
+    "is_cup": "0",
+    "id_country": 358
+},
+{
+    "id": 1204,
+    "name": "2. Division Group East",
+    "is_cup": "0",
+    "id_country": 358
+},
+...
 
 ## League Info  [/leagues{?user,token,id,t}]
 
 + Parameters
-    + user - YOUR_USER
-    + token - YOUR_TOKEN
+    + user - YOUR USER
+    + token - YOUR TOKEN
     + t - list
-    + id - LEAGUE_ID
+    + id - LEAGUE ID
  
 
 ### Get League Info by ID [GET] 
@@ -151,39 +216,2082 @@ SoccersAPI is a RESTful service for soccer data sport. It is a PAID service with
     + Body
 
  
-       {
-    "data": {
-        "id": 210,
+    {
+        "id": 309,
         "name": "Superliga",
         "is_cup": "0",
-        "id_current_season": 16589,
-        "id_current_stage": 77445682,
+        "id_current_season": 16058,
+        "id_current_stage": 77443840,
         "id_current_round": 165,
         "country": {
-            "id": 2492,
-            "name": "Albania",
-            "cc": "al"
+            "id": 358,
+            "name": "Denmark",
+            "cc": "dk"
         },
         "seasons": [
             {
-                "id": 8278,
+                "id": 6399,
                 "name": "2017/2018",
                 "is_current": "0"
             },
             {
-                "id": 13156,
-                "name": "2018/2019",
-                "is_current": "0"
-            },
-            {
-                "id": 774,
+                "id": 797,
                 "name": "2016/2017",
                 "is_current": "0"
             },
             {
-                "id": 16589,
+                "id": 12957,
+                "name": "2018/2019",
+                "is_current": "0"
+            },
+            {
+                "id": 16058,
                 "name": "2019/2020",
                 "is_current": "1"
             }
         ]
     }
+    
+## League Season  [/seasons{?user,token,id,t}]
+
++ Parameters
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - info
+    + id - SEASON ID
+ 
+
+### Get Season Info by Season ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /seasons
+ 
+    
+    + Body
+
+ 
+{
+        "id": 16058,
+        "name": "2019/2020",
+        "league_id": 309,
+        "is_current": "1",
+        "stages": [
+            {
+                "id": 77443835,
+                "name": "Europa League Play-offs - Final"
+            },
+            {
+                "id": 77443836,
+                "name": "Europa League Play-offs - Semi-finals"
+            },
+            {
+                "id": 77443837,
+                "name": "Europa League Play-offs - Quarter-finals"
+            },
+            {
+                "id": 77443838,
+                "name": "Relegation Round"
+            },
+            {
+                "id": 77443839,
+                "name": "Championship Round"
+            },
+            {
+                "id": 77443840,
+                "name": "Regular Season"
+            },
+            {
+                "id": 77444047,
+                "name": "Relegation Round"
+            },
+            {
+                "id": 77444048,
+                "name": "Championship Round"
+            },
+            {
+                "id": 77444049,
+                "name": "Regular Season"
+            }
+        ]
+    }
+  
+  
+## League Stage  [/stages{?user,token,id,t}]
+
++ Parameters
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - info
+    + id - STAGE ID
+ 
+
+### Get Stage Info by Stage ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /stages
+ 
+    
+    + Body
+
+ 
+{
+        "id": 77444049,
+        "name": "Regular Season",
+        "league_id": 309,
+        "season_id": 16058,
+        "is_current": "0",
+        "type": null,
+        "rounds": [
+            {
+                "id": 170547,
+                "name": "1",
+                "is_current": "0"
+            },
+            {
+                "id": 170548,
+                "name": "2",
+                "is_current": "0"
+            },
+            {
+                "id": 170549,
+                "name": "3",
+                "is_current": "0"
+            },
+            {
+                "id": 170550,
+                "name": "4",
+                "is_current": "0"
+            },
+            {
+                "id": 170551,
+                "name": "5",
+                "is_current": "0"
+            },
+            {
+                "id": 170552,
+                "name": "6",
+                "is_current": "0"
+            },
+            {
+                "id": 170553,
+                "name": "7",
+                "is_current": "0"
+            },
+            {
+                "id": 170554,
+                "name": "8",
+                "is_current": "0"
+            },
+            {
+                "id": 170555,
+                "name": "9",
+                "is_current": "0"
+            },
+            {
+                "id": 170556,
+                "name": "10",
+                "is_current": "0"
+            },
+            {
+                "id": 170557,
+                "name": "11",
+                "is_current": "0"
+            },
+            {
+                "id": 170558,
+                "name": "12",
+                "is_current": "0"
+            },
+            {
+                "id": 170559,
+                "name": "13",
+                "is_current": "0"
+            },
+            {
+                "id": 170560,
+                "name": "14",
+                "is_current": "0"
+            },
+            {
+                "id": 170561,
+                "name": "15",
+                "is_current": "0"
+            },
+            {
+                "id": 170562,
+                "name": "16",
+                "is_current": "0"
+            },
+            {
+                "id": 170563,
+                "name": "17",
+                "is_current": "0"
+            },
+            {
+                "id": 170564,
+                "name": "18",
+                "is_current": "0"
+            },
+            {
+                "id": 170565,
+                "name": "19",
+                "is_current": "0"
+            },
+            {
+                "id": 170566,
+                "name": "20",
+                "is_current": "0"
+            },
+            {
+                "id": 170567,
+                "name": "21",
+                "is_current": "0"
+            },
+            {
+                "id": 170568,
+                "name": "22",
+                "is_current": "0"
+            },
+            {
+                "id": 170569,
+                "name": "23",
+                "is_current": "0"
+            },
+            {
+                "id": 170570,
+                "name": "24",
+                "is_current": "0"
+            },
+            {
+                "id": 170571,
+                "name": "25",
+                "is_current": "0"
+            },
+            {
+                "id": 170572,
+                "name": "26",
+                "is_current": "0"
+            }
+        ]
+    }
+
+## League Standings  [/leagues{?user,token,t,id_league,id_season}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - standings
+    + id_league - LEAGUE ID
+    + id_season - SEASON ID
+    
+    
+
+### Get League Standings by League ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /leagues
+ 
+    
+    + Body
+
+ 
+{
+            "name": "Regular Season",
+            "league_id": 309,
+            "season_id": 16058,
+            "stage_id": 77443840,
+            "stage_name": "Regular Season",
+            "round_id": 169549,
+            "round_name": 15,
+            "standings": [
+                {
+                    "position": 1,
+                    "team_id": 977,
+                    "team_name": "Midtjylland",
+                    "group_id": 38,
+                    "group_name": null,
+                    "overall": [
+                        {
+                            "games_played": 15,
+                            "won": 12,
+                            "draw": 2,
+                            "lost": 1,
+                            "goal_scored": 21,
+                            "goal_against": 6,
+                            "goal_difference": 15,
+                            "points": 38
+                        }
+                    ],
+                    "home": [
+                        {
+                            "games_played": 7,
+                            "won": 5,
+                            "draw": 1,
+                            "lost": 1,
+                            "goal_scored": 8,
+                            "goal_against": 4,
+                            "goal_difference": 4,
+                            "points": 16
+                        }
+                    ],
+                    "away": [
+                        {
+                            "games_played": 8,
+                            "won": 7,
+                            "draw": 1,
+                            "lost": 0,
+                            "goal_scored": 13,
+                            "goal_against": 2,
+                            "goal_difference": 11,
+                            "points": 22
+                        }
+                    ],
+                    "total": {
+                        "goal_difference": 15,
+                        "points": 38
+                    },
+                    "result": "Championship Round",
+                    "recent_form": "LWWWW"
+                },
+                {
+                    "position": 2,
+                    "team_id": 123,
+                    "team_name": "København",
+                    "group_id": 38,
+                    "group_name": null,
+                    "overall": [
+                        {
+                            "games_played": 15,
+                            "won": 12,
+                            "draw": 2,
+                            "lost": 1,
+                            "goal_scored": 21,
+                            "goal_against": 6,
+                            "goal_difference": 15,
+                            "points": 38
+                        },
+                        {
+                            "games_played": 15,
+                            "won": 11,
+                            "draw": 1,
+                            "lost": 3,
+                            "goal_scored": 29,
+                            "goal_against": 15,
+                            "goal_difference": 14,
+                            "points": 34
+                        }
+                    ],
+                    "home": [
+                        {
+                            "games_played": 7,
+                            "won": 5,
+                            "draw": 1,
+                            "lost": 1,
+                            "goal_scored": 8,
+                            "goal_against": 4,
+                            "goal_difference": 4,
+                            "points": 16
+                        },
+                        {
+                            "games_played": 7,
+                            "won": 6,
+                            "draw": 1,
+                            "lost": 0,
+                            "goal_scored": 17,
+                            "goal_against": 5,
+                            "goal_difference": 12,
+                            "points": 19
+                        }
+                    ],
+                    "away": [
+                        {
+                            "games_played": 8,
+                            "won": 7,
+                            "draw": 1,
+                            "lost": 0,
+                            "goal_scored": 13,
+                            "goal_against": 2,
+                            "goal_difference": 11,
+                            "points": 22
+                        },
+                        {
+                            "games_played": 8,
+                            "won": 5,
+                            "draw": 0,
+                            "lost": 3,
+                            "goal_scored": 12,
+                            "goal_against": 10,
+                            "goal_difference": 2,
+                            "points": 15
+                        }
+                    ],
+                    "total": {
+                        "goal_difference": 14,
+                        "points": 34
+                    },
+                    "result": "Championship Round",
+                    "recent_form": "WLWWW"
+                },
+                {
+                    "position": 3,
+                    "team_id": 1827,
+                    "team_name": "OB",
+                    "group_id": 38,
+                    "group_name": null,
+                    "overall": [
+                        {
+                            "games_played": 15,
+                            "won": 12,
+                            "draw": 2,
+                            "lost": 1,
+                            "goal_scored": 21,
+                            "goal_against": 6,
+                            "goal_difference": 15,
+                            "points": 38
+                        },
+                        {
+                            "games_played": 15,
+                            "won": 11,
+                            "draw": 1,
+                            "lost": 3,
+                            "goal_scored": 29,
+                            "goal_against": 15,
+                            "goal_difference": 14,
+                            "points": 34
+                        },
+                        {
+                            "games_played": 15,
+                            "won": 8,
+                            "draw": 2,
+                            "lost": 5,
+                            "goal_scored": 23,
+                            "goal_against": 14,
+                            "goal_difference": 9,
+                            "points": 26
+                        }
+                    ],
+                    "home": [
+                        {
+                            "games_played": 7,
+                            "won": 5,
+                            "draw": 1,
+                            "lost": 1,
+                            "goal_scored": 8,
+                            "goal_against": 4,
+                            "goal_difference": 4,
+                            "points": 16
+                        },
+                        {
+                            "games_played": 7,
+                            "won": 6,
+                            "draw": 1,
+                            "lost": 0,
+                            "goal_scored": 17,
+                            "goal_against": 5,
+                            "goal_difference": 12,
+                            "points": 19
+                        },
+                        {
+                            "games_played": 8,
+                            "won": 5,
+                            "draw": 1,
+                            "lost": 2,
+                            "goal_scored": 16,
+                            "goal_against": 8,
+                            "goal_difference": 8,
+                            "points": 16
+                        }
+                    ] 
+ } ,
+ ...
+
+## League Topscorers  [/topscorers{?user,token,t,id_season}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - info
+    + id_season - SEASON ID
+    
+    
+
+### Get League Topscorers by Season ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /topscorers
+ 
+    
+    + Body
+    
+    []
+    
+    
+## Team Info  [/teams{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - info
+    + id - TEAM ID
+    
+    
+
+### Get Info by Team ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /teams
+ 
+    
+    + Body
+    
+    {
+        "id": 977,
+        "name": "Midtjylland",
+        "img": "https://cdn.soccersapi.com/images/soccer/teams/150/977.png",
+        "founded": "1999",
+        "twitter": "",
+        "current_season_id": 16058,
+        "coach_id": 83012,
+        "venue_id": 380,
+        "country": {
+            "id": 358,
+            "name": "Denmark"
+        }
+    }
+    
+## Team Stats  [/teams{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - stats
+    + id - TEAM ID
+    + id_season - SEASON ID
+    
+    
+
+### Get Stats by Team ID and Season ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /teams
+ 
+    
+    + Body
+    
+    {
+        "stage_id": 77443840,
+        "win": {
+            "total": 11,
+            "home": 5,
+            "away": 6
+        },
+        "draw": {
+            "total": 2,
+            "home": 1,
+            "away": 1
+        },
+        "lost": {
+            "total": 1,
+            "home": 1,
+            "away": 0
+        },
+        "goals_for": {
+            "total": 20,
+            "home": 8,
+            "away": 12
+        },
+        "goals_against": {
+            "total": 6,
+            "home": 4,
+            "away": 2
+        },
+        "clean_sheet": {
+            "total": 8,
+            "home": 3,
+            "away": 5
+        },
+        "failed_to_score": {
+            "total": 2,
+            "home": 1,
+            "away": 1
+        },
+        "scoring_minutes": [
+            {
+                "period": [
+                    {
+                        "minute": "0-15",
+                        "count": 1,
+                        "percentage": 5
+                    },
+                    {
+                        "minute": "15-30",
+                        "count": 2,
+                        "percentage": 10
+                    },
+                    {
+                        "minute": "30-45",
+                        "count": 3,
+                        "percentage": 15
+                    },
+                    {
+                        "minute": "45-60",
+                        "count": 4,
+                        "percentage": 20
+                    },
+                    {
+                        "minute": "60-75",
+                        "count": 6,
+                        "percentage": 30
+                    },
+                    {
+                        "minute": "75-90",
+                        "count": 4,
+                        "percentage": 20
+                    }
+                ]
+            }
+        ],
+        "avg_goals_per_game_scored": {
+            "total": 1.43,
+            "home": 1.14,
+            "away": 1.71
+        },
+        "avg_goals_per_game_conceded": {
+            "total": 0.43,
+            "home": 0.57,
+            "away": 0.29
+        },
+        "avg_first_goal_scored": {
+            "total": "60m",
+            "home": "71m",
+            "away": "50m"
+        },
+        "avg_first_goal_conceded": {
+            "total": "58m",
+            "home": "73m",
+            "away": "51m"
+        },
+        "attacks": 1679,
+        "dangerous_attacks": 793,
+        "avg_ball_possession_percentage": "55.50",
+        "fouls": 175,
+        "avg_fouls_per_game": "12.50",
+        "offsides": 29,
+        "redcards": 2,
+        "yellowcards": 33,
+        "shots_blocked": 27,
+        "shots_off_target": 118,
+        "avg_shots_off_target_per_game": "8.43",
+        "shots_on_target": 69,
+        "avg_shots_on_target_per_game": "4.93",
+        "btts": 35.71,
+        "goal_line": {
+            "over": {
+                "0_5": {
+                    "home": 85.71,
+                    "away": 85.71
+                },
+                "1_5": {
+                    "home": 28.57,
+                    "away": 71.43
+                },
+                "2_5": {
+                    "home": 0,
+                    "away": 14.29
+                },
+                "3_5": {
+                    "home": 0,
+                    "away": 0
+                },
+                "4_5": {
+                    "home": 0,
+                    "away": 0
+                },
+                "5_5": {
+                    "home": 0,
+                    "away": 0
+                }
+            },
+            "under": {
+                "0_5": {
+                    "home": 0,
+                    "away": 14.29
+                },
+                "1_5": {
+                    "home": 57.14,
+                    "away": 28.57
+                },
+                "2_5": {
+                    "home": 71.43,
+                    "away": 57.14
+                },
+                "3_5": {
+                    "home": 100,
+                    "away": 100
+                },
+                "4_5": {
+                    "home": 100,
+                    "away": 100
+                },
+                "5_5": {
+                    "home": 100,
+                    "away": 100
+                }
+            }
+        }
+    }
+    
+## Team Sidelined  [/teams{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - sidelined
+    + id - TEAM ID
+    
+    
+
+### Get Sidelined by Team ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /teams
+ 
+    
+    + Body
+    
+   []
+   
+## Team Transfers  [/teams{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - transfers
+    + id - TEAM ID
+    + id_season - SEASON ID
+    
+    
+
+### Get Transfers by Team ID and Season ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /teams
+ 
+    
+    + Body
+    
+    {
+            "player_id": 84608,
+            "from_team_id": 1690,
+            "to_team_id": 977,
+            "transfer": "n/a",
+            "type": "IN",
+            "date": "2019-07-01",
+            "amount": null
+        },
+        {
+            "player_id": 537804,
+            "from_team_id": 2971,
+            "to_team_id": 977,
+            "transfer": "n/a",
+            "type": "IN",
+            "date": "2019-07-01",
+            "amount": null
+        },
+        {
+            "player_id": 537759,
+            "from_team_id": 2971,
+            "to_team_id": 977,
+            "transfer": "n/a",
+            "type": "IN",
+            "date": "2019-07-01",
+            "amount": null
+        },
+ ...
+    
+    
+## Team Squad  [/teams{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - squad
+    + id - TEAM ID
+ 
+    
+    
+
+### Get Squad by Team ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /teams
+ 
+    
+    + Body
+    
+   {
+            "player_id": 5665,
+            "number": 31,
+            "captain": 0,
+            "position_id": 1,
+            "injured": false,
+            "minutes_played": 0,
+            "appearences": 0,
+            "lineups": 0,
+            "substitute_in": 0,
+            "substitute_out": 0,
+            "substitutes_on_bench": 11,
+            "goals": 0,
+            "assists": 0,
+            "saves": null,
+            "inside_box_saves": null,
+            "dispossesed": null,
+            "interceptions": null,
+            "yellowcards": 0,
+            "yellowred": 0,
+            "redcards": 0,
+            "tackles": null,
+            "blocks": null,
+            "hit_post": null,
+            "fouls": {
+                "committed": null,
+                "drawn": null
+            },
+            "crosses": {
+                "total": null,
+                "accurate": null
+            },
+            "dribbles": {
+                "attempts": null,
+                "success": null,
+                "dribbled_past": null
+            },
+            "duels": {
+                "total": null,
+                "won": null
+            },
+            "passes": {
+                "total": null,
+                "accuracy": null,
+                "key_passes": null
+            },
+            "penalties": {
+                "won": null,
+                "scores": null,
+                "missed": null,
+                "committed": null,
+                "saves": null
+            }
+        },
+        {
+            "player_id": 82846,
+            "number": 1,
+            "captain": 0,
+            "position_id": 1,
+            "injured": false,
+            "minutes_played": 1260,
+            "appearences": 14,
+            "lineups": 14,
+            "substitute_in": 0,
+            "substitute_out": 0,
+            "substitutes_on_bench": 0,
+            "goals": 0,
+            "assists": 0,
+            "saves": 34,
+            "inside_box_saves": 19,
+            "dispossesed": null,
+            "interceptions": null,
+            "yellowcards": 1,
+            "yellowred": 0,
+            "redcards": 0,
+            "tackles": null,
+            "blocks": null,
+            "hit_post": null,
+            "fouls": {
+                "committed": 1,
+                "drawn": 2
+            },
+            "crosses": {
+                "total": null,
+                "accurate": null
+            },
+            "dribbles": {
+                "attempts": null,
+                "success": null,
+                "dribbled_past": null
+            },
+            "duels": {
+                "total": 2,
+                "won": 2
+            },
+            "passes": {
+                "total": 269,
+                "accuracy": 66,
+                "key_passes": null
+            },
+            "penalties": {
+                "won": null,
+                "scores": null,
+                "missed": null,
+                "committed": null,
+                "saves": 1
+            }
+        },
+        {
+            "player_id": 537148,
+            "number": 30,
+            "captain": 0,
+            "position_id": 1,
+            "injured": false,
+            "minutes_played": 0,
+            "appearences": 0,
+            "lineups": 0,
+            "substitute_in": 0,
+            "substitute_out": 0,
+            "substitutes_on_bench": 3,
+            "goals": 0,
+            "assists": 0,
+            "saves": null,
+            "inside_box_saves": null,
+            "dispossesed": null,
+            "interceptions": null,
+            "yellowcards": 0,
+            "yellowred": 0,
+            "redcards": 0,
+            "tackles": null,
+            "blocks": null,
+            "hit_post": null,
+            "fouls": {
+                "committed": null,
+                "drawn": null
+            },
+            "crosses": {
+                "total": null,
+                "accurate": null
+            },
+            "dribbles": {
+                "attempts": null,
+                "success": null,
+                "dribbled_past": null
+            },
+            "duels": {
+                "total": null,
+                "won": null
+            },
+            "passes": {
+                "total": null,
+                "accuracy": null,
+                "key_passes": null
+            },
+            "penalties": {
+                "won": null,
+                "scores": null,
+                "missed": null,
+                "committed": null,
+                "saves": null
+            }
+        },
+...
+
+## Player Info  [/players{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - info
+    + id - PLAYER ID
+ 
+    
+    
+
+### Get info by Player ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /players
+ 
+    
+    + Body
+    
+  {
+        "id": 5665,
+        "name": null,
+        "common_name": "Mikkel Andersen",
+        "firstname": null,
+        "lastname": null,
+        "birthday": null,
+        "birthcountry": null,
+        "birthplace": null,
+        "w": null,
+        "h": null,
+        "img": "https://cdn.soccersapi.com/images/soccer/players/50/5665.png",
+        "country": {
+            "id": 38,
+            "name": null,
+            "cc": null
+        }
+    }
+    
+## Coach Info  [/coaches{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - info
+    + id - COACH ID
+ 
+    
+    
+
+### Get info by Coach ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /coaches
+ 
+    
+    + Body
+    
+   {
+        "id": 83012,
+        "name": "Brian Priske Pedersen",
+        "common_name": "B. Priske",
+        "firstname": null,
+        "lastname": null,
+        "birthday": "14/05/1977",
+        "birthcountry": "Denmark",
+        "birthplace": "Horsens",
+        "img": "https://cdn.soccersapi.com/images/soccer/coaches/50/83012.png",
+        "country": {
+            "id": null,
+            "name": "Denmark",
+            "cc": "dk"
+        }
+    }
+    
+## Venue Info  [/venues{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - info
+    + id - VENUE ID
+ 
+    
+    
+
+### Get info by Venue ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /venues
+ 
+    
+    + Body
+    
+  {
+        "id": 380,
+        "name": "MCH Arena",
+        "capacity": "11809",
+        "city": "Herning",
+        "address": "Kaj Zartows Vej 5",
+        "img": "https://cdn.soccersapi.com/images/soccer/venues/380.jpg"
+    }
+    
+## Fixtures by Date  [/fixtures{?user,token,t,d}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - schedule
+    + d - YYY-MM-DD
+ 
+    
+    
+
+### Get fixtures by Date [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+ {
+            "id": 11999895,
+            "status": "0",
+            "time": {
+                "datetime": "2019-11-03 11:00:00",
+                "date": "2019-11-03",
+                "time": "11:00:00",
+                "minute": "",
+                "timestamp": 1572775200,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 17356,
+                    "name": "UE Santa Coloma"
+                },
+                "away": {
+                    "id": 17388,
+                    "name": "Carroi"
+                }
+            },
+            "league": {
+                "id": 931,
+                "name": "Primera División",
+                "country_id": 2969,
+                "country_name": "Andorra",
+                "country_flag": "https://cdn.soccersapi.com/images/countries/30/ad.png"
+            },
+            "scores": {
+                "home_score": "0",
+                "away_score": "0",
+                "ht_score": "",
+                "ft_score": "",
+                "et_score": ""
+            },
+            "venue_id": null,
+            "referee_id": null,
+            "round_id": 184129,
+            "season_id": 16666,
+            "stage_id": 77445901
+        },
+        {
+            "id": 11999896,
+            "status": "0",
+            "time": {
+                "datetime": "2019-11-03 13:00:00",
+                "date": "2019-11-03",
+                "time": "13:00:00",
+                "minute": "",
+                "timestamp": 1572782400,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 17339,
+                    "name": "Atlètic Club d'Escaldes"
+                },
+                "away": {
+                    "id": 17361,
+                    "name": "Ordino"
+                }
+            },
+            "league": {
+                "id": 931,
+                "name": "Primera División",
+                "country_id": 2969,
+                "country_name": "Andorra",
+                "country_flag": "https://cdn.soccersapi.com/images/countries/30/ad.png"
+            },
+            "scores": {
+                "home_score": "0",
+                "away_score": "0",
+                "ht_score": "",
+                "ft_score": "",
+                "et_score": ""
+            },
+            "venue_id": null,
+            "referee_id": null,
+            "round_id": 184129,
+            "season_id": 16666,
+            "stage_id": 77445901
+        },
+        {
+            "id": 11999898,
+            "status": "3",
+            "time": {
+                "datetime": "2019-11-03 15:00:00",
+                "date": "2019-11-03",
+                "time": "15:00:00",
+                "minute": "90",
+                "timestamp": 1572789600,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 17351,
+                    "name": "Engordany"
+                },
+                "away": {
+                    "id": 17341,
+                    "name": "Inter Club d'Escaldes"
+                }
+            },
+            "league": {
+                "id": 931,
+                "name": "Primera División",
+                "country_id": 2969,
+                "country_name": "Andorra",
+                "country_flag": "https://cdn.soccersapi.com/images/countries/30/ad.png"
+            },
+            "scores": {
+                "home_score": "1",
+                "away_score": "1",
+                "ht_score": "0-1",
+                "ft_score": "1-1",
+                "et_score": ""
+            },
+            "venue_id": null,
+            "referee_id": null,
+            "round_id": 184129,
+            "season_id": 16666,
+            "stage_id": 77445901
+        },
+...
+
+## Fixtures Live  [/fixtures{?user,token,t}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - live
+ 
+ 
+ 
+ 
+
+
+### Get fixtures Live [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+ {
+            "id": 11950092,
+            "status": 11,
+            "time": {
+                "datetime": "2019-11-03 18:00:00",
+                "date": "2019-11-03",
+                "time": "18:00:00",
+                "minute": 45,
+                "timestamp": false,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 12020,
+                    "name": "Puma Generaleña",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/12020.png",
+                    "form": null,
+                    "coach_id": 472245
+                },
+                "away": {
+                    "id": 15340,
+                    "name": "Juventud Escazuceña",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/15340.png",
+                    "form": null,
+                    "coach_id": 37252548
+                }
+            },
+            "league": {
+                "id": 728,
+                "name": "Liga de Ascenso",
+                "country_id": 1777,
+                "country_name": "Costa Rica",
+                "country_flag": "https://cdn.soccersapi.com/images/countries/30/cr.png"
+            },
+            "scores": {
+                "home_score": 0,
+                "away_score": 0,
+                "ht_score": "0-0",
+                "ft_score": null,
+                "et_score": null
+            },
+            "stadium_id": 11053,
+            "referee_id": null,
+            "round_id": 178353,
+            "season_id": 16057,
+            "stage_id": 77445312,
+            "venue_id": 11053
+        },
+        {
+            "id": 11983892,
+            "status": 1,
+            "time": {
+                "datetime": "2019-11-03 19:00:00",
+                "date": "2019-11-03",
+                "time": "19:00:00",
+                "minute": 90,
+                "timestamp": false,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 8338,
+                    "name": "Gimnasia Concepción",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/8338.png",
+                    "form": null,
+                    "coach_id": 32031251
+                },
+                "away": {
+                    "id": 9311,
+                    "name": "Sportivo Belgrano",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/9311.png",
+                    "form": null,
+                    "coach_id": 3872666
+                }
+            },
+            "league": {
+                "id": 1371,
+                "name": "Torneo Federal A",
+                "country_id": 82,
+                "country_name": "Argentina",
+                "country_flag": "https://cdn.soccersapi.com/images/countries/30/ar.png"
+            },
+            "scores": {
+                "home_score": 2,
+                "away_score": 1,
+                "ht_score": "1-0",
+                "ft_score": null,
+                "et_score": null
+            },
+            "stadium_id": 5412,
+            "referee_id": null,
+            "round_id": 182257,
+            "season_id": 16584,
+            "stage_id": 77445665,
+            "venue_id": 5412
+        },
+        {
+            "id": 12000864,
+            "status": 1,
+            "time": {
+                "datetime": "2019-11-03 19:00:00",
+                "date": "2019-11-03",
+                "time": "19:00:00",
+                "minute": 90,
+                "timestamp": false,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 5693,
+                    "name": "Fénix",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/5693.png",
+                    "form": null,
+                    "coach_id": 17176692
+                },
+                "away": {
+                    "id": 2875,
+                    "name": "River Plate",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/2875.png",
+                    "form": null,
+                    "coach_id": 474365
+                }
+            },
+            "league": {
+                "id": 808,
+                "name": "Primera Division",
+                "country_id": 196,
+                "country_name": "Uruguay",
+                "country_flag": "https://cdn.soccersapi.com/images/countries/30/uy.png"
+            },
+            "scores": {
+                "home_score": 1,
+                "away_score": 0,
+                "ht_score": "1-0",
+                "ft_score": null,
+                "et_score": null
+            },
+            "stadium_id": 3750,
+            "referee_id": null,
+            "round_id": 184254,
+            "season_id": 15782,
+            "stage_id": 77442532,
+            "venue_id": 3750
+        },
+...
+
+## Fixtures Ended  [/fixtures{?user,token,t,d}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - live
+    + d - YYYY-MM-DD
+ 
+ 
+ 
+ 
+
+
+### Get fixtures Ended by Date [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+ {
+            "id": 11999898,
+            "status": "3",
+            "time": {
+                "datetime": "2019-11-03 15:00:00",
+                "date": "2019-11-03",
+                "time": "15:00:00",
+                "minute": "90",
+                "timestamp": 1572789600,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 17351,
+                    "name": "Engordany"
+                },
+                "away": {
+                    "id": 17341,
+                    "name": "Inter Club d'Escaldes"
+                }
+            },
+            "league": {
+                "id": 931,
+                "name": "Primera División",
+                "country_id": 2969,
+                "country_name": "Andorra",
+                "country_flag": "https://cdn.soccersapi.com/images/countries/30/ad.png"
+            },
+            "scores": {
+                "home_score": "1",
+                "away_score": "1",
+                "ht_score": "0-1",
+                "ft_score": "1-1",
+                "et_score": ""
+            },
+            "venue_id": null,
+            "referee_id": null,
+            "round_id": 184129,
+            "season_id": 16666,
+            "stage_id": 77445901
+        },
+        {
+            "id": 11999897,
+            "status": "3",
+            "time": {
+                "datetime": "2019-11-03 17:00:00",
+                "date": "2019-11-03",
+                "time": "17:00:00",
+                "minute": "90",
+                "timestamp": 1572796800,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 15397,
+                    "name": "Sant Julià"
+                },
+                "away": {
+                    "id": 7096,
+                    "name": "FC Santa Coloma"
+                }
+            },
+            "league": {
+                "id": 931,
+                "name": "Primera División",
+                "country_id": 2969,
+                "country_name": "Andorra",
+                "country_flag": "https://cdn.soccersapi.com/images/countries/30/ad.png"
+            },
+            "scores": {
+                "home_score": "0",
+                "away_score": "3",
+                "ht_score": "0-2",
+                "ft_score": "0-3",
+                "et_score": ""
+            },
+            "venue_id": null,
+            "referee_id": null,
+            "round_id": 184129,
+            "season_id": 16666,
+            "stage_id": 77445901
+        },
+        {
+            "id": 12007322,
+            "status": "3",
+            "time": {
+                "datetime": "2019-11-03 11:00:00",
+                "date": "2019-11-03",
+                "time": "11:00:00",
+                "minute": "90",
+                "timestamp": 1572775200,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 4486,
+                    "name": "Zira"
+                },
+                "away": {
+                    "id": 6113,
+                    "name": "Sumqayıt"
+                }
+            },
+            "league": {
+                "id": 228,
+                "name": "Premier League",
+                "country_id": 2491,
+                "country_name": "Azerbaijan",
+                "country_flag": "https://cdn.soccersapi.com/images/countries/30/az.png"
+            },
+            "scores": {
+                "home_score": "2",
+                "away_score": "2",
+                "ht_score": "1-1",
+                "ft_score": "2-2",
+                "et_score": ""
+            },
+            "venue_id": null,
+            "referee_id": null,
+            "round_id": 185032,
+            "season_id": 16562,
+            "stage_id": 77445605
+        },
+...
+
+## Fixtures by Stage  [/fixtures{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - live
+    + id - STAGE ID
+ 
+ 
+ 
+ 
+
+
+### Get fixtures by Stage ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+ {
+            "id": 11898607,
+            "status": "3",
+            "time": {
+                "datetime": "2019-07-12 17:00:00",
+                "date": "2019-07-12",
+                "time": "17:00:00",
+                "minute": "90",
+                "timestamp": 1562943600,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 977,
+                    "name": "Midtjylland"
+                },
+                "away": {
+                    "id": 1409,
+                    "name": "Esbjerg"
+                }
+            },
+            "scores": {
+                "home_score": "1",
+                "away_score": "0",
+                "ht_score": "0-0",
+                "ft_score": "1-0",
+                "et_score": ""
+            },
+            "round_id": 169535
+        },
+        {
+            "id": 11898606,
+            "status": "3",
+            "time": {
+                "datetime": "2019-07-14 10:00:00",
+                "date": "2019-07-14",
+                "time": "10:00:00",
+                "minute": "90",
+                "timestamp": 1563091200,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 428,
+                    "name": "SønderjyskE"
+                },
+                "away": {
+                    "id": 2394,
+                    "name": "Randers"
+                }
+            },
+            "scores": {
+                "home_score": "2",
+                "away_score": "1",
+                "ht_score": "1-0",
+                "ft_score": "2-1",
+                "et_score": ""
+            },
+            "round_id": 169535
+        },
+        {
+            "id": 11898612,
+            "status": "3",
+            "time": {
+                "datetime": "2019-07-14 12:00:00",
+                "date": "2019-07-14",
+                "time": "12:00:00",
+                "minute": "90",
+                "timestamp": 1563098400,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 2688,
+                    "name": "Lyngby"
+                },
+                "away": {
+                    "id": 1058,
+                    "name": "AaB"
+                }
+            },
+            "scores": {
+                "home_score": "2",
+                "away_score": "0",
+                "ht_score": "1-0",
+                "ft_score": "2-0",
+                "et_score": ""
+            },
+            "round_id": 169535
+        },
+...
+
+## Fixtures by Round  [/fixtures{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - live
+    + id - ROUND ID
+ 
+ 
+ 
+ 
+
+
+### Get fixtures by ROUND ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+{
+            "id": 11898607,
+            "status": "3",
+            "time": {
+                "datetime": "2019-07-12 17:00:00",
+                "date": "2019-07-12",
+                "time": "17:00:00",
+                "minute": "90",
+                "timestamp": 1562943600,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 977,
+                    "name": "Midtjylland"
+                },
+                "away": {
+                    "id": 1409,
+                    "name": "Esbjerg"
+                }
+            },
+            "scores": {
+                "home_score": "1",
+                "away_score": "0",
+                "ht_score": "0-0",
+                "ft_score": "1-0",
+                "et_score": ""
+            }
+        },
+        {
+            "id": 11898606,
+            "status": "3",
+            "time": {
+                "datetime": "2019-07-14 10:00:00",
+                "date": "2019-07-14",
+                "time": "10:00:00",
+                "minute": "90",
+                "timestamp": 1563091200,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 428,
+                    "name": "SønderjyskE"
+                },
+                "away": {
+                    "id": 2394,
+                    "name": "Randers"
+                }
+            },
+            "scores": {
+                "home_score": "2",
+                "away_score": "1",
+                "ht_score": "1-0",
+                "ft_score": "2-1",
+                "et_score": ""
+            }
+        },
+        {
+            "id": 11898612,
+            "status": "3",
+            "time": {
+                "datetime": "2019-07-14 12:00:00",
+                "date": "2019-07-14",
+                "time": "12:00:00",
+                "minute": "90",
+                "timestamp": 1563098400,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 2688,
+                    "name": "Lyngby"
+                },
+                "away": {
+                    "id": 1058,
+                    "name": "AaB"
+                }
+            },
+            "scores": {
+                "home_score": "2",
+                "away_score": "0",
+                "ht_score": "1-0",
+                "ft_score": "2-0",
+                "et_score": ""
+            }
+        },
+...
+
+## Match Info  [/fixtures{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - event
+    + id - MATCH ID
+ 
+ 
+ 
+ 
+
+
+### Get Info by MATCH ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+{
+        "id": 11898612,
+        "status": "3",
+        "time": {
+            "datetime": "2019-07-14 12:00:00",
+            "date": "2019-07-14",
+            "time": "12:00:00",
+            "minute": "90",
+            "timestamp": 1563098400,
+            "timezone": "UTC"
+        },
+        "teams": {
+            "home": {
+                "id": 2688,
+                "name": "Lyngby",
+                "img": "https://cdn.soccersapi.com/images/soccer/teams/150/2688.png",
+                "form": "3-4-3",
+                "coach_id": 32002835
+            },
+            "away": {
+                "id": 1058,
+                "name": "AaB",
+                "img": "https://cdn.soccersapi.com/images/soccer/teams/150/1058.png",
+                "form": "4-3-3",
+                "coach_id": 27440867
+            }
+        },
+        "league": {
+            "id": 309,
+            "name": "Superliga",
+            "country_id": 358,
+            "country_name": "Denmark",
+            "country_flag": "https://cdn.soccersapi.com/images/countries/30/dk.png"
+        },
+        "scores": {
+            "home_score": "2",
+            "away_score": "0",
+            "ht_score": "1-0",
+            "ft_score": "2-0",
+            "et_score": ""
+        },
+        "referee_id": 44868,
+        "round_id": 169535,
+        "season_id": 16058,
+        "stage_id": 77443840,
+        "venue_id": 1614
+    }
+
+## Match Stats  [/fixtures{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match_stats
+    + id - MATCH ID
+ 
+ 
+ 
+ 
+
+
+### Get Sats by MATCH ID [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+{
+            "team_id": 2688,
+            "shots": {
+                "total": "11",
+                "ongoal": "6",
+                "offgoal": "4",
+                "blocked": "1",
+                "insidebox": "4",
+                "outsidebox": "7"
+            },
+            "passes": {
+                "total": "343",
+                "accurate": "263",
+                "percentage": null
+            },
+            "attacks": {
+                "attacks": "61",
+                "dangerous_attacks": "28"
+            },
+            "fouls": 17,
+            "corners": 1,
+            "offsides": 3,
+            "possessiontime": 40,
+            "yellowcards": 1,
+            "redcards": 0,
+            "saves": 7,
+            "substitutions": 3,
+            "goal_kick": null,
+            "free_kick": null,
+            "throw_in": null
+        },
+        {
+            "team_id": 1058,
+            "shots": {
+                "total": "17",
+                "ongoal": "7",
+                "offgoal": "3",
+                "blocked": "7",
+                "insidebox": "7",
+                "outsidebox": "10"
+            },
+            "passes": {
+                "total": "501",
+                "accurate": "413",
+                "percentage": null
+            },
+            "attacks": {
+                "attacks": "117",
+                "dangerous_attacks": "47"
+            },
+            "fouls": 12,
+            "corners": 9,
+            "offsides": 2,
+            "possessiontime": 60,
+            "yellowcards": 2,
+            "redcards": 0,
+            "saves": 4,
+            "substitutions": 3,
+            "goal_kick": null,
+            "free_kick": null,
+            "throw_in": null
+        }
