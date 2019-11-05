@@ -54,17 +54,18 @@ add the GET parameter page=NUMBER in the endpoint URL.
  Support https://soccersapi.com/page/support  
  Plans & Pricing https://soccersapi.com/page/pricing  
 
-## Countries List [/countries/{?user,token,t}]
-
+## List Countries [/countries/{?user,token,t}]
+ 
 + Parameters
     + user - YOUR USER
     + token - YOUR TOKEN
     + t - list
     + p - PAGE NUMBER
-    + Example - https://api.soccersapi.com/v2.2/countries/?user=YOURUSER&token=YOURTOKEN&t=list&p=PAGENUMBER
+   
 
 
-### List All Countries [GET] 
+
+### REQUEST [GET] 
  
 
 + Request (application/json)
@@ -123,9 +124,9 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - info
     + id - COUNTRY ID
-    + Example - https://api.soccersapi.com/v2.2/countries/?user=YOURUSER&token=YOURTOKEN&t=info&id=COUNTRYID
+ 
     
-### Get country info by ID [GET]
+### REQUEST [GET] 
 
 
 + Request (application/json)
@@ -149,17 +150,17 @@ add the GET parameter page=NUMBER in the endpoint URL.
     }
  
 
-## All Leagues [/leagues{?user,token,t,page}]
+## List Leagues [/leagues{?user,token,t,page}]
 
 + Parameters
     + user - YOUR USER
     + token - YOUR TOKEN
     + t - list
     + p - PAGENUMBER
-    + Example - https://api.soccersapi.com/v2.2/leagues/?user=YOURUSER&token=YOURTOKEN&t=list&p=PAGENUMBER
+  
  
 
-### Get a list of all leagues [GET] 
+### REQUEST [GET] 
 
 
 + Request (application/json)
@@ -251,10 +252,10 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - list
     + id - LEAGUE ID
-    + Example - https://api.soccersapi.com/v2.2/leagues/?user=YOURUSER&token=YOURTOKEN&t=info&id=LEAGUEID
+  
  
 
-### Get League Info by ID [GET] 
+### REQUEST [GET] 
 
 
 + Request (application/json)
@@ -307,248 +308,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
         ]
     }
     
-## League Season  [/seasons{?user,token,id,t}]
-
-+ Parameters
-    + user - YOUR USER
-    + token - YOUR TOKEN
-    + t - info
-    + id - SEASON ID
-    + Example - https://api.soccersapi.com/v2.2/seasons/?user=YOURUSER&token=YOURTOKEN&t=info&id=SEASONID
- 
-
-### Get Season Info by Season ID [GET] 
-
-
-+ Request (application/json)
-
-+ Response 200 (application/json)
- 
-
-
-    + Headers
-
-            Location: /seasons
- 
-    
-    + Body
-
- 
-{
-        "id": 16058,
-        "name": "2019/2020",
-        "league_id": 309,
-        "is_current": "1",
-        "stages": [
-            {
-                "id": 77443835,
-                "name": "Europa League Play-offs - Final"
-            },
-            {
-                "id": 77443836,
-                "name": "Europa League Play-offs - Semi-finals"
-            },
-            {
-                "id": 77443837,
-                "name": "Europa League Play-offs - Quarter-finals"
-            },
-            {
-                "id": 77443838,
-                "name": "Relegation Round"
-            },
-            {
-                "id": 77443839,
-                "name": "Championship Round"
-            },
-            {
-                "id": 77443840,
-                "name": "Regular Season"
-            },
-            {
-                "id": 77444047,
-                "name": "Relegation Round"
-            },
-            {
-                "id": 77444048,
-                "name": "Championship Round"
-            },
-            {
-                "id": 77444049,
-                "name": "Regular Season"
-            }
-        ]
-    }
-  
-  
-## League Stage  [/stages{?user,token,id,t}]
-
-+ Parameters
-    + user - YOUR USER
-    + token - YOUR TOKEN
-    + t - info
-    + id - STAGE ID
-    + Example - https://api.soccersapi.com/v2.2/stages/?user=YOURUSER&token=YOURTOKEN&t=info&id=STAGEID
- 
-
-### Get Stage Info by Stage ID [GET] 
-
-
-+ Request (application/json)
-
-+ Response 200 (application/json)
- 
-
-
-    + Headers
-
-            Location: /stages
- 
-    
-    + Body
-
- 
-{
-        "id": 77444049,
-        "name": "Regular Season",
-        "league_id": 309,
-        "season_id": 16058,
-        "is_current": "0",
-        "type": null,
-        "rounds": [
-            {
-                "id": 170547,
-                "name": "1",
-                "is_current": "0"
-            },
-            {
-                "id": 170548,
-                "name": "2",
-                "is_current": "0"
-            },
-            {
-                "id": 170549,
-                "name": "3",
-                "is_current": "0"
-            },
-            {
-                "id": 170550,
-                "name": "4",
-                "is_current": "0"
-            },
-            {
-                "id": 170551,
-                "name": "5",
-                "is_current": "0"
-            },
-            {
-                "id": 170552,
-                "name": "6",
-                "is_current": "0"
-            },
-            {
-                "id": 170553,
-                "name": "7",
-                "is_current": "0"
-            },
-            {
-                "id": 170554,
-                "name": "8",
-                "is_current": "0"
-            },
-            {
-                "id": 170555,
-                "name": "9",
-                "is_current": "0"
-            },
-            {
-                "id": 170556,
-                "name": "10",
-                "is_current": "0"
-            },
-            {
-                "id": 170557,
-                "name": "11",
-                "is_current": "0"
-            },
-            {
-                "id": 170558,
-                "name": "12",
-                "is_current": "0"
-            },
-            {
-                "id": 170559,
-                "name": "13",
-                "is_current": "0"
-            },
-            {
-                "id": 170560,
-                "name": "14",
-                "is_current": "0"
-            },
-            {
-                "id": 170561,
-                "name": "15",
-                "is_current": "0"
-            },
-            {
-                "id": 170562,
-                "name": "16",
-                "is_current": "0"
-            },
-            {
-                "id": 170563,
-                "name": "17",
-                "is_current": "0"
-            },
-            {
-                "id": 170564,
-                "name": "18",
-                "is_current": "0"
-            },
-            {
-                "id": 170565,
-                "name": "19",
-                "is_current": "0"
-            },
-            {
-                "id": 170566,
-                "name": "20",
-                "is_current": "0"
-            },
-            {
-                "id": 170567,
-                "name": "21",
-                "is_current": "0"
-            },
-            {
-                "id": 170568,
-                "name": "22",
-                "is_current": "0"
-            },
-            {
-                "id": 170569,
-                "name": "23",
-                "is_current": "0"
-            },
-            {
-                "id": 170570,
-                "name": "24",
-                "is_current": "0"
-            },
-            {
-                "id": 170571,
-                "name": "25",
-                "is_current": "0"
-            },
-            {
-                "id": 170572,
-                "name": "26",
-                "is_current": "0"
-            }
-        ]
-    }
-
-## League Standings  [/leagues{?user,token,t,id_league,id_season}]
+## Standings  [/leagues{?user,token,t,id_league,id_season}]
 
 + Parameters
     
@@ -557,11 +317,10 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + t - standings
     + id_league - LEAGUE ID
     + id_season - SEASON ID
-    + Example - https://api.soccersapi.com/v2.2/leagues/?user=YOURUSER&token=YOURTOKEN&t=standings&id_league=LEAGUEID&id_season=SEASONID
     
     
 
-### Get League Standings by League ID [GET] 
+### REQUEST [GET] 
 
 
 + Request (application/json)
@@ -787,8 +546,281 @@ add the GET parameter page=NUMBER in the endpoint URL.
                     ] 
  } ,
  ...
+    
+## Seasons  [/seasons{?user,token,id,t}]
 
-## League Topscorers  [/topscorers{?user,token,t,id_season}]
++ Parameters
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - info
+    + id - SEASON ID
+   
+ 
+
+### REQUEST [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /seasons
+ 
+    
+    + Body
+
+ 
+{
+        "id": 16058,
+        "name": "2019/2020",
+        "league_id": 309,
+        "is_current": "1",
+        "stages": [
+            {
+                "id": 77443835,
+                "name": "Europa League Play-offs - Final"
+            },
+            {
+                "id": 77443836,
+                "name": "Europa League Play-offs - Semi-finals"
+            },
+            {
+                "id": 77443837,
+                "name": "Europa League Play-offs - Quarter-finals"
+            },
+            {
+                "id": 77443838,
+                "name": "Relegation Round"
+            },
+            {
+                "id": 77443839,
+                "name": "Championship Round"
+            },
+            {
+                "id": 77443840,
+                "name": "Regular Season"
+            },
+            {
+                "id": 77444047,
+                "name": "Relegation Round"
+            },
+            {
+                "id": 77444048,
+                "name": "Championship Round"
+            },
+            {
+                "id": 77444049,
+                "name": "Regular Season"
+            }
+        ]
+    }
+  
+  
+## Stages  [/stages{?user,token,id,t}]
+
++ Parameters
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - info
+    + id - STAGE ID
+  
+ 
+
+### REQUEST [GET] 
+
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /stages
+ 
+    
+    + Body
+
+ 
+{
+        "id": 77444049,
+        "name": "Regular Season",
+        "league_id": 309,
+        "season_id": 16058,
+        "is_current": "0",
+        "type": null,
+        "rounds": [
+            {
+                "id": 170547,
+                "name": "1",
+                "is_current": "0"
+            },
+            {
+                "id": 170548,
+                "name": "2",
+                "is_current": "0"
+            },
+            {
+                "id": 170549,
+                "name": "3",
+                "is_current": "0"
+            },
+            {
+                "id": 170550,
+                "name": "4",
+                "is_current": "0"
+            },
+            {
+                "id": 170551,
+                "name": "5",
+                "is_current": "0"
+            },
+            {
+                "id": 170552,
+                "name": "6",
+                "is_current": "0"
+            },
+            {
+                "id": 170553,
+                "name": "7",
+                "is_current": "0"
+            },
+            {
+                "id": 170554,
+                "name": "8",
+                "is_current": "0"
+            },
+            {
+                "id": 170555,
+                "name": "9",
+                "is_current": "0"
+            },
+            {
+                "id": 170556,
+                "name": "10",
+                "is_current": "0"
+            },
+            {
+                "id": 170557,
+                "name": "11",
+                "is_current": "0"
+            },
+            {
+                "id": 170558,
+                "name": "12",
+                "is_current": "0"
+            },
+            {
+                "id": 170559,
+                "name": "13",
+                "is_current": "0"
+            },
+            {
+                "id": 170560,
+                "name": "14",
+                "is_current": "0"
+            },
+            {
+                "id": 170561,
+                "name": "15",
+                "is_current": "0"
+            },
+            {
+                "id": 170562,
+                "name": "16",
+                "is_current": "0"
+            },
+            {
+                "id": 170563,
+                "name": "17",
+                "is_current": "0"
+            },
+            {
+                "id": 170564,
+                "name": "18",
+                "is_current": "0"
+            },
+            {
+                "id": 170565,
+                "name": "19",
+                "is_current": "0"
+            },
+            {
+                "id": 170566,
+                "name": "20",
+                "is_current": "0"
+            },
+            {
+                "id": 170567,
+                "name": "21",
+                "is_current": "0"
+            },
+            {
+                "id": 170568,
+                "name": "22",
+                "is_current": "0"
+            },
+            {
+                "id": 170569,
+                "name": "23",
+                "is_current": "0"
+            },
+            {
+                "id": 170570,
+                "name": "24",
+                "is_current": "0"
+            },
+            {
+                "id": 170571,
+                "name": "25",
+                "is_current": "0"
+            },
+            {
+                "id": 170572,
+                "name": "26",
+                "is_current": "0"
+            }
+        ]
+    }
+
+## Rounds  [/rounds{?user,token,id,t}]
+
++ Parameters
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - info
+    + id - ROUND ID
+  
+ 
+
+### REQUEST [GET] 
+
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /rounds
+ 
+    
+    + Body
+
+ 
+ []
+ 
+
+## Topscorers  [/topscorers{?user,token,t,id_season}]
 
 + Parameters
     
@@ -796,11 +828,11 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - info
     + id_season - SEASON ID
-    + Example - https://api.soccersapi.com/v2.2/topscorers/?user=YOURUSER&token=YOURTOKEN&t=info&id=SEASONID
+     
     
     
 
-### Get League Topscorers by Season ID [GET] 
+### REQUEST [GET] 
 
 
 + Request (application/json)
@@ -816,7 +848,102 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
     + Body
     
-    []
+    "goalscorers": [
+            {
+                "position": 1,
+                "season_id": 12961,
+                "player_id": 240598,
+                "team_id": 1074,
+                "stage_id": 77441746,
+                "goals": 2,
+                "penalty_goals": 1,
+                "type": "goals"
+            },
+            {
+                "position": 1,
+                "season_id": 12961,
+                "player_id": 255086,
+                "team_id": 1074,
+                "stage_id": 77441747,
+                "goals": 2,
+                "penalty_goals": 0,
+                "type": "goals"
+            },
+            {
+                "position": 1,
+                "season_id": 12961,
+                "player_id": 240523,
+                "team_id": 6893,
+                "stage_id": 7157626,
+                "goals": 10,
+                "penalty_goals": 4,
+                "type": "goals"
+            },
+            
+ 
+    "cardscorers": [
+            {
+                "position": 1,
+                "season_id": 12961,
+                "player_id": 218293,
+                "team_id": 898,
+                "stage_id": 77441748,
+                "yellowcards": 1,
+                "redcards": 0,
+                "type": "cards"
+            },
+            {
+                "position": 1,
+                "season_id": 12961,
+                "player_id": 2207211,
+                "team_id": 1074,
+                "stage_id": 77441746,
+                "yellowcards": 2,
+                "redcards": 0,
+                "type": "cards"
+            },
+            {
+                "position": 1,
+                "season_id": 12961,
+                "player_id": 215609,
+                "team_id": 898,
+                "stage_id": 77441747,
+                "yellowcards": 1,
+                "redcards": 1,
+                "type": "cards"
+            },
+            
+  
+    "assistscorers": [
+            {
+                "position": 1,
+                "season_id": 12985,
+                "player_id": 25647,
+                "team_id": 358,
+                "stage_id": 7401010,
+                "assists": 11,
+                "type": "assists"
+            },
+            {
+                "position": 2,
+                "season_id": 12985,
+                "player_id": 25759,
+                "team_id": 957,
+                "stage_id": 7401010,
+                "assists": 10,
+                "type": "assists"
+            },
+            {
+                "position": 3,
+                "season_id": 12985,
+                "player_id": 26578,
+                "team_id": 852,
+                "stage_id": 7401010,
+                "assists": 9,
+                "type": "assists"
+            },
+ 
+...
     
     
 ## Team Info  [/teams{?user,token,t,id}]
@@ -827,11 +954,11 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - info
     + id - TEAM ID
-    + Example - https://api.soccersapi.com/v2.2/teams/?user=YOURUSER&token=YOURTOKEN&t=info&id=TEAMID
+     
     
     
 
-### Get Info by Team ID [GET] 
+### REQUEST [GET] 
 
 
 + Request (application/json)
@@ -862,286 +989,6 @@ add the GET parameter page=NUMBER in the endpoint URL.
         }
     }
     
-## Team Stats  [/teams{?user,token,t,id}]
-
-+ Parameters
-    
-    + user - YOUR USER
-    + token - YOUR TOKEN
-    + t - stats
-    + id - TEAM ID
-    + id_season - SEASON ID
-    + Example - https://api.soccersapi.com/v2.2/teams/?user=YOURUSER&token=YOURTOKEN&t=stats&id=TEAMID
-    
-    
-
-### Get Stats by Team ID and Season ID [GET] 
-
-
-+ Request (application/json)
-
-+ Response 200 (application/json)
- 
-
-
-    + Headers
-
-            Location: /teams
- 
-    
-    + Body
-    
-    {
-        "stage_id": 77443840,
-        "win": {
-            "total": 11,
-            "home": 5,
-            "away": 6
-        },
-        "draw": {
-            "total": 2,
-            "home": 1,
-            "away": 1
-        },
-        "lost": {
-            "total": 1,
-            "home": 1,
-            "away": 0
-        },
-        "goals_for": {
-            "total": 20,
-            "home": 8,
-            "away": 12
-        },
-        "goals_against": {
-            "total": 6,
-            "home": 4,
-            "away": 2
-        },
-        "clean_sheet": {
-            "total": 8,
-            "home": 3,
-            "away": 5
-        },
-        "failed_to_score": {
-            "total": 2,
-            "home": 1,
-            "away": 1
-        },
-        "scoring_minutes": [
-            {
-                "period": [
-                    {
-                        "minute": "0-15",
-                        "count": 1,
-                        "percentage": 5
-                    },
-                    {
-                        "minute": "15-30",
-                        "count": 2,
-                        "percentage": 10
-                    },
-                    {
-                        "minute": "30-45",
-                        "count": 3,
-                        "percentage": 15
-                    },
-                    {
-                        "minute": "45-60",
-                        "count": 4,
-                        "percentage": 20
-                    },
-                    {
-                        "minute": "60-75",
-                        "count": 6,
-                        "percentage": 30
-                    },
-                    {
-                        "minute": "75-90",
-                        "count": 4,
-                        "percentage": 20
-                    }
-                ]
-            }
-        ],
-        "avg_goals_per_game_scored": {
-            "total": 1.43,
-            "home": 1.14,
-            "away": 1.71
-        },
-        "avg_goals_per_game_conceded": {
-            "total": 0.43,
-            "home": 0.57,
-            "away": 0.29
-        },
-        "avg_first_goal_scored": {
-            "total": "60m",
-            "home": "71m",
-            "away": "50m"
-        },
-        "avg_first_goal_conceded": {
-            "total": "58m",
-            "home": "73m",
-            "away": "51m"
-        },
-        "attacks": 1679,
-        "dangerous_attacks": 793,
-        "avg_ball_possession_percentage": "55.50",
-        "fouls": 175,
-        "avg_fouls_per_game": "12.50",
-        "offsides": 29,
-        "redcards": 2,
-        "yellowcards": 33,
-        "shots_blocked": 27,
-        "shots_off_target": 118,
-        "avg_shots_off_target_per_game": "8.43",
-        "shots_on_target": 69,
-        "avg_shots_on_target_per_game": "4.93",
-        "btts": 35.71,
-        "goal_line": {
-            "over": {
-                "0_5": {
-                    "home": 85.71,
-                    "away": 85.71
-                },
-                "1_5": {
-                    "home": 28.57,
-                    "away": 71.43
-                },
-                "2_5": {
-                    "home": 0,
-                    "away": 14.29
-                },
-                "3_5": {
-                    "home": 0,
-                    "away": 0
-                },
-                "4_5": {
-                    "home": 0,
-                    "away": 0
-                },
-                "5_5": {
-                    "home": 0,
-                    "away": 0
-                }
-            },
-            "under": {
-                "0_5": {
-                    "home": 0,
-                    "away": 14.29
-                },
-                "1_5": {
-                    "home": 57.14,
-                    "away": 28.57
-                },
-                "2_5": {
-                    "home": 71.43,
-                    "away": 57.14
-                },
-                "3_5": {
-                    "home": 100,
-                    "away": 100
-                },
-                "4_5": {
-                    "home": 100,
-                    "away": 100
-                },
-                "5_5": {
-                    "home": 100,
-                    "away": 100
-                }
-            }
-        }
-    }
-    
-## Team Sidelined  [/teams{?user,token,t,id}]
-
-+ Parameters
-    
-    + user - YOUR USER
-    + token - YOUR TOKEN
-    + t - sidelined
-    + id - TEAM ID
-    + Example - https://api.soccersapi.com/v2.2/teams/?user=YOURUSER&token=YOURTOKEN&t=sidelined&id=TEAMID
-    
-    
-
-### Get Sidelined by Team ID [GET] 
-
-
-+ Request (application/json)
-
-+ Response 200 (application/json)
- 
-
-
-    + Headers
-
-            Location: /teams
- 
-    
-    + Body
-    
-   []
-   
-## Team Transfers  [/teams{?user,token,t,id}]
-
-+ Parameters
-    
-    + user - YOUR USER
-    + token - YOUR TOKEN
-    + t - transfers
-    + id - TEAM ID
-    + id_season - SEASON ID
-    + Example - https://api.soccersapi.com/v2.2/seasons/?user=YOURUSER&token=YOURTOKEN&t=transfers&id=TEAMID
-    
-    
-
-### Get Transfers by Team ID and Season ID [GET] 
-
-
-+ Request (application/json)
-
-+ Response 200 (application/json)
- 
-
-
-    + Headers
-
-            Location: /teams
- 
-    
-    + Body
-    
-    {
-            "player_id": 84608,
-            "from_team_id": 1690,
-            "to_team_id": 977,
-            "transfer": "n/a",
-            "type": "IN",
-            "date": "2019-07-01",
-            "amount": null
-        },
-        {
-            "player_id": 537804,
-            "from_team_id": 2971,
-            "to_team_id": 977,
-            "transfer": "n/a",
-            "type": "IN",
-            "date": "2019-07-01",
-            "amount": null
-        },
-        {
-            "player_id": 537759,
-            "from_team_id": 2971,
-            "to_team_id": 977,
-            "transfer": "n/a",
-            "type": "IN",
-            "date": "2019-07-01",
-            "amount": null
-        },
- ...
-    
     
 ## Team Squad  [/teams{?user,token,t,id}]
 
@@ -1151,12 +998,12 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - squad
     + id - TEAM ID
-    + Example - https://api.soccersapi.com/v2.2/seasons/?user=YOURUSER&token=YOURTOKEN&t=squad&id=TEAMID
+     
  
     
     
 
-### Get Squad by Team ID [GET] 
+### REQUEST [GET] 
 
 
 + Request (application/json)
@@ -1335,6 +1182,291 @@ add the GET parameter page=NUMBER in the endpoint URL.
             }
         },
 ...
+    
+## Team Stats  [/teams{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - stats
+    + id - TEAM ID
+    + id_season - SEASON ID
+     
+    
+    
+
+### REQUEST [GET]  
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /teams
+ 
+    
+    + Body
+    
+    {
+        "stage_id": 77443840,
+        "win": {
+            "total": 11,
+            "home": 5,
+            "away": 6
+        },
+        "draw": {
+            "total": 2,
+            "home": 1,
+            "away": 1
+        },
+        "lost": {
+            "total": 1,
+            "home": 1,
+            "away": 0
+        },
+        "goals_for": {
+            "total": 20,
+            "home": 8,
+            "away": 12
+        },
+        "goals_against": {
+            "total": 6,
+            "home": 4,
+            "away": 2
+        },
+        "clean_sheet": {
+            "total": 8,
+            "home": 3,
+            "away": 5
+        },
+        "failed_to_score": {
+            "total": 2,
+            "home": 1,
+            "away": 1
+        },
+        "scoring_minutes": [
+            {
+                "period": [
+                    {
+                        "minute": "0-15",
+                        "count": 1,
+                        "percentage": 5
+                    },
+                    {
+                        "minute": "15-30",
+                        "count": 2,
+                        "percentage": 10
+                    },
+                    {
+                        "minute": "30-45",
+                        "count": 3,
+                        "percentage": 15
+                    },
+                    {
+                        "minute": "45-60",
+                        "count": 4,
+                        "percentage": 20
+                    },
+                    {
+                        "minute": "60-75",
+                        "count": 6,
+                        "percentage": 30
+                    },
+                    {
+                        "minute": "75-90",
+                        "count": 4,
+                        "percentage": 20
+                    }
+                ]
+            }
+        ],
+        "avg_goals_per_game_scored": {
+            "total": 1.43,
+            "home": 1.14,
+            "away": 1.71
+        },
+        "avg_goals_per_game_conceded": {
+            "total": 0.43,
+            "home": 0.57,
+            "away": 0.29
+        },
+        "avg_first_goal_scored": {
+            "total": "60m",
+            "home": "71m",
+            "away": "50m"
+        },
+        "avg_first_goal_conceded": {
+            "total": "58m",
+            "home": "73m",
+            "away": "51m"
+        },
+        "attacks": 1679,
+        "dangerous_attacks": 793,
+        "avg_ball_possession_percentage": "55.50",
+        "fouls": 175,
+        "avg_fouls_per_game": "12.50",
+        "offsides": 29,
+        "redcards": 2,
+        "yellowcards": 33,
+        "shots_blocked": 27,
+        "shots_off_target": 118,
+        "avg_shots_off_target_per_game": "8.43",
+        "shots_on_target": 69,
+        "avg_shots_on_target_per_game": "4.93",
+        "btts": 35.71,
+        "goal_line": {
+            "over": {
+                "0_5": {
+                    "home": 85.71,
+                    "away": 85.71
+                },
+                "1_5": {
+                    "home": 28.57,
+                    "away": 71.43
+                },
+                "2_5": {
+                    "home": 0,
+                    "away": 14.29
+                },
+                "3_5": {
+                    "home": 0,
+                    "away": 0
+                },
+                "4_5": {
+                    "home": 0,
+                    "away": 0
+                },
+                "5_5": {
+                    "home": 0,
+                    "away": 0
+                }
+            },
+            "under": {
+                "0_5": {
+                    "home": 0,
+                    "away": 14.29
+                },
+                "1_5": {
+                    "home": 57.14,
+                    "away": 28.57
+                },
+                "2_5": {
+                    "home": 71.43,
+                    "away": 57.14
+                },
+                "3_5": {
+                    "home": 100,
+                    "away": 100
+                },
+                "4_5": {
+                    "home": 100,
+                    "away": 100
+                },
+                "5_5": {
+                    "home": 100,
+                    "away": 100
+                }
+            }
+        }
+    }
+
+## Team Transfers  [/teams{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - transfers
+    + id - TEAM ID
+    + id_season - SEASON ID
+   
+    
+    
+
+### REQUEST [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /teams
+ 
+    
+    + Body
+    
+    {
+            "player_id": 84608,
+            "from_team_id": 1690,
+            "to_team_id": 977,
+            "transfer": "n/a",
+            "type": "IN",
+            "date": "2019-07-01",
+            "amount": null
+        },
+        {
+            "player_id": 537804,
+            "from_team_id": 2971,
+            "to_team_id": 977,
+            "transfer": "n/a",
+            "type": "IN",
+            "date": "2019-07-01",
+            "amount": null
+        },
+        {
+            "player_id": 537759,
+            "from_team_id": 2971,
+            "to_team_id": 977,
+            "transfer": "n/a",
+            "type": "IN",
+            "date": "2019-07-01",
+            "amount": null
+        },
+ ...
+    
+   
+    
+## Team Sidelined  [/teams{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - sidelined
+    + id - TEAM ID
+     
+    
+    
+
+### REQUEST [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /teams
+ 
+    
+    + Body
+    
+   []
+   
+ 
+
 
 ## Player Info  [/players{?user,token,t,id}]
 
@@ -1344,7 +1476,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - info
     + id - PLAYER ID
-    + Example - https://api.soccersapi.com/v2.2/players/?user=YOURUSER&token=YOURTOKEN&t=info&id=PLAYERID
+    
  
     
     
@@ -1392,7 +1524,6 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - info
     + id - COACH ID
-    + Example - https://api.soccersapi.com/v2.2/coaches/?user=YOURUSER&token=YOURTOKEN&t=info&id=COACHID
  
     
     
@@ -1438,7 +1569,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - info
     + id - VENUE ID
-    + Example - https://api.soccersapi.com/v2.2/venues/?user=YOURUSER&token=YOURTOKEN&t=info&id=VENUEID
+   
  
     
     
@@ -1476,7 +1607,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - schedule
     + d - YYY-MM-DD
-    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=schedule&d=YYY-MM-DD
+   
  
     
     
@@ -1629,7 +1760,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + user - YOUR USER
     + token - YOUR TOKEN
     + t - live
-    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=live
+    
  
  
  
@@ -1806,7 +1937,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - ended
     + d - YYYY-MM-DD
-    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=ended&d=YYYY-MM-DD
+   
  
  
  
@@ -1962,7 +2093,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - stage
     + id - STAGE ID
-    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=stage&id=STAGEID
+     
     
  
  
@@ -2086,8 +2217,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - round
     + id - ROUND ID
-    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=round&id=ROUNDID
- 
+    
  
  
  
@@ -2198,7 +2328,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
         },
 ...
 
-## Match Info  [/fixtures{?user,token,t,id}]
+## Fixture by ID  [/fixtures{?user,token,t,id}]
 
 + Parameters
     
@@ -2206,14 +2336,14 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - event
     + id - MATCH ID
-    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=event&id=MATCHID
+    
  
  
  
  
 
 
-### Get Info by MATCH ID [GET] 
+### Get Info by Fixture ID [GET] 
 
 
 + Request (application/json)
@@ -2277,7 +2407,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
         "venue_id": 1614
     }
 
-## Match Stats  [/fixtures{?user,token,t,id}]
+## Fixture Stats  [/fixtures{?user,token,t,id}]
 
 + Parameters
     
@@ -2285,14 +2415,14 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - match_stats
     + id - MATCH ID
-    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=match_stats&id=MATCHID
+   
  
  
  
  
 
 
-### Get Sats by MATCH ID [GET] 
+### Get Sats by Fixture ID [GET] 
 
 
 + Request (application/json)
@@ -2371,7 +2501,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
             "throw_in": null
         }
         
-## Match Commentary  [/fixtures{?user,token,t,id}]
+## Fixture Commentary  [/fixtures{?user,token,t,id}]
 
 + Parameters
     
@@ -2379,14 +2509,14 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - match_comments
     + id - MATCH ID
-    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=match_comments&id=MATCHID
+     
  
  
  
  
 
 
-### Get Commentary by MATCH ID [GET] 
+### Get Commentary by Fixture ID [GET] 
 
 
 + Request (application/json)
@@ -2429,7 +2559,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
 ...
 
 
-## Match Events Summary [/fixtures{?user,token,t,id}]
+## Fixture Events Summary [/fixtures{?user,token,t,id}]
 
 + Parameters
     
@@ -2437,14 +2567,14 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - match_events
     + id - MATCH ID
-    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=match_events&id=MATCHID
+    
  
  
  
  
 
 
-### Get Events Summary by MATCH ID [GET] 
+### Get Events Summary by Fixture ID [GET] 
 
 
 + Request (application/json)
@@ -2501,7 +2631,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
         },
 ...
 
-## Match Trends [/fixtures{?user,token,t,id}]
+## Fixture Trends [/fixtures{?user,token,t,id}]
 
 + Parameters
     
@@ -2509,14 +2639,14 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - match_trends
     + id - MATCH ID
-    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=match_trends&id=MATCHID
+    
  
  
  
  
 
 
-### Get Trends by MATCH ID [GET] 
+### Get Trends by Fixture ID [GET] 
 
 
 + Request (application/json)
@@ -2534,7 +2664,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
 []
 
-## Match Lineups [/fixtures{?user,token,t,id}]
+## Fixture Lineups [/fixtures{?user,token,t,id}]
 
 + Parameters
     
@@ -2542,14 +2672,14 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - match_lineups
     + id - MATCH ID
-    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=match_lineups&id=MATCHID
+    
  
  
  
  
 
 
-### Get Lineups by MATCH ID [GET] 
+### Get Lineups by Fixture ID [GET] 
 
 
 + Request (application/json)
@@ -2708,7 +2838,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
         },
 ...
 
-## Match Bench [/fixtures{?user,token,t,id}]
+## Fixture Bench [/fixtures{?user,token,t,id}]
 
 + Parameters
     
@@ -2716,14 +2846,14 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - match_bench
     + id - MATCH ID
-    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=match_bench&id=MATCHID
+   
  
  
  
  
 
 
-### Get Bench by MATCH ID [GET] 
+### Get Bench by Fixture ID [GET] 
 
 
 + Request (application/json)
@@ -2883,7 +3013,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
 ...
 
 
-## Match Sidelined [/fixtures{?user,token,t,id}]
+## Fixture Sidelined [/fixtures{?user,token,t,id}]
 
 + Parameters
     
@@ -2891,14 +3021,14 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - match_sidelined
     + id - MATCH ID
-    + Example - https://api.soccersapi.com/v2.2/fixtures/?user=YOURUSER&token=YOURTOKEN&t=match_sidelined&id=MATCHID
+   
  
  
  
  
 
 
-### Get Sidelined by MATCH ID [GET] 
+### Get Sidelined by Fixture ID [GET] 
 
 
 + Request (application/json)
@@ -2916,6 +3046,130 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
  []
  
+## Fixture Odds [/fixtures{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match_odds
+    + id - MATCH ID
+   
+ 
+ 
+
+### REQUEST [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+  {
+            "id": 39,
+            "name": "3Way Result",
+            "bookmakers": {
+                "data": [
+                    {
+                        "id": 2,
+                        "name": "bet365",
+                        "odds": {
+                            "data": [
+                                {
+                                    "label": "1",
+                                    "value": 3.5,
+                                    "probability": "28.57%",
+                                    "dp3": "3.50",
+                                    "american": 250,
+                                    "factional": null,
+                                    "winning": true,
+                                    "handicap": null,
+                                    "total": null,
+                                    "bookmaker_event_id": null,
+                                    "last_update": {
+                                        "date": "2019-07-14 11:21:50.000000",
+                                        "timezone_type": 3,
+                                        "timezone": "UTC"
+                                    }
+                                },
+                                {
+                                    "label": "X",
+                                    "value": 3.5,
+                                    "probability": "28.57%",
+                                    "dp3": "3.50",
+                                    "american": 250,
+                                    "factional": null,
+                                    "winning": false,
+                                    "handicap": null,
+                                    "total": null,
+                                    "bookmaker_event_id": null,
+                                    "last_update": {
+                                        "date": "2019-07-14 11:21:50.000000",
+                                        "timezone_type": 3,
+                                        "timezone": "UTC"
+                                    }
+                                },
+                                {
+                                    "label": "2",
+                                    "value": 2,
+                                    "probability": "50%",
+                                    "dp3": "20",
+                                    "american": 100,
+                                    "factional": null,
+                                    "winning": false,
+                                    "handicap": null,
+                                    "total": null,
+                                    "bookmaker_event_id": null,
+                                    "last_update": {
+                                        "date": "2019-07-14 11:21:50.000000",
+                                        "timezone_type": 3,
+                                        "timezone": "UTC"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    
+
+## Fixture TV  [/fixtures{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match_tvs
+    + id - MATCH ID
+   
+ 
+ 
+
+### REQUEST [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+  []
+ 
 ## Referees Info [/referees{?user,token,t,id}]
 
 + Parameters
@@ -2924,7 +3178,6 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - info
     + id - REFEREE ID
-    + Example - https://api.soccersapi.com/v2.2/referees/?user=YOURUSER&token=YOURTOKEN&t=info&id=REFEREEID
  
  
  
