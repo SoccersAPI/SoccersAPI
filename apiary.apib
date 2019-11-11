@@ -65,7 +65,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
 
 
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
  
 
 + Request (application/json)
@@ -126,7 +126,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + id - COUNTRY ID
  
     
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -156,11 +156,11 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + user - YOUR USER
     + token - YOUR TOKEN
     + t - list
-    + p - PAGENUMBER
+    + p - PAGE NUMBER
   
  
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -255,7 +255,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
   
  
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -308,6 +308,86 @@ add the GET parameter page=NUMBER in the endpoint URL.
         ]
     }
     
+## League Stats  [/stats{?user,token,id,t}]
+
++ Parameters
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - league
+    + id - LEAGUE ID
+  
+ 
+
+### TEST ENDPOINT [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /stats
+ 
+    
+    + Body
+
+ 
+   {
+        "season_id": 15818,
+        "number_of_teams": 15,
+        "number_of_matches": 210,
+        "number_of_matches_played": 196,
+        "number_of_goals": 581,
+        "matches_both_teams_scored": 89,
+        "number_of_yellowcards": 648,
+        "number_of_yellowredcards": 17,
+        "number_of_redcards": 14,
+        "avg_goals_per_match": "2.96",
+        "avg_yellowcards_per_match": "3.31",
+        "avg_yellowredcards_per_match": "0.09",
+        "avg_redcards_per_match": "0.07",
+        "team_with_most_goals_id": 5712,
+        "team_with_most_conceded_goals_id": 6534,
+        "team_with_most_goals_per_match_id": 5712,
+        "season_topscorer_id": 51064,
+        "season_assist_topscorer_id": null,
+        "team_most_cleansheets_id": 6545,
+        "team_most_cleansheets_number": 16,
+        "goals_scored_minutes": {
+            "0-15": "11.6%",
+            "15-30": "16.21%",
+            "30-45": "16.38%",
+            "45-60": "18.09%",
+            "60-75": "18.43%",
+            "75-90": "23.72%"
+        },
+        "goalkeeper_most_cleansheets_id": 58468,
+        "goalkeeper_most_cleansheets_number": 16,
+        "goal_scored_every_minutes": 25,
+        "btts": "45.41",
+        "goal_line": {
+            "over": {
+                "0_5": 90.82,
+                "1_5": 76.02,
+                "2_5": 56.12,
+                "3_5": 39.29,
+                "4_5": 18.88,
+                "5_5": 9.18
+            },
+            "under": {
+                "0_5": 9.18,
+                "1_5": 23.98,
+                "2_5": 43.88,
+                "3_5": 60.71,
+                "4_5": 81.12,
+                "5_5": 90.82
+            }
+        }
+    }
+    
 ## Standings  [/leagues{?user,token,t,id_league,id_season}]
 
 + Parameters
@@ -320,7 +400,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
     
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -557,7 +637,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
    
  
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -630,7 +710,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
   
  
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 
@@ -799,7 +879,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
   
  
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 
@@ -832,7 +912,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
     
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -958,7 +1038,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
     
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -1003,7 +1083,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
     
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -1196,7 +1276,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
     
 
-### REQUEST [GET]  
+### TEST ENDPOINT [GET]  
 
 
 + Request (application/json)
@@ -1388,7 +1468,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
     
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -1447,7 +1527,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
     
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -1481,7 +1561,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
     
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -1528,7 +1608,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
     
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -1574,7 +1654,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
     
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -1607,12 +1687,13 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - schedule
     + d - YYY-MM-DD
+    + p - PAGE NUMBER
    
  
     
     
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -1767,7 +1848,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
  
 
 
-### REQUEST [GET]  
+### TEST ENDPOINT [GET]  
 
 
 + Request (application/json)
@@ -1944,7 +2025,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
  
 
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -2101,7 +2182,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
  
 
 
-### REQUEST [GET]  
+### TEST ENDPOINT [GET]  
 
 
 + Request (application/json)
@@ -2223,7 +2304,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
  
 
 
-### REQUEST [GET]  
+### TEST ENDPOINT [GET]  
 
 
 + Request (application/json)
@@ -2343,7 +2424,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
  
 
 
-### REQUEST [GET]  
+### TEST ENDPOINT [GET]  
 
 
 + Request (application/json)
@@ -2422,7 +2503,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
  
 
 
-### REQUEST [GET]  
+### TEST ENDPOINT [GET]  
 
 
 + Request (application/json)
@@ -2509,6 +2590,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - match_comments
     + id - MATCH ID
+    + order - ASC or DESC
      
  
  
@@ -2516,7 +2598,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
  
 
 
-### REQUEST [GET]  
+### TEST ENDPOINT [GET]  
 
 
 + Request (application/json)
@@ -2574,7 +2656,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
  
 
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -2646,7 +2728,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
  
 
 
-### REQUEST [GET]  
+### TEST ENDPOINT [GET]  
 
 
 + Request (application/json)
@@ -2679,7 +2761,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
  
 
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -2853,7 +2935,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
  
 
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -3028,7 +3110,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
  
 
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -3058,7 +3140,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
  
  
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -3139,6 +3221,90 @@ add the GET parameter page=NUMBER in the endpoint URL.
                         }
                     },
                     
+## Fixture Inplay Odds [/fixtures{?user,token,t,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match_oddsinplay
+    + id - MATCH ID
+   
+ 
+ 
+
+### TEST ENDPOINT [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+  {
+            "id": 39,
+            "name": "3Way Result",
+            "bookmakers": {
+                "data": [
+                    {
+                        "id": 2,
+                        "name": "bet365",
+                        "odds": {
+                            "data": [
+                                {
+                                    "label": "Corinthians",
+                                    "info": "Corinthians",
+                                    "value": "1.01",
+                                    "american": -10000,
+                                    "fractional": "1/100",
+                                    "suspend": false,
+                                    "description": "",
+                                    "handicap": "",
+                                    "last_update": {
+                                        "date": "2019-11-07 00:27:49.000000",
+                                        "timezone_type": 3,
+                                        "timezone": "UTC"
+                                    }
+                                },
+                                {
+                                    "label": "Draw",
+                                    "info": "Draw",
+                                    "value": "26.00",
+                                    "american": 2500,
+                                    "fractional": "25/1",
+                                    "suspend": false,
+                                    "description": "",
+                                    "handicap": "",
+                                    "last_update": {
+                                        "date": "2019-11-07 00:27:49.000000",
+                                        "timezone_type": 3,
+                                        "timezone": "UTC"
+                                    }
+                                },
+                                {
+                                    "label": "Fortaleza",
+                                    "info": "Fortaleza",
+                                    "value": "501.00",
+                                    "american": 50000,
+                                    "fractional": "500/1",
+                                    "suspend": false,
+                                    "description": "",
+                                    "handicap": "",
+                                    "last_update": {
+                                        "date": "2019-11-07 00:27:49.000000",
+                                        "timezone_type": 3,
+                                        "timezone": "UTC"
+                                    }
+                                }
+                    ]
 
 ## Fixture TV  [/fixtures{?user,token,t,id}]
 
@@ -3152,7 +3318,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
  
  
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
@@ -3184,7 +3350,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
  
 
 
-### REQUEST [GET] 
+### TEST ENDPOINT [GET] 
 
 
 + Request (application/json)
