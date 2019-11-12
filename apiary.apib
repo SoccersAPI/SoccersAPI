@@ -54,13 +54,13 @@ add the GET parameter page=NUMBER in the endpoint URL.
  Support https://soccersapi.com/page/support  
  Plans & Pricing https://soccersapi.com/page/pricing  
 
-## List Countries [/countries/{?user,token,t}]
+## List Countries [/countries/{?user,token,t,page}]
  
 + Parameters
     + user - YOUR USER
     + token - YOUR TOKEN
     + t - list
-    + p - PAGE NUMBER
+    + page - PAGE NUMBER
    
 
 
@@ -70,7 +70,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
 
 + Request (application/json)
 
-+ Response 200 (application/json)
++ Response 200 (application/json) 
 
     + Headers
 
@@ -116,6 +116,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     "code": null
 },
 ...
+ 
 
 ## Country Info [/countries/{?user,token,t,id}]    
 
@@ -156,7 +157,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + user - YOUR USER
     + token - YOUR TOKEN
     + t - list
-    + p - PAGE NUMBER
+    + page - PAGE NUMBER
   
  
 
@@ -384,6 +385,86 @@ add the GET parameter page=NUMBER in the endpoint URL.
                 "3_5": 60.71,
                 "4_5": 81.12,
                 "5_5": 90.82
+            }
+        }
+    }
+    
+## League Stats by Season  [/stats{?user,token,id,t}]
+
++ Parameters
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - season
+    + id - SEASON ID
+  
+ 
+
+### TEST ENDPOINT [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /stats
+ 
+    
+    + Body
+
+ 
+         {
+        "season_id": 15378,
+        "number_of_teams": 10,
+        "number_of_matches": 62,
+        "number_of_matches_played": 62,
+        "number_of_goals": 146,
+        "matches_both_teams_scored": 29,
+        "number_of_yellowcards": 124,
+        "number_of_yellowredcards": 2,
+        "number_of_redcards": 12,
+        "avg_goals_per_match": "2.35",
+        "avg_yellowcards_per_match": "2.00",
+        "avg_yellowredcards_per_match": "0.03",
+        "avg_redcards_per_match": "0.19",
+        "team_with_most_goals_id": 8169,
+        "team_with_most_conceded_goals_id": 30231,
+        "team_with_most_goals_per_match_id": 12258,
+        "season_topscorer_id": null,
+        "season_assist_topscorer_id": null,
+        "team_most_cleansheets_id": 3659,
+        "team_most_cleansheets_number": 7,
+        "goals_scored_minutes": {
+            "0-15": "12.33%",
+            "15-30": "14.38%",
+            "30-45": "13.7%",
+            "45-60": "22.6%",
+            "60-75": "20.55%",
+            "75-90": "21.23%"
+        },
+        "goalkeeper_most_cleansheets_id": 221993,
+        "goalkeeper_most_cleansheets_number": 7,
+        "goal_scored_every_minutes": 24,
+        "btts": "46.77",
+        "goal_line": {
+            "over": {
+                "0_5": 87.1,
+                "1_5": 66.13,
+                "2_5": 40.32,
+                "3_5": 20.97,
+                "4_5": 14.52,
+                "5_5": 3.23
+            },
+            "under": {
+                "0_5": 12.9,
+                "1_5": 33.87,
+                "2_5": 59.68,
+                "3_5": 79.03,
+                "4_5": 85.48,
+                "5_5": 96.77
             }
         }
     }
@@ -2488,13 +2569,13 @@ add the GET parameter page=NUMBER in the endpoint URL.
         "venue_id": 1614
     }
 
-## Fixture Stats  [/fixtures{?user,token,t,id}]
+## Fixture Stats  [/stats{?user,token,t,id}]
 
 + Parameters
     
     + user - YOUR USER
     + token - YOUR TOKEN
-    + t - match_stats
+    + t - match
     + id - MATCH ID
    
  
@@ -2514,72 +2595,72 @@ add the GET parameter page=NUMBER in the endpoint URL.
 
     + Headers
 
-            Location: /fixtures
+            Location: /stats
  
     
     + Body
     
 {
-            "team_id": 2688,
+            "team_id": 121,
             "shots": {
-                "total": "11",
-                "ongoal": "6",
-                "offgoal": "4",
-                "blocked": "1",
-                "insidebox": "4",
-                "outsidebox": "7"
+                "total": 11,
+                "ongoal": 5,
+                "offgoal": 6,
+                "blocked": 3,
+                "insidebox": 9,
+                "outsidebox": 2
             },
             "passes": {
-                "total": "343",
-                "accurate": "263",
-                "percentage": null
+                "total": 556,
+                "accurate": 483,
+                "percentage": 87
             },
             "attacks": {
-                "attacks": "61",
-                "dangerous_attacks": "28"
+                "attacks": 97,
+                "dangerous_attacks": 52
             },
-            "fouls": 17,
-            "corners": 1,
-            "offsides": 3,
-            "possessiontime": 40,
-            "yellowcards": 1,
-            "redcards": 0,
-            "saves": 7,
+            "fouls": 8,
+            "corners": 6,
+            "offsides": 5,
+            "possessiontime": 50,
+            "yellowcards": 3,
+            "redcards": 1,
+            "saves": 3,
             "substitutions": 3,
-            "goal_kick": null,
-            "free_kick": null,
-            "throw_in": null
+            "goal_kick": 11,
+            "free_kick": 21,
+            "throw_in": 13
         },
         {
-            "team_id": 1058,
+            "team_id": 3506,
             "shots": {
-                "total": "17",
-                "ongoal": "7",
-                "offgoal": "3",
-                "blocked": "7",
-                "insidebox": "7",
-                "outsidebox": "10"
+                "total": 17,
+                "ongoal": 5,
+                "offgoal": 10,
+                "blocked": 4,
+                "insidebox": 9,
+                "outsidebox": 8
             },
             "passes": {
-                "total": "501",
-                "accurate": "413",
-                "percentage": null
+                "total": 552,
+                "accurate": 504,
+                "percentage": 91
             },
             "attacks": {
-                "attacks": "117",
-                "dangerous_attacks": "47"
+                "attacks": 86,
+                "dangerous_attacks": 63
             },
-            "fouls": 12,
-            "corners": 9,
+            "fouls": 20,
+            "corners": 5,
             "offsides": 2,
-            "possessiontime": 60,
-            "yellowcards": 2,
+            "possessiontime": 50,
+            "yellowcards": 5,
             "redcards": 0,
-            "saves": 4,
+            "saves": 2,
             "substitutions": 3,
-            "goal_kick": null,
-            "free_kick": null,
-            "throw_in": null
+            "goal_kick": 6,
+            "free_kick": 13,
+            "throw_in": 9
         }
         
 ## Fixture Commentary  [/fixtures{?user,token,t,id}]
