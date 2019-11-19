@@ -389,7 +389,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
         }
     }
     
-## League Stats by Season  [/stats{?user,token,id,t}]
+## Stats by Season [/stats{?user,token,t,id}]
 
 + Parameters
     + user - YOUR USER
@@ -1151,7 +1151,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     }
     
     
-## Team Squad  [/teams{?user,token,t,id}]
+## Team Squad  [/teams{?user,token,t,id,_}]
 
 + Parameters
     
@@ -1344,13 +1344,13 @@ add the GET parameter page=NUMBER in the endpoint URL.
         },
 ...
     
-## Team Stats  [/teams{?user,token,t,id}]
+## Team Stats  [/stats{?user,token,t,id,id_season}]
 
 + Parameters
     
     + user - YOUR USER
     + token - YOUR TOKEN
-    + t - stats
+    + t - team
     + id - TEAM ID
     + id_season - SEASON ID
      
@@ -1373,129 +1373,129 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
     + Body
     
-    {
-        "stage_id": 77443840,
+{
+        "stage_id": 77443900,
         "win": {
-            "total": 11,
-            "home": 5,
-            "away": 6
+            "total": 3,
+            "home": 2,
+            "away": 1
         },
         "draw": {
-            "total": 2,
-            "home": 1,
-            "away": 1
-        },
-        "lost": {
-            "total": 1,
-            "home": 1,
-            "away": 0
-        },
-        "goals_for": {
-            "total": 20,
-            "home": 8,
-            "away": 12
-        },
-        "goals_against": {
-            "total": 6,
-            "home": 4,
+            "total": 4,
+            "home": 2,
             "away": 2
         },
-        "clean_sheet": {
-            "total": 8,
-            "home": 3,
+        "lost": {
+            "total": 4,
+            "home": 1,
+            "away": 3
+        },
+        "goals_for": {
+            "total": 13,
+            "home": 8,
             "away": 5
         },
-        "failed_to_score": {
+        "goals_against": {
+            "total": 11,
+            "home": 4,
+            "away": 7
+        },
+        "clean_sheet": {
             "total": 2,
-            "home": 1,
-            "away": 1
+            "home": 2,
+            "away": 0
+        },
+        "failed_to_score": {
+            "total": 3,
+            "home": 0,
+            "away": 3
         },
         "scoring_minutes": [
             {
                 "period": [
                     {
                         "minute": "0-15",
-                        "count": 1,
-                        "percentage": 5
+                        "count": 2,
+                        "percentage": 15.4
                     },
                     {
                         "minute": "15-30",
-                        "count": 2,
-                        "percentage": 10
+                        "count": 4,
+                        "percentage": 30.8
                     },
                     {
                         "minute": "30-45",
-                        "count": 3,
-                        "percentage": 15
+                        "count": 2,
+                        "percentage": 15.4
                     },
                     {
                         "minute": "45-60",
-                        "count": 4,
-                        "percentage": 20
+                        "count": 0,
+                        "percentage": 0
                     },
                     {
                         "minute": "60-75",
-                        "count": 6,
-                        "percentage": 30
+                        "count": 3,
+                        "percentage": 23.1
                     },
                     {
                         "minute": "75-90",
-                        "count": 4,
-                        "percentage": 20
+                        "count": 2,
+                        "percentage": 15.4
                     }
                 ]
             }
         ],
         "avg_goals_per_game_scored": {
-            "total": 1.43,
-            "home": 1.14,
-            "away": 1.71
+            "total": 1.18,
+            "home": 1.6,
+            "away": 0.83
         },
         "avg_goals_per_game_conceded": {
-            "total": 0.43,
-            "home": 0.57,
-            "away": 0.29
+            "total": 1,
+            "home": 0.8,
+            "away": 1.17
         },
         "avg_first_goal_scored": {
-            "total": "60m",
-            "home": "71m",
-            "away": "50m"
+            "total": "32m",
+            "home": "39m",
+            "away": "19m"
         },
         "avg_first_goal_conceded": {
-            "total": "58m",
-            "home": "73m",
-            "away": "51m"
+            "total": "60m",
+            "home": "60m",
+            "away": "58m"
         },
-        "attacks": 1679,
-        "dangerous_attacks": 793,
-        "avg_ball_possession_percentage": "55.50",
-        "fouls": 175,
-        "avg_fouls_per_game": "12.50",
-        "offsides": 29,
-        "redcards": 2,
-        "yellowcards": 33,
-        "shots_blocked": 27,
-        "shots_off_target": 118,
-        "avg_shots_off_target_per_game": "8.43",
-        "shots_on_target": 69,
-        "avg_shots_on_target_per_game": "4.93",
-        "btts": 35.71,
+        "attacks": 1213,
+        "dangerous_attacks": 584,
+        "avg_ball_possession_percentage": "54.82",
+        "fouls": 118,
+        "avg_fouls_per_game": "10.73",
+        "offsides": 17,
+        "redcards": 0,
+        "yellowcards": 24,
+        "shots_blocked": 28,
+        "shots_off_target": 88,
+        "avg_shots_off_target_per_game": "8.00",
+        "shots_on_target": 48,
+        "avg_shots_on_target_per_game": "4.36",
+        "btts": 54.55,
         "goal_line": {
             "over": {
                 "0_5": {
-                    "home": 85.71,
-                    "away": 85.71
+                    "home": 100,
+                    "away": 50
                 },
                 "1_5": {
-                    "home": 28.57,
-                    "away": 71.43
+                    "home": 20,
+                    "away": 16.67
                 },
                 "2_5": {
-                    "home": 0,
-                    "away": 14.29
+                    "home": 20,
+                    "away": 16.67
                 },
                 "3_5": {
-                    "home": 0,
+                    "home": 20,
                     "away": 0
                 },
                 "4_5": {
@@ -1510,19 +1510,19 @@ add the GET parameter page=NUMBER in the endpoint URL.
             "under": {
                 "0_5": {
                     "home": 0,
-                    "away": 14.29
+                    "away": 0
                 },
                 "1_5": {
-                    "home": 57.14,
-                    "away": 28.57
+                    "home": 20,
+                    "away": 33.33
                 },
                 "2_5": {
-                    "home": 71.43,
-                    "away": 57.14
+                    "home": 60,
+                    "away": 83.33
                 },
                 "3_5": {
-                    "home": 100,
-                    "away": 100
+                    "home": 80,
+                    "away": 83.33
                 },
                 "4_5": {
                     "home": 100,
@@ -1536,7 +1536,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
         }
     }
 
-## Team Transfers  [/teams{?user,token,t,id}]
+## Team Transfers  [/teams{?user,token,t,id,id_season}]
 
 + Parameters
     
@@ -1596,7 +1596,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
    
     
-## Team Sidelined  [/teams{?user,token,t,id}]
+## Team Sidelined  [/teams{?user,token,t,id,__}]
 
 + Parameters
     
@@ -1760,7 +1760,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
         "img": "https://cdn.soccersapi.com/images/soccer/venues/380.jpg"
     }
     
-## Fixtures by Date  [/fixtures{?user,token,t,d}]
+## Fixtures by Date  [/fixtures{?user,token,t,d,page}]
 
 + Parameters
     
@@ -1768,7 +1768,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     + token - YOUR TOKEN
     + t - schedule
     + d - YYY-MM-DD
-    + p - PAGE NUMBER
+    + page - PAGE NUMBER
    
  
     
@@ -2371,7 +2371,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
         },
 ...
 
-## Fixtures by Round  [/fixtures{?user,token,t,id}]
+## Fixtures by Round  [/fixtures{?user,token,t,id,_}]
 
 + Parameters
     
@@ -2490,7 +2490,322 @@ add the GET parameter page=NUMBER in the endpoint URL.
         },
 ...
 
-## Fixture by ID  [/fixtures{?user,token,t,id}]
+## Fixtures by Team / Season  [/fixtures{?user,token,t,season_id,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - teams
+    + season_id - SEASON ID
+    + id - TEAM ID
+    
+ 
+ 
+ 
+
+
+### TEST ENDPOINT [GET]  
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+{
+            "id": 10359589,
+            "status": "3",
+            "time": {
+                "datetime": "2018-06-10 20:00:00",
+                "date": "2018-06-10",
+                "time": "20:00:00",
+                "minute": "90",
+                "timestamp": 1528653600,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 15229,
+                    "name": "General Velásquez",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/15229.png",
+                    "form": "",
+                    "coach_id": null
+                },
+                "away": {
+                    "id": 10296,
+                    "name": "Unión Española",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/10296.png",
+                    "form": "",
+                    "coach_id": null
+                }
+            },
+            "league": {
+                "id": 707,
+                "name": "Chilean Cup",
+                "country_id": 118,
+                "country_name": "Chile",
+                "country_flag": "https://cdn.soccersapi.com/images/countries/30/cl.png"
+            },
+            "scores": {
+                "home_score": "1",
+                "away_score": "1",
+                "ht_score": "1-1",
+                "ft_score": "1-1",
+                "et_score": ""
+            },
+            "stadium_id": 10929,
+            "referee_id": null,
+            "round_id": null,
+            "season_id": 12755,
+            "stage_id": 6453867,
+            "venue_id": 10929
+        },
+        {
+            "id": 10359646,
+            "status": "3",
+            "time": {
+                "datetime": "2018-06-14 23:00:00",
+                "date": "2018-06-14",
+                "time": "23:00:00",
+                "minute": "90",
+                "timestamp": 1529010000,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 10296,
+                    "name": "Unión Española",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/10296.png",
+                    "form": "",
+                    "coach_id": null
+                },
+                "away": {
+                    "id": 15229,
+                    "name": "General Velásquez",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/15229.png",
+                    "form": "",
+                    "coach_id": null
+                }
+            },
+...
+
+## Fixtures by Team / Stage  [/fixtures{?user,token,t,stage_id,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - teams
+    + stage_id - STAGE ID
+    + id - TEAM ID
+    
+ 
+ 
+ 
+
+
+### TEST ENDPOINT [GET]  
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+{
+            "id": 12011529,
+            "status": "3",
+            "time": {
+                "datetime": "2019-11-15 00:00:00",
+                "date": "2019-11-15",
+                "time": "00:00:00",
+                "minute": "90",
+                "timestamp": 1573772400,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 5501,
+                    "name": "Cuiabá",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/5501.png",
+                    "form": "",
+                    "coach_id": 460164
+                },
+                "away": {
+                    "id": 3516,
+                    "name": "Paysandu",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/3516.png",
+                    "form": "",
+                    "coach_id": 470876
+                }
+            },
+            "league": {
+                "id": 1424,
+                "name": "Copa Verde",
+                "country_id": 43,
+                "country_name": "Brazil",
+                "country_flag": "https://cdn.soccersapi.com/images/countries/30/br.png"
+            },
+            "scores": {
+                "home_score": "0",
+                "away_score": "1",
+                "ht_score": "0-0",
+                "ft_score": "0-1",
+                "et_score": ""
+            },
+            "referee_id": 47321,
+            "round_id": null,
+            "season_id": 12947,
+            "stage_id": 6818402,
+            "venue_id": null
+        },
+        {
+            "id": 12011530,
+            "status": "0",
+            "time": {
+                "datetime": "2019-11-21 00:00:00",
+                "date": "2019-11-21",
+                "time": "00:00:00",
+                "minute": "",
+                "timestamp": 1574290800,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 3516,
+                    "name": "Paysandu",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/3516.png",
+                    "form": "",
+                    "coach_id": 470876
+                },
+                "away": {
+                    "id": 5501,
+                    "name": "Cuiabá",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/5501.png",
+                    "form": "",
+                    "coach_id": 460164
+                }
+            },
+            "league": {
+                "id": 1424,
+                "name": "Copa Verde",
+                "country_id": 43,
+                "country_name": "Brazil",
+                "country_flag": "https://cdn.soccersapi.com/images/countries/30/br.png"
+            },
+            "scores": {
+                "home_score": "0",
+                "away_score": "0",
+                "ht_score": "",
+                "ft_score": "",
+                "et_score": ""
+            },
+            "referee_id": null,
+            "round_id": null,
+            "season_id": 12947,
+            "stage_id": 6818402,
+            "venue_id": null
+        }
+...
+
+## Fixtures by Team / Round  [/fixtures{?user,token,t,round_id,id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - teams
+    + round_id - ROUND ID
+    + id - TEAM ID
+    
+ 
+ 
+ 
+
+
+### TEST ENDPOINT [GET]  
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+{
+            "id": 11839545,
+            "status": "3",
+            "time": {
+                "datetime": "2019-11-15 20:00:00",
+                "date": "2019-11-15",
+                "time": "20:00:00",
+                "minute": "90",
+                "timestamp": 1573844400,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 6363,
+                    "name": "América Mineiro",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/6363.png",
+                    "form": "",
+                    "coach_id": 158193
+                },
+                "away": {
+                    "id": 3478,
+                    "name": "Vitória",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/3478.png",
+                    "form": "",
+                    "coach_id": 464489
+                }
+            },
+            "league": {
+                "id": 689,
+                "name": "Serie B",
+                "country_id": 43,
+                "country_name": "Brazil",
+                "country_flag": "https://cdn.soccersapi.com/images/countries/30/br.png"
+            },
+            "scores": {
+                "home_score": "2",
+                "away_score": "1",
+                "ht_score": "1-0",
+                "ft_score": "2-1",
+                "et_score": ""
+            },
+            "referee_id": 55118,
+            "round_id": 164422,
+            "season_id": 15796,
+            "stage_id": 77442603,
+            "venue_id": 2037
+        }
+...
+
+## Fixture by ID  [/fixtures{?user,token,t,id,__}]
 
 + Parameters
     
@@ -2569,7 +2884,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
         "venue_id": 1614
     }
 
-## Fixture Stats  [/stats{?user,token,t,id}]
+## Fixture Stats  [/stats{?user,token,t,id,___}]
 
 + Parameters
     
@@ -2663,7 +2978,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
             "throw_in": 9
         }
         
-## Fixture Commentary  [/fixtures{?user,token,t,id}]
+## Fixture Commentary  [/fixtures{?user,token,t,id,order}]
 
 + Parameters
     
@@ -2722,7 +3037,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
 ...
 
 
-## Fixture Events Summary [/fixtures{?user,token,t,id}]
+## Fixture Events Summary [/fixtures{?user,token,t,id,____}]
 
 + Parameters
     
@@ -2794,7 +3109,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
         },
 ...
 
-## Fixture Trends [/fixtures{?user,token,t,id}]
+## Fixture Trends [/fixtures{?user,token,t,id,_____}]
 
 + Parameters
     
@@ -2827,7 +3142,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
 []
 
-## Fixture Lineups [/fixtures{?user,token,t,id}]
+## Fixture Lineups [/fixtures{?user,token,t,id,______}]
 
 + Parameters
     
@@ -3001,7 +3316,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
         },
 ...
 
-## Fixture Bench [/fixtures{?user,token,t,id}]
+## Fixture Bench [/fixtures{?user,token,t,id,_______}]
 
 + Parameters
     
@@ -3176,7 +3491,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
 ...
 
 
-## Fixture Sidelined [/fixtures{?user,token,t,id}]
+## Fixture Sidelined [/fixtures{?user,token,t,id,________}]
 
 + Parameters
     
@@ -3209,7 +3524,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
     
  []
  
-## Fixture Odds [/fixtures{?user,token,t,id}]
+## Fixture Odds [/fixtures{?user,token,t,id,_________}]
 
 + Parameters
     
@@ -3302,7 +3617,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
                         }
                     },
                     
-## Fixture Inplay Odds [/fixtures{?user,token,t,id}]
+## Fixture Inplay Odds [/fixtures{?user,token,t,id,__________}]
 
 + Parameters
     
@@ -3387,7 +3702,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
                                 }
                     ]
 
-## Fixture TV  [/fixtures{?user,token,t,id}]
+## Fixture TV  [/fixtures{?user,token,t,id,___________}]
 
 + Parameters
     
