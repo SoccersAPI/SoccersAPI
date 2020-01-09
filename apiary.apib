@@ -9577,6 +9577,8 @@ The Player by ID endpoint returns information of a single player
 
 ## Match TV Channels  [/fixtures{?user,token,t,id,___________}]
 
+The Match TV Channels Endpoint gives you a list of International TV Channels will cover the match
+
 + Parameters
     
     + user - YOUR USER
@@ -9686,7 +9688,9 @@ The Player by ID endpoint returns information of a single player
         }
  
 
-## Coach Info  [/coaches{?user,token,t,id}]
+## Coach by ID  [/coaches{?user,token,t,id}]
+
+The Coach by ID Endpoint give you information of a specific coach
 
 + Parameters
     
@@ -9698,7 +9702,7 @@ The Player by ID endpoint returns information of a single player
     
     
 
-### TEST ENDPOINT [GET] 
+### GET Coach by ID [GET] 
 
 
 + Request (application/json)
@@ -9731,7 +9735,9 @@ The Player by ID endpoint returns information of a single player
         }
     }
     
-## Venue Info  [/venues{?user,token,t,id}]
+## Venue by ID  [/venues{?user,token,t,id}]
+
+The Venue by ID Endpoint give you information of a specific venue
 
 + Parameters
     
@@ -9744,7 +9750,7 @@ The Player by ID endpoint returns information of a single player
     
     
 
-### TEST ENDPOINT [GET] 
+### GET Venue by ID  [GET] 
 
 
 + Request (application/json)
@@ -9770,13 +9776,9 @@ The Player by ID endpoint returns information of a single player
     }
  
  
- 
+## Referee by ID [/referees{?user,token,t,id}]
 
- 
-
-
-
-## Referees Info [/referees{?user,token,t,id}]
+The Referee by ID Endpoint give you information of a specific Referee
 
 + Parameters
     
@@ -9786,11 +9788,7 @@ The Player by ID endpoint returns information of a single player
     + id - REFEREE ID
  
  
- 
- 
-
-
-### TEST ENDPOINT [GET] 
+### GET Referee by ID [GET] 
 
 
 + Request (application/json)
