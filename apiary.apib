@@ -74,7 +74,7 @@ add the GET parameter page=NUMBER in the endpoint URL.
 
 
 
-### All Countries [GET] 
+### GET All Countries [GET] 
  
 
 + Request (application/json)
@@ -110,10 +110,11 @@ add the GET parameter page=NUMBER in the endpoint URL.
             "sub_region": "Northern Africa",
             "code": "dz"
         } 
- 
+
 
 ## Country by ID [/countries/{?user,token,t,id}]    
 The Get Country By Id Endpoint gives you data from a specific country like Name, Flag, IsoCode, Continent and other related Country data.
+
 + Parameters
     + user - YOUR USER
     + token - YOUR TOKEN
@@ -121,7 +122,7 @@ The Get Country By Id Endpoint gives you data from a specific country like Name,
     + id - COUNTRY ID
  
     
-### TEST ENDPOINT [GET] 
+### GET Country by ID [GET] 
 
 
 + Request (application/json)
@@ -157,7 +158,7 @@ The Get All Leagues Endpoint gives you a paginated list of all leagues available
   
  
 
-### TEST ENDPOINT [GET] 
+### GET All Leagues [GET] 
 
 
 + Request (application/json)
@@ -205,7 +206,7 @@ The Get All Leagues Endpoint gives you a paginated list of all leagues available
   
  
 
-### TEST ENDPOINT [GET] 
+### GET League by ID [GET] 
 
 
 + Request (application/json)
@@ -222,7 +223,7 @@ The Get All Leagues Endpoint gives you a paginated list of all leagues available
     + Body
 
  
-    {
+    "data": {
         "id": 240,
         "name": "First Division",
         "is_cup": "0",
@@ -250,20 +251,23 @@ The Get All Leagues Endpoint gives you a paginated list of all leagues available
                 "name": "2019",
                 "is_current": "1"
             }
+        ]
+    } 
  
-## Standings  [/leagues{?user,token,t,id_league,id_season}]
+## Standings  [/leagues{?user,token,t,season_id}]
+
 The Standings Endpoint show the rank of the teams of each League in which they are participating. The response of the Standings Endpoint can be returned in two formats.
+
 + Parameters
     
     + user - YOUR USER
     + token - YOUR TOKEN
     + t - standings
-    + id_league - LEAGUE ID
-    + id_season - SEASON ID
+    + season_id - SEASON ID
     
     
 
-### TEST ENDPOINT [GET] 
+### GET Standings [GET] 
 
 
 + Request (application/json)
@@ -280,212 +284,736 @@ The Standings Endpoint show the rank of the teams of each League in which they a
     + Body
 
  
+ 
+   "data":{
+      "league_id":874,
+      "season_id":12498,
+      "stage_id":3656878,
+      "round_id":144303,
+      "standings":[
          {
-            "name": "Regular Season",
-            "league_id": 309,
-            "season_id": 16058,
-            "stage_id": 77443840,
-            "stage_name": "Regular Season",
-            "round_id": 169549,
-            "round_name": 15,
-            "standings": [
-                {
-                    "position": 1,
-                    "team_id": 977,
-                    "team_name": "Midtjylland",
-                    "group_id": 38,
-                    "group_name": null,
-                    "overall": [
-                        {
-                            "games_played": 15,
-                            "won": 12,
-                            "draw": 2,
-                            "lost": 1,
-                            "goal_scored": 21,
-                            "goal_against": 6,
-                            "goal_difference": 15,
-                            "points": 38
-                        }
-                    ],
-                    "home": [
-                        {
-                            "games_played": 7,
-                            "won": 5,
-                            "draw": 1,
-                            "lost": 1,
-                            "goal_scored": 8,
-                            "goal_against": 4,
-                            "goal_difference": 4,
-                            "points": 16
-                        }
-                    ],
-                    "away": [
-                        {
-                            "games_played": 8,
-                            "won": 7,
-                            "draw": 1,
-                            "lost": 0,
-                            "goal_scored": 13,
-                            "goal_against": 2,
-                            "goal_difference": 11,
-                            "points": 22
-                        }
-                    ],
-                    "total": {
-                        "goal_difference": 15,
-                        "points": 38
-                    },
-                    "result": "Championship Round",
-                    "recent_form": "LWWWW"
-                },
-                {
-                    "position": 2,
-                    "team_id": 123,
-                    "team_name": "København",
-                    "group_id": 38,
-                    "group_name": null,
-                    "overall": [
-                        {
-                            "games_played": 15,
-                            "won": 12,
-                            "draw": 2,
-                            "lost": 1,
-                            "goal_scored": 21,
-                            "goal_against": 6,
-                            "goal_difference": 15,
-                            "points": 38
-                        },
-                        {
-                            "games_played": 15,
-                            "won": 11,
-                            "draw": 1,
-                            "lost": 3,
-                            "goal_scored": 29,
-                            "goal_against": 15,
-                            "goal_difference": 14,
-                            "points": 34
-                        }
-                    ],
-                    "home": [
-                        {
-                            "games_played": 7,
-                            "won": 5,
-                            "draw": 1,
-                            "lost": 1,
-                            "goal_scored": 8,
-                            "goal_against": 4,
-                            "goal_difference": 4,
-                            "points": 16
-                        },
-                        {
-                            "games_played": 7,
-                            "won": 6,
-                            "draw": 1,
-                            "lost": 0,
-                            "goal_scored": 17,
-                            "goal_against": 5,
-                            "goal_difference": 12,
-                            "points": 19
-                        }
-                    ],
-                    "away": [
-                        {
-                            "games_played": 8,
-                            "won": 7,
-                            "draw": 1,
-                            "lost": 0,
-                            "goal_scored": 13,
-                            "goal_against": 2,
-                            "goal_difference": 11,
-                            "points": 22
-                        },
-                        {
-                            "games_played": 8,
-                            "won": 5,
-                            "draw": 0,
-                            "lost": 3,
-                            "goal_scored": 12,
-                            "goal_against": 10,
-                            "goal_difference": 2,
-                            "points": 15
-                        }
-                    ],
-                    "total": {
-                        "goal_difference": 14,
-                        "points": 34
-                    },
-                    "result": "Championship Round",
-                    "recent_form": "WLWWW"
-                },
-                {
-                    "position": 3,
-                    "team_id": 1827,
-                    "team_name": "OB",
-                    "group_id": 38,
-                    "group_name": null,
-                    "overall": [
-                        {
-                            "games_played": 15,
-                            "won": 12,
-                            "draw": 2,
-                            "lost": 1,
-                            "goal_scored": 21,
-                            "goal_against": 6,
-                            "goal_difference": 15,
-                            "points": 38
-                        },
-                        {
-                            "games_played": 15,
-                            "won": 11,
-                            "draw": 1,
-                            "lost": 3,
-                            "goal_scored": 29,
-                            "goal_against": 15,
-                            "goal_difference": 14,
-                            "points": 34
-                        },
-                        {
-                            "games_played": 15,
-                            "won": 8,
-                            "draw": 2,
-                            "lost": 5,
-                            "goal_scored": 23,
-                            "goal_against": 14,
-                            "goal_difference": 9,
-                            "points": 26
-                        }
-                    ],
-                    "home": [
-                        {
-                            "games_played": 7,
-                            "won": 5,
-                            "draw": 1,
-                            "lost": 1,
-                            "goal_scored": 8,
-                            "goal_against": 4,
-                            "goal_difference": 4,
-                            "points": 16
-                        },
-                        {
-                            "games_played": 7,
-                            "won": 6,
-                            "draw": 1,
-                            "lost": 0,
-                            "goal_scored": 17,
-                            "goal_against": 5,
-                            "goal_difference": 12,
-                            "points": 19
-                        },
-                        {
-                            "games_played": 8,
-                            "won": 5,
-                            "draw": 1,
-                            "lost": 2,
-                            "goal_scored": 16,
-                            "goal_against": 8,
-                            "goal_difference": 8,
-                            "points": 16
-                        }
+            "position":1,
+            "team_id":13994,
+            "team_name":"Medeama",
+            "round":{
+               "id":144303,
+               "name":15
+            },
+            "group":{
+               "id":null,
+               "name":null
+            },
+            "overall":{
+               "games_played":14,
+               "won":8,
+               "draw":3,
+               "lost":3,
+               "goals_scored":19,
+               "goals_against":12
+            },
+            "home":{
+               "games_played":6,
+               "won":6,
+               "draw":0,
+               "lost":0,
+               "goals_scored":12,
+               "goals_against":3
+            },
+            "away":{
+               "games_played":8,
+               "won":2,
+               "draw":3,
+               "lost":3,
+               "goals_scored":7,
+               "goals_against":9
+            },
+            "total":{
+               "goal_difference":"+7",
+               "points":27
+            },
+            "result":"CAF Champions League",
+            "points":27,
+            "recent_form":"DWLWW",
+            "status":"same"
+         },
+         {
+            "position":2,
+            "team_id":11150,
+            "team_name":"Ashanti Gold",
+            "round":{
+               "id":144303,
+               "name":15
+            },
+            "group":{
+               "id":null,
+               "name":null
+            },
+            "overall":{
+               "games_played":15,
+               "won":8,
+               "draw":3,
+               "lost":4,
+               "goals_scored":15,
+               "goals_against":9
+            },
+            "home":{
+               "games_played":6,
+               "won":6,
+               "draw":0,
+               "lost":0,
+               "goals_scored":8,
+               "goals_against":0
+            },
+            "away":{
+               "games_played":9,
+               "won":2,
+               "draw":3,
+               "lost":4,
+               "goals_scored":7,
+               "goals_against":9
+            },
+            "total":{
+               "goal_difference":"+6",
+               "points":27
+            },
+            "result":"None",
+            "points":27,
+            "recent_form":"WLWLD",
+            "status":"up"
+         },
+         {
+            "position":3,
+            "team_id":150459,
+            "team_name":"Karela",
+            "round":{
+               "id":144303,
+               "name":15
+            },
+            "group":{
+               "id":null,
+               "name":null
+            },
+            "overall":{
+               "games_played":15,
+               "won":7,
+               "draw":4,
+               "lost":4,
+               "goals_scored":17,
+               "goals_against":10
+            },
+            "home":{
+               "games_played":9,
+               "won":6,
+               "draw":2,
+               "lost":1,
+               "goals_scored":15,
+               "goals_against":6
+            },
+            "away":{
+               "games_played":6,
+               "won":1,
+               "draw":2,
+               "lost":3,
+               "goals_scored":2,
+               "goals_against":4
+            },
+            "total":{
+               "goal_difference":"+7",
+               "points":25
+            },
+            "result":"None",
+            "points":25,
+            "recent_form":"WDWLW",
+            "status":"up"
+         },
+         {
+            "position":4,
+            "team_id":5581,
+            "team_name":"Asante Kotoko",
+            "round":{
+               "id":144303,
+               "name":15
+            },
+            "group":{
+               "id":null,
+               "name":null
+            },
+            "overall":{
+               "games_played":15,
+               "won":7,
+               "draw":3,
+               "lost":5,
+               "goals_scored":15,
+               "goals_against":13
+            },
+            "home":{
+               "games_played":9,
+               "won":6,
+               "draw":1,
+               "lost":2,
+               "goals_scored":10,
+               "goals_against":5
+            },
+            "away":{
+               "games_played":6,
+               "won":1,
+               "draw":2,
+               "lost":3,
+               "goals_scored":5,
+               "goals_against":8
+            },
+            "total":{
+               "goal_difference":"+2",
+               "points":24
+            },
+            "result":"None",
+            "points":24,
+            "recent_form":"WDWWL",
+            "status":"up"
+         },
+         {
+            "position":5,
+            "team_id":16645,
+            "team_name":"Inter Allies",
+            "round":{
+               "id":144303,
+               "name":15
+            },
+            "group":{
+               "id":null,
+               "name":null
+            },
+            "overall":{
+               "games_played":15,
+               "won":8,
+               "draw":0,
+               "lost":7,
+               "goals_scored":15,
+               "goals_against":15
+            },
+            "home":{
+               "games_played":7,
+               "won":7,
+               "draw":0,
+               "lost":0,
+               "goals_scored":11,
+               "goals_against":0
+            },
+            "away":{
+               "games_played":8,
+               "won":1,
+               "draw":0,
+               "lost":7,
+               "goals_scored":4,
+               "goals_against":15
+            },
+            "total":{
+               "goal_difference":"+0",
+               "points":24
+            },
+            "result":"None",
+            "points":24,
+            "recent_form":"LWWWL",
+            "status":"down"
+         },
+         {
+            "position":6,
+            "team_id":10681,
+            "team_name":"Dreams",
+            "round":{
+               "id":144303,
+               "name":15
+            },
+            "group":{
+               "id":null,
+               "name":null
+            },
+            "overall":{
+               "games_played":15,
+               "won":7,
+               "draw":3,
+               "lost":5,
+               "goals_scored":13,
+               "goals_against":15
+            },
+            "home":{
+               "games_played":7,
+               "won":5,
+               "draw":2,
+               "lost":0,
+               "goals_scored":9,
+               "goals_against":3
+            },
+            "away":{
+               "games_played":8,
+               "won":2,
+               "draw":1,
+               "lost":5,
+               "goals_scored":4,
+               "goals_against":12
+            },
+            "total":{
+               "goal_difference":"-2",
+               "points":24
+            },
+            "result":"None",
+            "points":24,
+            "recent_form":"DLWLW",
+            "status":"up"
+         },
+         {
+            "position":7,
+            "team_id":16614,
+            "team_name":"WAFA",
+            "round":{
+               "id":144303,
+               "name":15
+            },
+            "group":{
+               "id":null,
+               "name":null
+            },
+            "overall":{
+               "games_played":15,
+               "won":5,
+               "draw":5,
+               "lost":5,
+               "goals_scored":22,
+               "goals_against":17
+            },
+            "home":{
+               "games_played":7,
+               "won":2,
+               "draw":4,
+               "lost":1,
+               "goals_scored":12,
+               "goals_against":6
+            },
+            "away":{
+               "games_played":8,
+               "won":3,
+               "draw":1,
+               "lost":4,
+               "goals_scored":10,
+               "goals_against":11
+            },
+            "total":{
+               "goal_difference":"+5",
+               "points":20
+            },
+            "result":"None",
+            "points":20,
+            "recent_form":"LDDDW",
+            "status":"down"
+         },
+         {
+            "position":8,
+            "team_id":27591,
+            "team_name":"Elmina Sharks",
+            "round":{
+               "id":144303,
+               "name":15
+            },
+            "group":{
+               "id":null,
+               "name":null
+            },
+            "overall":{
+               "games_played":14,
+               "won":4,
+               "draw":8,
+               "lost":2,
+               "goals_scored":14,
+               "goals_against":12
+            },
+            "home":{
+               "games_played":7,
+               "won":3,
+               "draw":4,
+               "lost":0,
+               "goals_scored":7,
+               "goals_against":3
+            },
+            "away":{
+               "games_played":7,
+               "won":1,
+               "draw":4,
+               "lost":2,
+               "goals_scored":7,
+               "goals_against":9
+            },
+            "total":{
+               "goal_difference":"+2",
+               "points":20
+            },
+            "result":"None",
+            "points":20,
+            "recent_form":"DDLDD",
+            "status":"up"
+         },
+         {
+            "position":9,
+            "team_id":5384,
+            "team_name":"Berekum Chelsea",
+            "round":{
+               "id":144303,
+               "name":15
+            },
+            "group":{
+               "id":null,
+               "name":null
+            },
+            "overall":{
+               "games_played":15,
+               "won":5,
+               "draw":4,
+               "lost":6,
+               "goals_scored":14,
+               "goals_against":14
+            },
+            "home":{
+               "games_played":8,
+               "won":5,
+               "draw":2,
+               "lost":1,
+               "goals_scored":12,
+               "goals_against":6
+            },
+            "away":{
+               "games_played":7,
+               "won":0,
+               "draw":2,
+               "lost":5,
+               "goals_scored":2,
+               "goals_against":8
+            },
+            "total":{
+               "goal_difference":"+0",
+               "points":19
+            },
+            "result":"None",
+            "points":19,
+            "recent_form":"WLWDL",
+            "status":"up"
+         },
+         {
+            "position":10,
+            "team_id":13854,
+            "team_name":"Bechem United",
+            "round":{
+               "id":144303,
+               "name":15
+            },
+            "group":{
+               "id":null,
+               "name":null
+            },
+            "overall":{
+               "games_played":15,
+               "won":5,
+               "draw":4,
+               "lost":6,
+               "goals_scored":17,
+               "goals_against":20
+            },
+            "home":{
+               "games_played":9,
+               "won":5,
+               "draw":2,
+               "lost":2,
+               "goals_scored":15,
+               "goals_against":12
+            },
+            "away":{
+               "games_played":6,
+               "won":0,
+               "draw":2,
+               "lost":4,
+               "goals_scored":2,
+               "goals_against":8
+            },
+            "total":{
+               "goal_difference":"-3",
+               "points":19
+            },
+            "result":"None",
+            "points":19,
+            "recent_form":"WLLLD",
+            "status":"up"
+         },
+         {
+            "position":11,
+            "team_id":149110,
+            "team_name":"Eleven Wonders",
+            "round":{
+               "id":144303,
+               "name":15
+            },
+            "group":{
+               "id":null,
+               "name":null
+            },
+            "overall":{
+               "games_played":15,
+               "won":5,
+               "draw":2,
+               "lost":8,
+               "goals_scored":13,
+               "goals_against":16
+            },
+            "home":{
+               "games_played":6,
+               "won":4,
+               "draw":1,
+               "lost":1,
+               "goals_scored":8,
+               "goals_against":4
+            },
+            "away":{
+               "games_played":9,
+               "won":1,
+               "draw":1,
+               "lost":7,
+               "goals_scored":5,
+               "goals_against":12
+            },
+            "total":{
+               "goal_difference":"-3",
+               "points":17
+            },
+            "result":"None",
+            "points":17,
+            "recent_form":"LWLWL",
+            "status":"down"
+         },
+         {
+            "position":12,
+            "team_id":16607,
+            "team_name":"Liberty Professionals",
+            "round":{
+               "id":144303,
+               "name":15
+            },
+            "group":{
+               "id":null,
+               "name":null
+            },
+            "overall":{
+               "games_played":15,
+               "won":4,
+               "draw":5,
+               "lost":6,
+               "goals_scored":15,
+               "goals_against":18
+            },
+            "home":{
+               "games_played":7,
+               "won":2,
+               "draw":3,
+               "lost":2,
+               "goals_scored":6,
+               "goals_against":7
+            },
+            "away":{
+               "games_played":8,
+               "won":2,
+               "draw":2,
+               "lost":4,
+               "goals_scored":9,
+               "goals_against":11
+            },
+            "total":{
+               "goal_difference":"-3",
+               "points":17
+            },
+            "result":"None",
+            "points":17,
+            "recent_form":"DDWLW",
+            "status":"same"
+         },
+         {
+            "position":13,
+            "team_id":6789,
+            "team_name":"Hearts of Oak",
+            "round":{
+               "id":144303,
+               "name":15
+            },
+            "group":{
+               "id":null,
+               "name":null
+            },
+            "overall":{
+               "games_played":14,
+               "won":4,
+               "draw":5,
+               "lost":5,
+               "goals_scored":13,
+               "goals_against":16
+            },
+            "home":{
+               "games_played":8,
+               "won":2,
+               "draw":4,
+               "lost":2,
+               "goals_scored":8,
+               "goals_against":8
+            },
+            "away":{
+               "games_played":6,
+               "won":2,
+               "draw":1,
+               "lost":3,
+               "goals_scored":5,
+               "goals_against":8
+            },
+            "total":{
+               "goal_difference":"-3",
+               "points":17
+            },
+            "result":"None",
+            "points":17,
+            "recent_form":"DLDDW",
+            "status":"same"
+         },
+         {
+            "position":14,
+            "team_id":13144,
+            "team_name":"Aduana Stars",
+            "round":{
+               "id":144303,
+               "name":15
+            },
+            "group":{
+               "id":null,
+               "name":null
+            },
+            "overall":{
+               "games_played":12,
+               "won":4,
+               "draw":2,
+               "lost":6,
+               "goals_scored":18,
+               "goals_against":16
+            },
+            "home":{
+               "games_played":5,
+               "won":4,
+               "draw":1,
+               "lost":0,
+               "goals_scored":15,
+               "goals_against":4
+            },
+            "away":{
+               "games_played":7,
+               "won":0,
+               "draw":1,
+               "lost":6,
+               "goals_scored":3,
+               "goals_against":12
+            },
+            "total":{
+               "goal_difference":"+2",
+               "points":14
+            },
+            "result":"Relegation",
+            "points":14,
+            "recent_form":"LLWLL",
+            "status":"same"
+         },
+         {
+            "position":15,
+            "team_id":10094,
+            "team_name":"Ebusua Dwarfs",
+            "round":{
+               "id":144303,
+               "name":15
+            },
+            "group":{
+               "id":null,
+               "name":null
+            },
+            "overall":{
+               "games_played":14,
+               "won":3,
+               "draw":5,
+               "lost":6,
+               "goals_scored":13,
+               "goals_against":20
+            },
+            "home":{
+               "games_played":7,
+               "won":3,
+               "draw":2,
+               "lost":2,
+               "goals_scored":9,
+               "goals_against":8
+            },
+            "away":{
+               "games_played":7,
+               "won":0,
+               "draw":3,
+               "lost":4,
+               "goals_scored":4,
+               "goals_against":12
+            },
+            "total":{
+               "goal_difference":"-7",
+               "points":14
+            },
+            "result":"Relegation",
+            "points":14,
+            "recent_form":"DDWLD",
+            "status":"same"
+         },
+         {
+            "position":16,
+            "team_id":8786,
+            "team_name":"Wa All Stars",
+            "round":{
+               "id":144303,
+               "name":15
+            },
+            "group":{
+               "id":null,
+               "name":null
+            },
+            "overall":{
+               "games_played":14,
+               "won":2,
+               "draw":4,
+               "lost":8,
+               "goals_scored":8,
+               "goals_against":18
+            },
+            "home":{
+               "games_played":8,
+               "won":2,
+               "draw":2,
+               "lost":4,
+               "goals_scored":3,
+               "goals_against":6
+            },
+            "away":{
+               "games_played":6,
+               "won":0,
+               "draw":2,
+               "lost":4,
+               "goals_scored":5,
+               "goals_against":12
+            },
+            "total":{
+               "goal_difference":"-10",
+               "points":10
+            },
+            "result":"Relegation",
+            "points":10,
+            "recent_form":"WLLDD",
+            "status":"same"
+         }
+      ]
+   }
+}
                    
 
 ## Season by ID  [/seasons{?user,token,t,id}]
