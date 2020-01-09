@@ -8446,17 +8446,20 @@ The Match Stats endpoint gives you the statistics of a single match
                 }
                 
 
-##League Stats  [/stats{?user,token,id,t}]
+       
+## League Stats Current Season [/stats{?user,token,t,league_id}]
+
+This endpoint allows you to get league stats by ID. By default it will return the current Season 
 
 + Parameters
     + user - YOUR USER
     + token - YOUR TOKEN
     + t - league
-    + id - LEAGUE ID
+    + league_id - LEAGUE ID
   
  
 
-### TEST ENDPOINT [GET] 
+### GET League Stats Current Season [GET] 
 
 
 + Request (application/json)
@@ -8477,14 +8480,14 @@ The Match Stats endpoint gives you the statistics of a single match
         "season_id": 15818,
         "number_of_teams": 15,
         "number_of_matches": 210,
-        "number_of_matches_played": 196,
-        "number_of_goals": 581,
-        "matches_both_teams_scored": 89,
-        "number_of_yellowcards": 648,
-        "number_of_yellowredcards": 17,
-        "number_of_redcards": 14,
-        "avg_goals_per_match": "2.96",
-        "avg_yellowcards_per_match": "3.31",
+        "number_of_matches_played": 210,
+        "number_of_goals": 636,
+        "matches_both_teams_scored": 98,
+        "number_of_yellowcards": 714,
+        "number_of_yellowredcards": 19,
+        "number_of_redcards": 15,
+        "avg_goals_per_match": "3.03",
+        "avg_yellowcards_per_match": "3.40",
         "avg_yellowredcards_per_match": "0.09",
         "avg_redcards_per_match": "0.07",
         "team_with_most_goals_id": 5712,
@@ -8495,38 +8498,40 @@ The Match Stats endpoint gives you the statistics of a single match
         "team_most_cleansheets_id": 6545,
         "team_most_cleansheets_number": 16,
         "goals_scored_minutes": {
-            "0-15": "11.6%",
-            "15-30": "16.21%",
+            "0-15": "12.17%",
+            "15-30": "15.6%",
             "30-45": "16.38%",
-            "45-60": "18.09%",
-            "60-75": "18.43%",
-            "75-90": "23.72%"
+            "45-60": "17.32%",
+            "60-75": "18.72%",
+            "75-90": "24.18%"
         },
-        "goalkeeper_most_cleansheets_id": 58468,
+        "goalkeeper_most_cleansheets_id": 59793,
         "goalkeeper_most_cleansheets_number": 16,
         "goal_scored_every_minutes": 25,
-        "btts": "45.41",
+        "btts": "46.67",
         "goal_line": {
             "over": {
-                "0_5": 90.82,
-                "1_5": 76.02,
-                "2_5": 56.12,
-                "3_5": 39.29,
-                "4_5": 18.88,
-                "5_5": 9.18
+                "0_5": 91.43,
+                "1_5": 77.14,
+                "2_5": 57.62,
+                "3_5": 39.05,
+                "4_5": 19.52,
+                "5_5": 10
             },
             "under": {
-                "0_5": 9.18,
-                "1_5": 23.98,
-                "2_5": 43.88,
-                "3_5": 60.71,
-                "4_5": 81.12,
-                "5_5": 90.82
+                "0_5": 8.57,
+                "1_5": 22.86,
+                "2_5": 42.38,
+                "3_5": 60.95,
+                "4_5": 80.48,
+                "5_5": 90
             }
         }
-    }
+   }
     
-## Stats by Season [/stats{?user,token,t,id}]
+## Season Stats [/stats{?user,token,t,season_id}]
+
+This endpoint allows you to get Season stats by ID
 
 + Parameters
     + user - YOUR USER
@@ -8536,7 +8541,7 @@ The Match Stats endpoint gives you the statistics of a single match
   
  
 
-### TEST ENDPOINT [GET] 
+### GET Season Stats [GET] 
 
 
 + Request (application/json)
@@ -8553,7 +8558,7 @@ The Match Stats endpoint gives you the statistics of a single match
     + Body
 
  
-         {
+        {
         "season_id": 15378,
         "number_of_teams": 10,
         "number_of_matches": 62,
@@ -8605,20 +8610,21 @@ The Match Stats endpoint gives you the statistics of a single match
             }
         }
     }
-    
 
-    
-## Seasons  [/seasons{?user,token,id,t}]
+## Team Stats [/stats{?user,token,t,id,season_id}]
+
+This endpoint allows you to get Team stats by Team ID and Season ID
 
 + Parameters
     + user - YOUR USER
     + token - YOUR TOKEN
-    + t - info
-    + id - SEASON ID
-   
+    + t - team
+    + id - TEAM ID
+    + season_id - SEASON ID
+  
  
 
-### TEST ENDPOINT [GET] 
+### GET Team Stats [GET] 
 
 
 + Request (application/json)
@@ -8629,63 +8635,212 @@ The Match Stats endpoint gives you the statistics of a single match
 
     + Headers
 
-            Location: /seasons
+            Location: /stats
  
     
     + Body
 
  
-{
-        "id": 16058,
-        "name": "2019/2020",
-        "league_id": 309,
-        "is_current": "1",
-        "stages": [
+         {
+        "stage_id": 77443900,
+        "win": {
+            "total": 8,
+            "home": 5,
+            "away": 3
+        },
+        "draw": {
+            "total": 7,
+            "home": 4,
+            "away": 3
+        },
+        "lost": {
+            "total": 6,
+            "home": 1,
+            "away": 5
+        },
+        "goals_for": {
+            "total": 32,
+            "home": 20,
+            "away": 12
+        },
+        "goals_against": {
+            "total": 25,
+            "home": 10,
+            "away": 15
+        },
+        "clean_sheet": {
+            "total": 3,
+            "home": 2,
+            "away": 1
+        },
+        "failed_to_score": {
+            "total": 5,
+            "home": 0,
+            "away": 5
+        },
+        "scoring_minutes": [
             {
-                "id": 77443835,
-                "name": "Europa League Play-offs - Final"
-            },
-            {
-                "id": 77443836,
-                "name": "Europa League Play-offs - Semi-finals"
-            },
-            {
-                "id": 77443837,
-                "name": "Europa League Play-offs - Quarter-finals"
-            },
-            {
-                "id": 77443838,
-                "name": "Relegation Round"
-            },
-            {
-                "id": 77443839,
-                "name": "Championship Round"
-            },
-            {
-                "id": 77443840,
-                "name": "Regular Season"
-            },
-            {
-                "id": 77444047,
-                "name": "Relegation Round"
-            },
-            {
-                "id": 77444048,
-                "name": "Championship Round"
-            },
-            {
-                "id": 77444049,
-                "name": "Regular Season"
+                "period": [
+                    {
+                        "minute": "0-15",
+                        "count": 3,
+                        "percentage": 9.4
+                    },
+                    {
+                        "minute": "15-30",
+                        "count": 9,
+                        "percentage": 28.1
+                    },
+                    {
+                        "minute": "30-45",
+                        "count": 6,
+                        "percentage": 18.8
+                    },
+                    {
+                        "minute": "45-60",
+                        "count": 2,
+                        "percentage": 6.3
+                    },
+                    {
+                        "minute": "60-75",
+                        "count": 6,
+                        "percentage": 18.8
+                    },
+                    {
+                        "minute": "75-90",
+                        "count": 6,
+                        "percentage": 18.8
+                    }
+                ]
             }
-        ]
+        ],
+        "avg_goals_per_game_scored": {
+            "total": 1.52,
+            "home": 2,
+            "away": 1.09
+        },
+        "avg_goals_per_game_conceded": {
+            "total": 1.19,
+            "home": 1,
+            "away": 1.36
+        },
+        "avg_first_goal_scored": {
+            "total": "36m",
+            "home": "38m",
+            "away": "33m"
+        },
+        "avg_first_goal_conceded": {
+            "total": "49m",
+            "home": "52m",
+            "away": "44m"
+        },
+        "attacks": 2364,
+        "dangerous_attacks": 1125,
+        "avg_ball_possession_percentage": "55.19",
+        "fouls": 229,
+        "avg_fouls_per_game": "10.90",
+        "offsides": 29,
+        "redcards": 0,
+        "yellowcards": 41,
+        "shots_blocked": 28,
+        "shots_off_target": 177,
+        "avg_shots_off_target_per_game": "8.43",
+        "shots_on_target": 112,
+        "avg_shots_on_target_per_game": "5.33",
+        "avg_corners": "5.48",
+        "total_corners": 115,
+        "btts": 61.9
     }
-  
-  
+    
 
+## Player Stats [/stats{?user,token,t,id,season_id}]
 
+The Player Stats Endpoint gives you singular player statistics by season ID
+
++ Parameters
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - team
+    + id - PLAYER ID
+    + season_id - SEASON ID
+  
  
 
+### GET Player Stats [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /stats
+ 
+    
+    + Body
+
+ 
+         {
+        "player_id": 1000,
+        "team_id": 41,
+        "league_id": 46,
+        "season_id": 3,
+        "captain": 0,
+        "minutes_played": 0,
+        "appearences": 0,
+        "lineups": 2,
+        "substitute_in": 3,
+        "substitute_out": 2,
+        "substitutes_on_bench": 6,
+        "goals": 0,
+        "assists": 0,
+        "saves": 0,
+        "inside_box_saves": 0,
+        "dispossesed": 0,
+        "interceptions": 0,
+        "yellowcards": 0,
+        "redcards": 0,
+        "type": "domestic",
+        "tackles": null,
+        "blocks": null,
+        "hit_post": null,
+        "fouls": {
+            "committed": null,
+            "drawn": null
+        },
+        "crosses": {
+            "total": null,
+            "accurate": null
+        },
+        "dribbles": {
+            "attempts": null,
+            "success": null,
+            "dribbled_past": null
+        },
+        "duels": {
+            "total": null,
+            "won": null
+        },
+        "passes": {
+            "total": null,
+            "accuracy": null,
+            "key_passes": null
+        },
+        "penalties": {
+            "won": null,
+            "scores": null,
+            "missed": null,
+            "committed": null,
+            "saves": null
+        }
+    }
+
 ## Topscorers  [/topscorers{?user,token,t,id_season}]
+
+The Topscorers Endpoint gives you a list of players leaders in goals, assists and cards by season
 
 + Parameters
     
@@ -8697,7 +8852,7 @@ The Match Stats endpoint gives you the statistics of a single match
     
     
 
-### TEST ENDPOINT [GET] 
+### GET Topscorers [GET] 
 
 
 + Request (application/json)
@@ -8806,216 +8961,9 @@ The Match Stats endpoint gives you the statistics of a single match
                 "stage_id": 7401010,
                 "assists": 9,
                 "type": "assists"
-            },
+            } 
+    
  
-...
-    
-    
-
-    
-    
-
-    
-## Team Stats  [/stats{?user,token,t,id,id_season}]
-
-+ Parameters
-    
-    + user - YOUR USER
-    + token - YOUR TOKEN
-    + t - team
-    + id - TEAM ID
-    + id_season - SEASON ID
-     
-    
-    
-
-### TEST ENDPOINT [GET]  
-
-
-+ Request (application/json)
-
-+ Response 200 (application/json)
- 
-
-
-    + Headers
-
-            Location: /teams
- 
-    
-    + Body
-    
-{
-        "stage_id": 77443900,
-        "win": {
-            "total": 3,
-            "home": 2,
-            "away": 1
-        },
-        "draw": {
-            "total": 4,
-            "home": 2,
-            "away": 2
-        },
-        "lost": {
-            "total": 4,
-            "home": 1,
-            "away": 3
-        },
-        "goals_for": {
-            "total": 13,
-            "home": 8,
-            "away": 5
-        },
-        "goals_against": {
-            "total": 11,
-            "home": 4,
-            "away": 7
-        },
-        "clean_sheet": {
-            "total": 2,
-            "home": 2,
-            "away": 0
-        },
-        "failed_to_score": {
-            "total": 3,
-            "home": 0,
-            "away": 3
-        },
-        "scoring_minutes": [
-            {
-                "period": [
-                    {
-                        "minute": "0-15",
-                        "count": 2,
-                        "percentage": 15.4
-                    },
-                    {
-                        "minute": "15-30",
-                        "count": 4,
-                        "percentage": 30.8
-                    },
-                    {
-                        "minute": "30-45",
-                        "count": 2,
-                        "percentage": 15.4
-                    },
-                    {
-                        "minute": "45-60",
-                        "count": 0,
-                        "percentage": 0
-                    },
-                    {
-                        "minute": "60-75",
-                        "count": 3,
-                        "percentage": 23.1
-                    },
-                    {
-                        "minute": "75-90",
-                        "count": 2,
-                        "percentage": 15.4
-                    }
-                ]
-            }
-        ],
-        "avg_goals_per_game_scored": {
-            "total": 1.18,
-            "home": 1.6,
-            "away": 0.83
-        },
-        "avg_goals_per_game_conceded": {
-            "total": 1,
-            "home": 0.8,
-            "away": 1.17
-        },
-        "avg_first_goal_scored": {
-            "total": "32m",
-            "home": "39m",
-            "away": "19m"
-        },
-        "avg_first_goal_conceded": {
-            "total": "60m",
-            "home": "60m",
-            "away": "58m"
-        },
-        "attacks": 1213,
-        "dangerous_attacks": 584,
-        "avg_ball_possession_percentage": "54.82",
-        "fouls": 118,
-        "avg_fouls_per_game": "10.73",
-        "offsides": 17,
-        "redcards": 0,
-        "yellowcards": 24,
-        "shots_blocked": 28,
-        "shots_off_target": 88,
-        "avg_shots_off_target_per_game": "8.00",
-        "shots_on_target": 48,
-        "avg_shots_on_target_per_game": "4.36",
-        "btts": 54.55,
-        "goal_line": {
-            "over": {
-                "0_5": {
-                    "home": 100,
-                    "away": 50
-                },
-                "1_5": {
-                    "home": 20,
-                    "away": 16.67
-                },
-                "2_5": {
-                    "home": 20,
-                    "away": 16.67
-                },
-                "3_5": {
-                    "home": 20,
-                    "away": 0
-                },
-                "4_5": {
-                    "home": 0,
-                    "away": 0
-                },
-                "5_5": {
-                    "home": 0,
-                    "away": 0
-                }
-            },
-            "under": {
-                "0_5": {
-                    "home": 0,
-                    "away": 0
-                },
-                "1_5": {
-                    "home": 20,
-                    "away": 33.33
-                },
-                "2_5": {
-                    "home": 60,
-                    "away": 83.33
-                },
-                "3_5": {
-                    "home": 80,
-                    "away": 83.33
-                },
-                "4_5": {
-                    "home": 100,
-                    "away": 100
-                },
-                "5_5": {
-                    "home": 100,
-                    "away": 100
-                }
-            }
-        }
-    }
-
-
-    
-   
-    
-
-   
- 
-
 
 ## Player Info  [/players{?user,token,t,id}]
 
