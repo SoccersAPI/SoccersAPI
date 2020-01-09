@@ -5879,6 +5879,2573 @@ The Fixtures by Stage Endpoint gives you fixtures from a single stage and Team
             }
         }
 
+
+## Fixtures by Round  [/fixtures{?user,token,t,round_id}]
+
+The Fixtures by Round Endpoint gives you fixtures from a single round
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - round
+    + round_id - ROUND ID
+    
+ 
+### GET Fixtures by Round [GET]  
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+   {
+            "id": 11352948,
+            "status": 3,
+            "pitch": null,
+            "referee_id": 15438,
+            "round_id": 159791,
+            "season_id": 15512,
+            "stage_id": 77441847,
+            "group_id": 207836,
+            "aggregate_id": null,
+            "winner_team_id": 18759,
+            "venue_id": null,
+            "leg": "1/1",
+            "deleted": false,
+            "time": {
+                "datetime": "2019-03-24 14:00:00",
+                "date": "2019-03-24",
+                "time": "14:00:00",
+                "minute": 90,
+                "timestamp": 1553436000,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 18759
+                },
+                "away": {
+                    "id": 18686
+                }
+            },
+            "league": {
+                "id": 1363
+            },
+            "scores": {
+                "home_score": 1,
+                "away_score": 0,
+                "ht_score": "1-0",
+                "ft_score": "1-0",
+                "et_score": null,
+                "ps_score": null
+            },
+            "standings": {
+                "home_position": 5,
+                "away_position": 1
+            },
+            "assistants": {
+                "first_assistant_id": 15439,
+                "second_assistant_id": 12071,
+                "fourth_assistant_id": null
+            }
+        },
+        {
+            "id": 11353059,
+            "status": 3,
+            "pitch": null,
+            "referee_id": 19404,
+            "round_id": 159791,
+            "season_id": 15512,
+            "stage_id": 77441847,
+            "group_id": 207840,
+            "aggregate_id": null,
+            "winner_team_id": 18740,
+            "venue_id": null,
+            "leg": "1/1",
+            "deleted": false,
+            "time": {
+                "datetime": "2019-03-24 14:00:00",
+                "date": "2019-03-24",
+                "time": "14:00:00",
+                "minute": 90,
+                "timestamp": 1553436000,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 18641
+                },
+                "away": {
+                    "id": 18740
+                }
+            },
+            "league": {
+                "id": 1363
+            },
+            "scores": {
+                "home_score": 0,
+                "away_score": 4,
+                "ht_score": "0-2",
+                "ft_score": "0-4",
+                "et_score": null,
+                "ps_score": null
+            },
+            "standings": {
+                "home_position": 2,
+                "away_position": 4
+            },
+            "assistants": {
+                "first_assistant_id": 16720,
+                "second_assistant_id": 19405,
+                "fourth_assistant_id": null
+            }
+        },
+        {
+            "id": 11352949,
+            "status": 3,
+            "pitch": null,
+            "referee_id": 14897,
+            "round_id": 159791,
+            "season_id": 15512,
+            "stage_id": 77441847,
+            "group_id": 207836,
+            "aggregate_id": null,
+            "winner_team_id": 18770,
+            "venue_id": 6817,
+            "leg": "1/1",
+            "deleted": false,
+            "time": {
+                "datetime": "2019-03-24 17:00:00",
+                "date": "2019-03-24",
+                "time": "17:00:00",
+                "minute": 90,
+                "timestamp": 1553446800,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 18770
+                },
+                "away": {
+                    "id": 18626
+                }
+            },
+            "league": {
+                "id": 1363
+            },
+            "scores": {
+                "home_score": 2,
+                "away_score": 1,
+                "ht_score": "1-1",
+                "ft_score": "2-1",
+                "et_score": null,
+                "ps_score": null
+            },
+            "standings": {
+                "home_position": 4,
+                "away_position": 2
+            },
+            "assistants": {
+                "first_assistant_id": 12156,
+                "second_assistant_id": 15855,
+                "fourth_assistant_id": null
+            }
+        }
+
+
+## Fixtures by Round / Team  [/fixtures{?user,token,t,round_id, team_id}]
+
+The Fixtures by Round Endpoint gives you fixtures from a single round
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - round
+    + round_id - ROUND ID
+    + team_id - TEAM ID
+    
+ 
+### GET Fixtures by Round / Team [GET]  
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+   {
+            "id": 11352868,
+            "status": 3,
+            "pitch": null,
+            "referee_id": 17830,
+            "round_id": 159791,
+            "season_id": 15512,
+            "stage_id": 77441847,
+            "group_id": 207832,
+            "aggregate_id": null,
+            "winner_team_id": 18683,
+            "venue_id": 3638,
+            "leg": "1/1",
+            "deleted": false,
+            "time": {
+                "datetime": "2019-03-25 19:45:00",
+                "date": "2019-03-25",
+                "time": "19:45:00",
+                "minute": 90,
+                "timestamp": 1553543100,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 18874
+                },
+                "away": {
+                    "id": 18683
+                }
+            },
+            "league": {
+                "id": 1363
+            },
+            "scores": {
+                "home_score": 1,
+                "away_score": 5,
+                "ht_score": "1-2",
+                "ft_score": "1-5",
+                "et_score": null,
+                "ps_score": null
+            },
+            "standings": {
+                "home_position": 3,
+                "away_position": 1
+            },
+            "assistants": {
+                "first_assistant_id": 17832,
+                "second_assistant_id": 17834,
+                "fourth_assistant_id": null
+            }
+        }
+
+
+## Match by ID  [/fixtures{?user,token,t,id _}]
+
+The Match by ID Endpoint gives you information from a specific match
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - info
+    + id - MATCH ID
+    
+ 
+### GET Match by ID [GET]  
+ 
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+    + Headers
+
+            Location: /fixtures
+ 
+    + Body
+    
+    {
+        "id": 10353539,
+        "status": "3",
+        "time": {
+            "datetime": "2018-05-03 12:00:00",
+            "date": "2018-05-03",
+            "time": "12:00:00",
+            "minute": "90",
+            "timestamp": 1525341600,
+            "timezone": "UTC"
+        },
+        "teams": {
+            "home": {
+                "id": 134493,
+                "name": "Hradec Kralove U21",
+                "img": "https://cdn.soccersapi.com//images/soccer/teams/150/134493.png",
+                "form": "",
+                "coach_id": null
+            },
+            "away": {
+                "id": 76842,
+                "name": "Liberec U21",
+                "img": "https://cdn.soccersapi.com//images/soccer/teams/150/76842.png",
+                "form": "",
+                "coach_id": null
+            }
+        },
+        "league": {
+            "id": 1465,
+            "name": "Youth League",
+            "country_id": 283,
+            "country_name": "Czech Republic"
+        },
+        "scores": {
+            "home_score": "0",
+            "away_score": "0",
+            "ht_score": "0-0",
+            "ft_score": "0-0",
+            "et_score": ""
+        },
+        "stadium_id": null,
+        "referee_id": null,
+        "round_id": null,
+        "season_id": 10032,
+        "stage_id": null,
+        "venue_id": null
+    }
+
+## Match Commentary  [/fixtures{?user,token,t,id,order}]
+
+The Match Commentary Endpoint gives you commentaries by Match ID
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match_comments
+    + id - MATCH ID
+    + order - ASC or DESC
+  
+### GET Match Commentary [GET]  
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+        {
+            "important": false,
+            "order": 2,
+            "goal": false,
+            "minute": 1,
+            "extra_minute": null,
+            "comment": "Casemiro  - Real Madrid -  won a free kick in defence."
+        },
+        {
+            "important": false,
+            "order": 3,
+            "goal": false,
+            "minute": 1,
+            "extra_minute": null,
+            "comment": "Fouled by Ivan Rakitic  - Barcelona"
+        },
+        {
+            "important": false,
+            "order": 4,
+            "goal": false,
+            "minute": 4,
+            "extra_minute": null,
+            "comment": "Shot blocked. Luis Suárez  - Barcelona -  shot with right foot from the right side of the box is blocked. Assist -  Lionel Messi."
+        } 
+
+
+## Match Events [/fixtures{?user,token,t,id,____}]
+
+The Match Events Endpoint gives the list ofevents / occurrences by Match ID
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match_events
+    + id - MATCH ID
+ 
+
+### GET Match Events [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+        {
+            "team_id": 121,
+            "type": "substitution",
+            "player_id": 186133,
+            "player_name": "A. Paco",
+            "related_player_id": 985,
+            "related_player_name": "L. Suarez",
+            "minute": 90,
+            "extra_minute": 2,
+            "reason": null,
+            "injuried": null,
+            "result": null
+        },
+        {
+            "team_id": 121,
+            "type": "yellowcard",
+            "player_id": 30030,
+            "player_name": "I. Rakitic",
+            "related_player_id": null,
+            "related_player_name": null,
+            "minute": 85,
+            "extra_minute": null,
+            "reason": "Foul",
+            "injuried": null,
+            "result": null
+        },
+        {
+            "team_id": 3506,
+            "type": "substitution",
+            "player_id": 73185,
+            "player_name": "M. Kovacic",
+            "related_player_id": 30327,
+            "related_player_name": "T. Kroos",
+            "minute": 84,
+            "extra_minute": null,
+            "reason": null,
+            "injuried": null,
+            "result": null
+        }
+
+## Match Lineups [/fixtures{?user,token,t,id,______}]
+
+The Match Lineups Endpoint gives you starting Lineups by Match ID
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match_lineups
+    + id - MATCH ID
+ 
+### GET Match Lineups [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+          {
+            "team_id": 121,
+            "player_id": 31322,
+            "player_name": "Marc-André ter Stegen",
+            "number": 1,
+            "position": "G",
+            "formation_position": 1,
+            "posx": null,
+            "posy": null,
+            "stats": {
+                "shots": {
+                    "shots_total": 0,
+                    "shots_on_goal": 0
+                },
+                "goals": {
+                    "scored": 0,
+                    "conceded": 2
+                },
+                "fouls": {
+                    "drawn": 0,
+                    "committed": 0
+                },
+                "cards": {
+                    "yellowcards": 0,
+                    "redcards": 0
+                },
+                "passing": {
+                    "total_crosses": 0,
+                    "crosses_accuracy": 0,
+                    "passes": 13,
+                    "passes_accuracy": 54
+                },
+                "other": {
+                    "assists": 0,
+                    "offsides": 0,
+                    "saves": 3,
+                    "pen_scored": 0,
+                    "pen_missed": 0,
+                    "pen_saved": 0,
+                    "tackles": 0,
+                    "blocks": 0,
+                    "interceptions": 0,
+                    "clearances": 0,
+                    "minutes_played": 90
+                }
+            }
+        },
+        {
+            "team_id": 121,
+            "player_id": 186077,
+            "player_name": "Sergi Roberto",
+            "number": 20,
+            "position": "D",
+            "formation_position": 2,
+            "posx": null,
+            "posy": null,
+            "stats": {
+                "shots": {
+                    "shots_total": 0,
+                    "shots_on_goal": 0
+                },
+                "goals": {
+                    "scored": 0,
+                    "conceded": 0
+                },
+                "fouls": {
+                    "drawn": 0,
+                    "committed": 1
+                },
+                "cards": {
+                    "yellowcards": 0,
+                    "redcards": 1
+                },
+                "passing": {
+                    "total_crosses": 1,
+                    "crosses_accuracy": 1,
+                    "passes": 34,
+                    "passes_accuracy": 94
+                },
+                "other": {
+                    "assists": 1,
+                    "offsides": 0,
+                    "saves": 0,
+                    "pen_scored": 0,
+                    "pen_missed": 0,
+                    "pen_saved": 0,
+                    "tackles": 0,
+                    "blocks": 0,
+                    "interceptions": 0,
+                    "clearances": 0,
+                    "minutes_played": 90
+                }
+            }
+        },
+        {
+            "team_id": 121,
+            "player_id": 3817,
+            "player_name": "Gerard Piqué",
+            "number": 3,
+            "position": "D",
+            "formation_position": 3,
+            "posx": null,
+            "posy": null,
+            "stats": {
+                "shots": {
+                    "shots_total": 1,
+                    "shots_on_goal": 0
+                },
+                "goals": {
+                    "scored": 0,
+                    "conceded": 0
+                },
+                "fouls": {
+                    "drawn": 1,
+                    "committed": 0
+                },
+                "cards": {
+                    "yellowcards": 0,
+                    "redcards": 0
+                },
+                "passing": {
+                    "total_crosses": 0,
+                    "crosses_accuracy": 0,
+                    "passes": 36,
+                    "passes_accuracy": 83
+                },
+                "other": {
+                    "assists": 0,
+                    "offsides": 0,
+                    "saves": 0,
+                    "pen_scored": 0,
+                    "pen_missed": 0,
+                    "pen_saved": 0,
+                    "tackles": 4,
+                    "blocks": 1,
+                    "interceptions": 0,
+                    "clearances": 5,
+                    "minutes_played": 90
+                }
+            }
+        } 
+
+## Match Bench [/fixtures{?user,token,t,id,_______}]
+
+The Match Bench Endpoint gives you the bench of both teams
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match_bench
+    + id - MATCH ID
+ 
+### GET Match Bench [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+        {
+            "team_id": 121,
+            "player_id": 23780,
+            "player_name": "Jasper Cillessen",
+            "number": 13,
+            "position": "G",
+            "formation_position": null,
+            "posx": null,
+            "posy": null,
+            "stats": {
+                "shots": {
+                    "shots_total": null,
+                    "shots_on_goal": null
+                },
+                "goals": {
+                    "scored": null,
+                    "conceded": null
+                },
+                "fouls": {
+                    "drawn": null,
+                    "committed": null
+                },
+                "cards": {
+                    "yellowcards": null,
+                    "redcards": null
+                },
+                "passing": {
+                    "total_crosses": null,
+                    "crosses_accuracy": null,
+                    "passes": null,
+                    "passes_accuracy": null
+                },
+                "other": {
+                    "assists": null,
+                    "offsides": null,
+                    "saves": null,
+                    "pen_scored": null,
+                    "pen_missed": null,
+                    "pen_saved": null,
+                    "tackles": null,
+                    "blocks": null,
+                    "interceptions": null,
+                    "clearances": null,
+                    "minutes_played": null
+                }
+            }
+        },
+        {
+            "team_id": 121,
+            "player_id": 596,
+            "player_name": "Thomas Vermaelen",
+            "number": 25,
+            "position": "D",
+            "formation_position": null,
+            "posx": null,
+            "posy": null,
+            "stats": {
+                "shots": {
+                    "shots_total": null,
+                    "shots_on_goal": null
+                },
+                "goals": {
+                    "scored": null,
+                    "conceded": null
+                },
+                "fouls": {
+                    "drawn": null,
+                    "committed": null
+                },
+                "cards": {
+                    "yellowcards": null,
+                    "redcards": null
+                },
+                "passing": {
+                    "total_crosses": null,
+                    "crosses_accuracy": null,
+                    "passes": null,
+                    "passes_accuracy": null
+                },
+                "other": {
+                    "assists": null,
+                    "offsides": null,
+                    "saves": null,
+                    "pen_scored": null,
+                    "pen_missed": null,
+                    "pen_saved": null,
+                    "tackles": null,
+                    "blocks": null,
+                    "interceptions": null,
+                    "clearances": null,
+                    "minutes_played": null
+                }
+            }
+        },
+        {
+            "team_id": 121,
+            "player_id": 160148,
+            "player_name": "Nélson Semedo",
+            "number": 2,
+            "position": "D",
+            "formation_position": null,
+            "posx": null,
+            "posy": null,
+            "stats": {
+                "shots": {
+                    "shots_total": 0,
+                    "shots_on_goal": 0
+                },
+                "goals": {
+                    "scored": 0,
+                    "conceded": 0
+                },
+                "fouls": {
+                    "drawn": 1,
+                    "committed": 0
+                },
+                "cards": {
+                    "yellowcards": 0,
+                    "redcards": 0
+                },
+                "passing": {
+                    "total_crosses": 0,
+                    "crosses_accuracy": 0,
+                    "passes": 17,
+                    "passes_accuracy": 89
+                },
+                "other": {
+                    "assists": 0,
+                    "offsides": 0,
+                    "saves": 0,
+                    "pen_scored": 0,
+                    "pen_missed": 0,
+                    "pen_saved": 0,
+                    "tackles": 0,
+                    "blocks": 0,
+                    "interceptions": 1,
+                    "clearances": 1,
+                    "minutes_played": 44
+                }
+            }
+        } 
+
+
+## Match Sidelined [/fixtures{?user,token,t,id,________}]
+
+The Match Sidelined Endpoint gives you a list of players of both teams that missing the match
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match_sidelined
+    + id - MATCH ID
+ 
+
+### GET Match Sidelined [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+ []
+
+
+## Match Stats  [/stats{?user,token,t,id,___}]
+
+The Match Stats endpoint gives you the statistics of a single match
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match
+    + id - MATCH ID
+ 
+
+### GET Match Stats [GET]  
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /stats
+ 
+    
+    + Body
+    
+           {
+            "team_id": 121,
+            "shots": {
+                "total": 11,
+                "ongoal": 4,
+                "offgoal": 6,
+                "blocked": 3,
+                "insidebox": 9,
+                "outsidebox": 2
+            },
+            "passes": {
+                "total": 559,
+                "accurate": 486,
+                "percentage": 87
+            },
+            "attacks": {
+                "attacks": 97,
+                "dangerous_attacks": 52
+            },
+            "fouls": 8,
+            "corners": 6,
+            "offsides": 5,
+            "possessiontime": 50,
+            "yellowcards": 3,
+            "redcards": 1,
+            "yellowredcards": null,
+            "saves": 3,
+            "substitutions": 3,
+            "goal_kick": 11,
+            "goal_attempts": 8,
+            "free_kick": 21,
+            "throw_in": 13,
+            "ball_safe": 90,
+            "goals": null,
+            "penalties": null,
+            "injuries": 0
+        },
+        {
+            "team_id": 3506,
+            "shots": {
+                "total": 17,
+                "ongoal": 5,
+                "offgoal": 10,
+                "blocked": 4,
+                "insidebox": 9,
+                "outsidebox": 8
+            },
+            "passes": {
+                "total": 552,
+                "accurate": 503,
+                "percentage": 91
+            },
+            "attacks": {
+                "attacks": 86,
+                "dangerous_attacks": 63
+            },
+            "fouls": 20,
+            "corners": 5,
+            "offsides": 2,
+            "possessiontime": 50,
+            "yellowcards": 5,
+            "redcards": 0,
+            "yellowredcards": null,
+            "saves": 2,
+            "substitutions": 3,
+            "goal_kick": 6,
+            "goal_attempts": 13,
+            "free_kick": 13,
+            "throw_in": 9,
+            "ball_safe": 81,
+            "goals": null,
+            "penalties": null,
+            "injuries": 1
+        }
+        
+
+
+## Match Trend Analyses [/fixtures{?user,token,t,id,_____}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match_trends
+    + id - MATCH ID
+ 
+
+### GET Match Trend Analyses [GET]  
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+         {
+            "team_id": 121,
+            "type": "possession",
+            "analyses": [
+                {
+                    "minute": "0",
+                    "amount": "0"
+                },
+                {
+                    "minute": "1",
+                    "amount": "21"
+                },
+                {
+                    "minute": "2",
+                    "amount": "55"
+                },
+                {
+                    "minute": "3",
+                    "amount": "66"
+                },
+                {
+                    "minute": "4",
+                    "amount": "57"
+                },
+                {
+                    "minute": "5",
+                    "amount": "63"
+                },
+                {
+                    "minute": "6",
+                    "amount": "58"
+                },
+                {
+                    "minute": "7",
+                    "amount": "55"
+                },
+                {
+                    "minute": "8",
+                    "amount": "58"
+                },
+                {
+                    "minute": "9",
+                    "amount": "56"
+                },
+                {
+                    "minute": "10",
+                    "amount": "53"
+                },
+                {
+                    "minute": "11",
+                    "amount": "52"
+                },
+                {
+                    "minute": "12",
+                    "amount": "55"
+                },
+                {
+                    "minute": "13",
+                    "amount": "59"
+                },
+                {
+                    "minute": "14",
+                    "amount": "58"
+                },
+                {
+                    "minute": "16",
+                    "amount": "61"
+                },
+                {
+                    "minute": "17",
+                    "amount": "59"
+                },
+                {
+                    "minute": "18",
+                    "amount": "62"
+                },
+                {
+                    "minute": "19",
+                    "amount": "61"
+                },
+                {
+                    "minute": "20",
+                    "amount": "63"
+                },
+                {
+                    "minute": "21",
+                    "amount": "65"
+                },
+                {
+                    "minute": "22",
+                    "amount": "64"
+                },
+                {
+                    "minute": "23",
+                    "amount": "62"
+                },
+                {
+                    "minute": "24",
+                    "amount": "59"
+                },
+                {
+                    "minute": "25",
+                    "amount": "59"
+                },
+                {
+                    "minute": "27",
+                    "amount": "58"
+                },
+                {
+                    "minute": "28",
+                    "amount": "59"
+                },
+                {
+                    "minute": "29",
+                    "amount": "60"
+                },
+                {
+                    "minute": "30",
+                    "amount": "59"
+                },
+                {
+                    "minute": "31",
+                    "amount": "61"
+                },
+                {
+                    "minute": "32",
+                    "amount": "60"
+                },
+                {
+                    "minute": "33",
+                    "amount": "59"
+                },
+                {
+                    "minute": "34",
+                    "amount": "59"
+                },
+                {
+                    "minute": "36",
+                    "amount": "58"
+                },
+                {
+                    "minute": "37",
+                    "amount": "56"
+                },
+                {
+                    "minute": "39",
+                    "amount": "58"
+                },
+                {
+                    "minute": "40",
+                    "amount": "58"
+                },
+                {
+                    "minute": "41",
+                    "amount": "59"
+                },
+                {
+                    "minute": "42",
+                    "amount": "58"
+                },
+                {
+                    "minute": "44",
+                    "amount": "57"
+                },
+                {
+                    "minute": "45",
+                    "amount": "59"
+                },
+                {
+                    "minute": "47",
+                    "amount": "58"
+                },
+                {
+                    "minute": "46",
+                    "amount": "57"
+                },
+                {
+                    "minute": "48",
+                    "amount": "58"
+                },
+                {
+                    "minute": "49",
+                    "amount": "56"
+                },
+                {
+                    "minute": "50",
+                    "amount": "57"
+                },
+                {
+                    "minute": "51",
+                    "amount": "58"
+                },
+                {
+                    "minute": "53",
+                    "amount": "57"
+                },
+                {
+                    "minute": "60",
+                    "amount": "58"
+                },
+                {
+                    "minute": "63",
+                    "amount": "59"
+                },
+                {
+                    "minute": "64",
+                    "amount": "57"
+                },
+                {
+                    "minute": "66",
+                    "amount": "55"
+                },
+                {
+                    "minute": "67",
+                    "amount": "56"
+                },
+                {
+                    "minute": "68",
+                    "amount": "55"
+                },
+                {
+                    "minute": "70",
+                    "amount": "56"
+                },
+                {
+                    "minute": "71",
+                    "amount": "55"
+                },
+                {
+                    "minute": "73",
+                    "amount": "56"
+                },
+                {
+                    "minute": "74",
+                    "amount": "56"
+                },
+                {
+                    "minute": "76",
+                    "amount": "57"
+                },
+                {
+                    "minute": "77",
+                    "amount": "56"
+                },
+                {
+                    "minute": "78",
+                    "amount": "56"
+                },
+                {
+                    "minute": "80",
+                    "amount": "55"
+                },
+                {
+                    "minute": "81",
+                    "amount": "56"
+                },
+                {
+                    "minute": "82",
+                    "amount": "55"
+                },
+                {
+                    "minute": "85",
+                    "amount": "54"
+                },
+                {
+                    "minute": "88",
+                    "amount": "53"
+                },
+                {
+                    "minute": "89",
+                    "amount": "54"
+                },
+                {
+                    "minute": "90",
+                    "amount": "53"
+                },
+                {
+                    "minute": "94",
+                    "amount": "52"
+                }
+            ]
+        },
+        {
+            "team_id": 3506,
+            "type": "possession",
+            "analyses": [
+                {
+                    "minute": "0",
+                    "amount": "100"
+                },
+                {
+                    "minute": "1",
+                    "amount": "79"
+                },
+                {
+                    "minute": "2",
+                    "amount": "45"
+                },
+                {
+                    "minute": "3",
+                    "amount": "34"
+                },
+                {
+                    "minute": "4",
+                    "amount": "43"
+                },
+                {
+                    "minute": "5",
+                    "amount": "37"
+                },
+                {
+                    "minute": "6",
+                    "amount": "42"
+                },
+                {
+                    "minute": "7",
+                    "amount": "45"
+                },
+                {
+                    "minute": "8",
+                    "amount": "42"
+                },
+                {
+                    "minute": "9",
+                    "amount": "44"
+                },
+                {
+                    "minute": "10",
+                    "amount": "47"
+                },
+                {
+                    "minute": "11",
+                    "amount": "48"
+                },
+                {
+                    "minute": "12",
+                    "amount": "45"
+                },
+                {
+                    "minute": "13",
+                    "amount": "41"
+                },
+                {
+                    "minute": "14",
+                    "amount": "42"
+                },
+                {
+                    "minute": "16",
+                    "amount": "39"
+                },
+                {
+                    "minute": "17",
+                    "amount": "41"
+                },
+                {
+                    "minute": "18",
+                    "amount": "38"
+                },
+                {
+                    "minute": "19",
+                    "amount": "39"
+                },
+                {
+                    "minute": "20",
+                    "amount": "37"
+                },
+                {
+                    "minute": "21",
+                    "amount": "35"
+                },
+                {
+                    "minute": "22",
+                    "amount": "36"
+                },
+                {
+                    "minute": "23",
+                    "amount": "38"
+                },
+                {
+                    "minute": "24",
+                    "amount": "41"
+                },
+                {
+                    "minute": "25",
+                    "amount": "41"
+                },
+                {
+                    "minute": "27",
+                    "amount": "42"
+                },
+                {
+                    "minute": "28",
+                    "amount": "41"
+                },
+                {
+                    "minute": "29",
+                    "amount": "40"
+                },
+                {
+                    "minute": "30",
+                    "amount": "41"
+                },
+                {
+                    "minute": "31",
+                    "amount": "39"
+                },
+                {
+                    "minute": "32",
+                    "amount": "40"
+                },
+                {
+                    "minute": "33",
+                    "amount": "41"
+                },
+                {
+                    "minute": "34",
+                    "amount": "41"
+                },
+                {
+                    "minute": "36",
+                    "amount": "42"
+                },
+                {
+                    "minute": "37",
+                    "amount": "44"
+                },
+                {
+                    "minute": "39",
+                    "amount": "42"
+                },
+                {
+                    "minute": "40",
+                    "amount": "42"
+                },
+                {
+                    "minute": "41",
+                    "amount": "41"
+                },
+                {
+                    "minute": "42",
+                    "amount": "42"
+                },
+                {
+                    "minute": "44",
+                    "amount": "43"
+                },
+                {
+                    "minute": "45",
+                    "amount": "41"
+                },
+                {
+                    "minute": "47",
+                    "amount": "42"
+                },
+                {
+                    "minute": "46",
+                    "amount": "43"
+                },
+                {
+                    "minute": "48",
+                    "amount": "42"
+                },
+                {
+                    "minute": "49",
+                    "amount": "44"
+                },
+                {
+                    "minute": "50",
+                    "amount": "43"
+                },
+                {
+                    "minute": "51",
+                    "amount": "42"
+                },
+                {
+                    "minute": "53",
+                    "amount": "43"
+                },
+                {
+                    "minute": "60",
+                    "amount": "42"
+                },
+                {
+                    "minute": "63",
+                    "amount": "41"
+                },
+                {
+                    "minute": "64",
+                    "amount": "43"
+                },
+                {
+                    "minute": "66",
+                    "amount": "45"
+                },
+                {
+                    "minute": "67",
+                    "amount": "44"
+                },
+                {
+                    "minute": "68",
+                    "amount": "45"
+                },
+                {
+                    "minute": "70",
+                    "amount": "44"
+                },
+                {
+                    "minute": "71",
+                    "amount": "45"
+                },
+                {
+                    "minute": "73",
+                    "amount": "44"
+                },
+                {
+                    "minute": "74",
+                    "amount": "44"
+                },
+                {
+                    "minute": "76",
+                    "amount": "43"
+                },
+                {
+                    "minute": "77",
+                    "amount": "44"
+                },
+                {
+                    "minute": "78",
+                    "amount": "44"
+                },
+                {
+                    "minute": "80",
+                    "amount": "45"
+                },
+                {
+                    "minute": "81",
+                    "amount": "44"
+                },
+                {
+                    "minute": "82",
+                    "amount": "45"
+                },
+                {
+                    "minute": "85",
+                    "amount": "46"
+                },
+                {
+                    "minute": "88",
+                    "amount": "47"
+                },
+                {
+                    "minute": "89",
+                    "amount": "46"
+                },
+                {
+                    "minute": "90",
+                    "amount": "47"
+                },
+                {
+                    "minute": "94",
+                    "amount": "48"
+                }
+            ]
+        },
+        {
+            "team_id": 121,
+            "type": "attacks",
+            "analyses": [
+                {
+                    "minute": "0",
+                    "amount": "0"
+                },
+                {
+                    "minute": "1",
+                    "amount": "3"
+                },
+                {
+                    "minute": "2",
+                    "amount": "5"
+                },
+                {
+                    "minute": "3",
+                    "amount": "6"
+                },
+                {
+                    "minute": "5",
+                    "amount": "7"
+                },
+                {
+                    "minute": "6",
+                    "amount": "8"
+                },
+                {
+                    "minute": "8",
+                    "amount": "10"
+                },
+                {
+                    "minute": "9",
+                    "amount": "11"
+                },
+                {
+                    "minute": "12",
+                    "amount": "12"
+                },
+                {
+                    "minute": "13",
+                    "amount": "14"
+                },
+                {
+                    "minute": "16",
+                    "amount": "15"
+                },
+                {
+                    "minute": "17",
+                    "amount": "16"
+                },
+                {
+                    "minute": "18",
+                    "amount": "20"
+                },
+                {
+                    "minute": "19",
+                    "amount": "22"
+                },
+                {
+                    "minute": "20",
+                    "amount": "24"
+                },
+                {
+                    "minute": "21",
+                    "amount": "25"
+                },
+                {
+                    "minute": "23",
+                    "amount": "26"
+                },
+                {
+                    "minute": "24",
+                    "amount": "28"
+                },
+                {
+                    "minute": "26",
+                    "amount": "29"
+                },
+                {
+                    "minute": "27",
+                    "amount": "30"
+                },
+                {
+                    "minute": "28",
+                    "amount": "31"
+                },
+                {
+                    "minute": "29",
+                    "amount": "32"
+                },
+                {
+                    "minute": "30",
+                    "amount": "33"
+                },
+                {
+                    "minute": "31",
+                    "amount": "34"
+                },
+                {
+                    "minute": "32",
+                    "amount": "35"
+                },
+                {
+                    "minute": "33",
+                    "amount": "37"
+                },
+                {
+                    "minute": "34",
+                    "amount": "40"
+                },
+                {
+                    "minute": "35",
+                    "amount": "41"
+                },
+                {
+                    "minute": "38",
+                    "amount": "42"
+                },
+                {
+                    "minute": "39",
+                    "amount": "44"
+                },
+                {
+                    "minute": "40",
+                    "amount": "46"
+                },
+                {
+                    "minute": "42",
+                    "amount": "47"
+                },
+                {
+                    "minute": "45",
+                    "amount": "51"
+                },
+                {
+                    "minute": "47",
+                    "amount": "52"
+                },
+                {
+                    "minute": "48",
+                    "amount": "55"
+                },
+                {
+                    "minute": "51",
+                    "amount": "61"
+                },
+                {
+                    "minute": "54",
+                    "amount": "63"
+                },
+                {
+                    "minute": "55",
+                    "amount": "64"
+                },
+                {
+                    "minute": "58",
+                    "amount": "65"
+                },
+                {
+                    "minute": "59",
+                    "amount": "67"
+                },
+                {
+                    "minute": "60",
+                    "amount": "68"
+                },
+                {
+                    "minute": "61",
+                    "amount": "70"
+                },
+                {
+                    "minute": "62",
+                    "amount": "72"
+                },
+                {
+                    "minute": "63",
+                    "amount": "74"
+                },
+                {
+                    "minute": "67",
+                    "amount": "76"
+                },
+                {
+                    "minute": "68",
+                    "amount": "77"
+                },
+                {
+                    "minute": "69",
+                    "amount": "78"
+                },
+                {
+                    "minute": "70",
+                    "amount": "79"
+                },
+                {
+                    "minute": "71",
+                    "amount": "80"
+                },
+                {
+                    "minute": "73",
+                    "amount": "82"
+                },
+                {
+                    "minute": "74",
+                    "amount": "84"
+                },
+                {
+                    "minute": "75",
+                    "amount": "85"
+                },
+                {
+                    "minute": "76",
+                    "amount": "86"
+                },
+                {
+                    "minute": "79",
+                    "amount": "87"
+                },
+                {
+                    "minute": "80",
+                    "amount": "88"
+                },
+                {
+                    "minute": "81",
+                    "amount": "90"
+                },
+                {
+                    "minute": "84",
+                    "amount": "91"
+                },
+                {
+                    "minute": "85",
+                    "amount": "92"
+                },
+                {
+                    "minute": "87",
+                    "amount": "93"
+                },
+                {
+                    "minute": "89",
+                    "amount": "94"
+                },
+                {
+                    "minute": "90",
+                    "amount": "95"
+                },
+                {
+                    "minute": "92",
+                    "amount": "96"
+                },
+                {
+                    "minute": "93",
+                    "amount": "97"
+                }
+            ]
+        },
+        {
+            "team_id": 3506,
+            "type": "attacks",
+            "analyses": [
+                {
+                    "minute": "0",
+                    "amount": "0"
+                },
+                {
+                    "minute": "2",
+                    "amount": "1"
+                },
+                {
+                    "minute": "4",
+                    "amount": "2"
+                },
+                {
+                    "minute": "5",
+                    "amount": "4"
+                },
+                {
+                    "minute": "6",
+                    "amount": "6"
+                },
+                {
+                    "minute": "7",
+                    "amount": "8"
+                },
+                {
+                    "minute": "8",
+                    "amount": "9"
+                },
+                {
+                    "minute": "9",
+                    "amount": "10"
+                },
+                {
+                    "minute": "10",
+                    "amount": "12"
+                },
+                {
+                    "minute": "11",
+                    "amount": "14"
+                },
+                {
+                    "minute": "16",
+                    "amount": "15"
+                },
+                {
+                    "minute": "17",
+                    "amount": "17"
+                },
+                {
+                    "minute": "19",
+                    "amount": "18"
+                },
+                {
+                    "minute": "22",
+                    "amount": "21"
+                },
+                {
+                    "minute": "23",
+                    "amount": "22"
+                },
+                {
+                    "minute": "24",
+                    "amount": "23"
+                },
+                {
+                    "minute": "25",
+                    "amount": "24"
+                },
+                {
+                    "minute": "26",
+                    "amount": "26"
+                },
+                {
+                    "minute": "27",
+                    "amount": "27"
+                },
+                {
+                    "minute": "28",
+                    "amount": "28"
+                },
+                {
+                    "minute": "30",
+                    "amount": "29"
+                },
+                {
+                    "minute": "32",
+                    "amount": "30"
+                },
+                {
+                    "minute": "33",
+                    "amount": "32"
+                },
+                {
+                    "minute": "34",
+                    "amount": "33"
+                },
+                {
+                    "minute": "36",
+                    "amount": "34"
+                },
+                {
+                    "minute": "37",
+                    "amount": "35"
+                },
+                {
+                    "minute": "39",
+                    "amount": "36"
+                },
+                {
+                    "minute": "44",
+                    "amount": "37"
+                },
+                {
+                    "minute": "46",
+                    "amount": "41"
+                },
+                {
+                    "minute": "45",
+                    "amount": "39"
+                },
+                {
+                    "minute": "47",
+                    "amount": "42"
+                },
+                {
+                    "minute": "48",
+                    "amount": "43"
+                },
+                {
+                    "minute": "49",
+                    "amount": "45"
+                },
+                {
+                    "minute": "51",
+                    "amount": "46"
+                },
+                {
+                    "minute": "53",
+                    "amount": "48"
+                },
+                {
+                    "minute": "55",
+                    "amount": "50"
+                },
+                {
+                    "minute": "58",
+                    "amount": "51"
+                },
+                {
+                    "minute": "60",
+                    "amount": "54"
+                },
+                {
+                    "minute": "63",
+                    "amount": "55"
+                },
+                {
+                    "minute": "64",
+                    "amount": "56"
+                },
+                {
+                    "minute": "65",
+                    "amount": "59"
+                },
+                {
+                    "minute": "66",
+                    "amount": "62"
+                },
+                {
+                    "minute": "68",
+                    "amount": "64"
+                },
+                {
+                    "minute": "69",
+                    "amount": "65"
+                },
+                {
+                    "minute": "71",
+                    "amount": "67"
+                },
+                {
+                    "minute": "74",
+                    "amount": "68"
+                },
+                {
+                    "minute": "75",
+                    "amount": "69"
+                },
+                {
+                    "minute": "77",
+                    "amount": "70"
+                },
+                {
+                    "minute": "78",
+                    "amount": "71"
+                },
+                {
+                    "minute": "79",
+                    "amount": "73"
+                },
+                {
+                    "minute": "80",
+                    "amount": "74"
+                },
+                {
+                    "minute": "82",
+                    "amount": "75"
+                },
+                {
+                    "minute": "85",
+                    "amount": "77"
+                },
+                {
+                    "minute": "87",
+                    "amount": "78"
+                },
+                {
+                    "minute": "88",
+                    "amount": "80"
+                },
+                {
+                    "minute": "89",
+                    "amount": "81"
+                },
+                {
+                    "minute": "90",
+                    "amount": "83"
+                },
+                {
+                    "minute": "93",
+                    "amount": "86"
+                }
+            ]
+        },
+        {
+            "team_id": 121,
+            "type": "dangerous_attacks",
+            "analyses": [
+                {
+                    "minute": "0",
+                    "amount": "0"
+                },
+                {
+                    "minute": "1",
+                    "amount": "2"
+                },
+                {
+                    "minute": "2",
+                    "amount": "4"
+                },
+                {
+                    "minute": "3",
+                    "amount": "6"
+                },
+                {
+                    "minute": "4",
+                    "amount": "7"
+                },
+                {
+                    "minute": "6",
+                    "amount": "8"
+                },
+                {
+                    "minute": "8",
+                    "amount": "10"
+                },
+                {
+                    "minute": "9",
+                    "amount": "11"
+                },
+                {
+                    "minute": "12",
+                    "amount": "12"
+                },
+                {
+                    "minute": "13",
+                    "amount": "13"
+                },
+                {
+                    "minute": "18",
+                    "amount": "17"
+                },
+                {
+                    "minute": "19",
+                    "amount": "18"
+                },
+                {
+                    "minute": "21",
+                    "amount": "19"
+                },
+                {
+                    "minute": "29",
+                    "amount": "21"
+                },
+                {
+                    "minute": "32",
+                    "amount": "22"
+                },
+                {
+                    "minute": "34",
+                    "amount": "23"
+                },
+                {
+                    "minute": "35",
+                    "amount": "25"
+                },
+                {
+                    "minute": "39",
+                    "amount": "27"
+                },
+                {
+                    "minute": "41",
+                    "amount": "29"
+                },
+                {
+                    "minute": "42",
+                    "amount": "30"
+                },
+                {
+                    "minute": "45",
+                    "amount": "31"
+                },
+                {
+                    "minute": "51",
+                    "amount": "34"
+                },
+                {
+                    "minute": "54",
+                    "amount": "35"
+                },
+                {
+                    "minute": "58",
+                    "amount": "36"
+                },
+                {
+                    "minute": "61",
+                    "amount": "37"
+                },
+                {
+                    "minute": "63",
+                    "amount": "38"
+                },
+                {
+                    "minute": "69",
+                    "amount": "39"
+                },
+                {
+                    "minute": "70",
+                    "amount": "42"
+                },
+                {
+                    "minute": "73",
+                    "amount": "44"
+                },
+                {
+                    "minute": "77",
+                    "amount": "45"
+                },
+                {
+                    "minute": "81",
+                    "amount": "47"
+                },
+                {
+                    "minute": "82",
+                    "amount": "48"
+                },
+                {
+                    "minute": "92",
+                    "amount": "50"
+                },
+                {
+                    "minute": "93",
+                    "amount": "52"
+                }
+            ]
+        },
+        {
+            "team_id": 3506,
+            "type": "dangerous_attacks",
+            "analyses": [
+                {
+                    "minute": "0",
+                    "amount": "0"
+                },
+                {
+                    "minute": "4",
+                    "amount": "1"
+                },
+                {
+                    "minute": "5",
+                    "amount": "2"
+                },
+                {
+                    "minute": "7",
+                    "amount": "4"
+                },
+                {
+                    "minute": "13",
+                    "amount": "5"
+                },
+                {
+                    "minute": "17",
+                    "amount": "6"
+                },
+                {
+                    "minute": "22",
+                    "amount": "7"
+                },
+                {
+                    "minute": "23",
+                    "amount": "8"
+                },
+                {
+                    "minute": "25",
+                    "amount": "9"
+                },
+                {
+                    "minute": "26",
+                    "amount": "11"
+                },
+                {
+                    "minute": "27",
+                    "amount": "12"
+                },
+                {
+                    "minute": "30",
+                    "amount": "13"
+                },
+                {
+                    "minute": "33",
+                    "amount": "14"
+                },
+                {
+                    "minute": "34",
+                    "amount": "15"
+                },
+                {
+                    "minute": "37",
+                    "amount": "17"
+                },
+                {
+                    "minute": "39",
+                    "amount": "18"
+                },
+                {
+                    "minute": "47",
+                    "amount": "19"
+                },
+                {
+                    "minute": "48",
+                    "amount": "20"
+                },
+                {
+                    "minute": "46",
+                    "amount": "22"
+                },
+                {
+                    "minute": "49",
+                    "amount": "24"
+                },
+                {
+                    "minute": "51",
+                    "amount": "26"
+                },
+                {
+                    "minute": "53",
+                    "amount": "27"
+                },
+                {
+                    "minute": "56",
+                    "amount": "28"
+                },
+                {
+                    "minute": "58",
+                    "amount": "29"
+                },
+                {
+                    "minute": "60",
+                    "amount": "30"
+                },
+                {
+                    "minute": "63",
+                    "amount": "31"
+                },
+                {
+                    "minute": "64",
+                    "amount": "33"
+                },
+                {
+                    "minute": "65",
+                    "amount": "35"
+                },
+                {
+                    "minute": "66",
+                    "amount": "37"
+                },
+                {
+                    "minute": "68",
+                    "amount": "39"
+                },
+                {
+                    "minute": "74",
+                    "amount": "40"
+                },
+                {
+                    "minute": "75",
+                    "amount": "41"
+                },
+                {
+                    "minute": "77",
+                    "amount": "42"
+                },
+                {
+                    "minute": "78",
+                    "amount": "43"
+                },
+                {
+                    "minute": "79",
+                    "amount": "47"
+                },
+                {
+                    "minute": "80",
+                    "amount": "48"
+                },
+                {
+                    "minute": "82",
+                    "amount": "49"
+                },
+                {
+                    "minute": "83",
+                    "amount": "50"
+                },
+                {
+                    "minute": "84",
+                    "amount": "53"
+                },
+                {
+                    "minute": "85",
+                    "amount": "54"
+                },
+                {
+                    "minute": "88",
+                    "amount": "57"
+                },
+                {
+                    "minute": "89",
+                    "amount": "58"
+                },
+                {
+                    "minute": "91",
+                    "amount": "59"
+                },
+                {
+                    "minute": "94",
+                    "amount": "63"
+                }
+            ]
+        },
+        {
+            "team_id": 121,
+            "type": "off_target",
+            "analyses": [
+                {
+                    "minute": "0",
+                    "amount": "0"
+                },
+                {
+                    "minute": "3",
+                    "amount": "1"
+                },
+                {
+                    "minute": "18",
+                    "amount": "2"
+                },
+                {
+                    "minute": "41",
+                    "amount": "3"
+                },
+                {
+                    "minute": "62",
+                    "amount": "4"
+                },
+                {
+                    "minute": "81",
+                    "amount": "5"
+                },
+                {
+                    "minute": "82",
+                    "amount": "6"
+                }
+            ]
+        },
+        {
+            "team_id": 3506,
+            "type": "off_target",
+            "analyses": [
+                {
+                    "minute": "0",
+                    "amount": "0"
+                },
+                {
+                    "minute": "24",
+                    "amount": "1"
+                },
+                {
+                    "minute": "25",
+                    "amount": "2"
+                },
+                {
+                    "minute": "27",
+                    "amount": "3"
+                },
+                {
+                    "minute": "38",
+                    "amount": "4"
+                },
+                {
+                    "minute": "40",
+                    "amount": "5"
+                },
+                {
+                    "minute": "48",
+                    "amount": "6"
+                },
+                {
+                    "minute": "46",
+                    "amount": "7"
+                },
+                {
+                    "minute": "64",
+                    "amount": "8"
+                },
+                {
+                    "minute": "80",
+                    "amount": "9"
+                },
+                {
+                    "minute": "94",
+                    "amount": "10"
+                }
+            ]
+        },
+        {
+            "team_id": 121,
+            "type": "on_target",
+            "analyses": [
+                {
+                    "minute": "0",
+                    "amount": "0"
+                },
+                {
+                    "minute": "9",
+                    "amount": "1"
+                },
+                {
+                    "minute": "51",
+                    "amount": "2"
+                },
+                {
+                    "minute": "54",
+                    "amount": "3"
+                },
+                {
+                    "minute": "69",
+                    "amount": "4"
+                },
+                {
+                    "minute": "81",
+                    "amount": "5"
+                }
+            ]
+        },
+        {
+            "team_id": 3506,
+            "type": "on_target",
+            "analyses": [
+                {
+                    "minute": "0",
+                    "amount": "0"
+                },
+                {
+                    "minute": "7",
+                    "amount": "1"
+                },
+                {
+                    "minute": "14",
+                    "amount": "2"
+                },
+                {
+                    "minute": "26",
+                    "amount": "3"
+                },
+                {
+                    "minute": "51",
+                    "amount": "4"
+                },
+                {
+                    "minute": "71",
+                    "amount": "5"
+                }
+            ]
+        },
+        {
+            "team_id": 121,
+            "type": "corners",
+            "analyses": [
+                {
+                    "minute": "3",
+                    "amount": "1"
+                },
+                {
+                    "minute": "29",
+                    "amount": "2"
+                },
+                {
+                    "minute": "69",
+                    "amount": "3"
+                },
+                {
+                    "minute": "70",
+                    "amount": "4"
+                },
+                {
+                    "minute": "81",
+                    "amount": "5"
+                },
+                {
+                    "minute": "92",
+                    "amount": "6"
+                }
+            ]
+        },
+        {
+            "team_id": 121,
+            "type": "goals",
+            "analyses": [
+                {
+                    "minute": "9",
+                    "amount": "1"
+                },
+                {
+                    "minute": "51",
+                    "amount": "2"
+                },
+                {
+                    "minute": "54",
+                    "amount": "2"
+                }
+            ]
+        },
+        {
+            "team_id": 3506,
+            "type": "goals",
+            "analyses": [
+                {
+                    "minute": "14",
+                    "amount": "1"
+                },
+                {
+                    "minute": "71",
+                    "amount": "2"
+                }
+            ]
+        },
+        {
+            "team_id": 3506,
+            "type": "corners",
+            "analyses": [
+                {
+                    "minute": "79",
+                    "amount": "1"
+                },
+                {
+                    "minute": "83",
+                    "amount": "3"
+                },
+                {
+                    "minute": "94",
+                    "amount": "5"
+                }
+                
+
 ##League Stats  [/stats{?user,token,id,t}]
 
 + Parameters
@@ -6580,128 +9147,7 @@ The Fixtures by Stage Endpoint gives you fixtures from a single stage and Team
         "address": "Kaj Zartows Vej 5",
         "img": "https://cdn.soccersapi.com/images/soccer/venues/380.jpg"
     }
-    
  
-
-## Fixtures by Round  [/fixtures{?user,token,t,id,_}]
-
-+ Parameters
-    
-    + user - YOUR USER
-    + token - YOUR TOKEN
-    + t - round
-    + id - ROUND ID
-    
- 
- 
- 
-
-
-### TEST ENDPOINT [GET]  
-
-
-+ Request (application/json)
-
-+ Response 200 (application/json)
- 
-
-
-    + Headers
-
-            Location: /fixtures
- 
-    
-    + Body
-    
-{
-            "id": 11898607,
-            "status": "3",
-            "time": {
-                "datetime": "2019-07-12 17:00:00",
-                "date": "2019-07-12",
-                "time": "17:00:00",
-                "minute": "90",
-                "timestamp": 1562943600,
-                "timezone": "UTC"
-            },
-            "teams": {
-                "home": {
-                    "id": 977,
-                    "name": "Midtjylland"
-                },
-                "away": {
-                    "id": 1409,
-                    "name": "Esbjerg"
-                }
-            },
-            "scores": {
-                "home_score": "1",
-                "away_score": "0",
-                "ht_score": "0-0",
-                "ft_score": "1-0",
-                "et_score": ""
-            }
-        },
-        {
-            "id": 11898606,
-            "status": "3",
-            "time": {
-                "datetime": "2019-07-14 10:00:00",
-                "date": "2019-07-14",
-                "time": "10:00:00",
-                "minute": "90",
-                "timestamp": 1563091200,
-                "timezone": "UTC"
-            },
-            "teams": {
-                "home": {
-                    "id": 428,
-                    "name": "SønderjyskE"
-                },
-                "away": {
-                    "id": 2394,
-                    "name": "Randers"
-                }
-            },
-            "scores": {
-                "home_score": "2",
-                "away_score": "1",
-                "ht_score": "1-0",
-                "ft_score": "2-1",
-                "et_score": ""
-            }
-        },
-        {
-            "id": 11898612,
-            "status": "3",
-            "time": {
-                "datetime": "2019-07-14 12:00:00",
-                "date": "2019-07-14",
-                "time": "12:00:00",
-                "minute": "90",
-                "timestamp": 1563098400,
-                "timezone": "UTC"
-            },
-            "teams": {
-                "home": {
-                    "id": 2688,
-                    "name": "Lyngby"
-                },
-                "away": {
-                    "id": 1058,
-                    "name": "AaB"
-                }
-            },
-            "scores": {
-                "home_score": "2",
-                "away_score": "0",
-                "ht_score": "1-0",
-                "ft_score": "2-0",
-                "et_score": ""
-            }
-        },
-...
-
 ## Fixtures by Team / League  [/fixtures{?user,token,t,league_id,id}]
 
 + Parameters
@@ -7120,726 +9566,11 @@ The Fixtures by Stage Endpoint gives you fixtures from a single stage and Team
             "stage_id": 77442603,
             "venue_id": 2037
         }
-...
-
-## Fixture by ID  [/fixtures{?user,token,t,id,__}]
-
-+ Parameters
-    
-    + user - YOUR USER
-    + token - YOUR TOKEN
-    + t - event
-    + id - MATCH ID
-    
- 
- 
- 
  
 
 
-### TEST ENDPOINT [GET]  
 
 
-+ Request (application/json)
-
-+ Response 200 (application/json)
- 
-
-
-    + Headers
-
-            Location: /fixtures
- 
-    
-    + Body
-    
-{
-        "id": 11898612,
-        "status": "3",
-        "time": {
-            "datetime": "2019-07-14 12:00:00",
-            "date": "2019-07-14",
-            "time": "12:00:00",
-            "minute": "90",
-            "timestamp": 1563098400,
-            "timezone": "UTC"
-        },
-        "teams": {
-            "home": {
-                "id": 2688,
-                "name": "Lyngby",
-                "img": "https://cdn.soccersapi.com/images/soccer/teams/150/2688.png",
-                "form": "3-4-3",
-                "coach_id": 32002835
-            },
-            "away": {
-                "id": 1058,
-                "name": "AaB",
-                "img": "https://cdn.soccersapi.com/images/soccer/teams/150/1058.png",
-                "form": "4-3-3",
-                "coach_id": 27440867
-            }
-        },
-        "league": {
-            "id": 309,
-            "name": "Superliga",
-            "country_id": 358,
-            "country_name": "Denmark",
-            "country_flag": "https://cdn.soccersapi.com/images/countries/30/dk.png"
-        },
-        "scores": {
-            "home_score": "2",
-            "away_score": "0",
-            "ht_score": "1-0",
-            "ft_score": "2-0",
-            "et_score": ""
-        },
-        "referee_id": 44868,
-        "round_id": 169535,
-        "season_id": 16058,
-        "stage_id": 77443840,
-        "venue_id": 1614
-    }
-
-## Fixture Stats  [/stats{?user,token,t,id,___}]
-
-+ Parameters
-    
-    + user - YOUR USER
-    + token - YOUR TOKEN
-    + t - match
-    + id - MATCH ID
-   
- 
- 
- 
- 
-
-
-### TEST ENDPOINT [GET]  
-
-
-+ Request (application/json)
-
-+ Response 200 (application/json)
- 
-
-
-    + Headers
-
-            Location: /stats
- 
-    
-    + Body
-    
-{
-            "team_id": 121,
-            "shots": {
-                "total": 11,
-                "ongoal": 5,
-                "offgoal": 6,
-                "blocked": 3,
-                "insidebox": 9,
-                "outsidebox": 2
-            },
-            "passes": {
-                "total": 556,
-                "accurate": 483,
-                "percentage": 87
-            },
-            "attacks": {
-                "attacks": 97,
-                "dangerous_attacks": 52
-            },
-            "fouls": 8,
-            "corners": 6,
-            "offsides": 5,
-            "possessiontime": 50,
-            "yellowcards": 3,
-            "redcards": 1,
-            "saves": 3,
-            "substitutions": 3,
-            "goal_kick": 11,
-            "free_kick": 21,
-            "throw_in": 13
-        },
-        {
-            "team_id": 3506,
-            "shots": {
-                "total": 17,
-                "ongoal": 5,
-                "offgoal": 10,
-                "blocked": 4,
-                "insidebox": 9,
-                "outsidebox": 8
-            },
-            "passes": {
-                "total": 552,
-                "accurate": 504,
-                "percentage": 91
-            },
-            "attacks": {
-                "attacks": 86,
-                "dangerous_attacks": 63
-            },
-            "fouls": 20,
-            "corners": 5,
-            "offsides": 2,
-            "possessiontime": 50,
-            "yellowcards": 5,
-            "redcards": 0,
-            "saves": 2,
-            "substitutions": 3,
-            "goal_kick": 6,
-            "free_kick": 13,
-            "throw_in": 9
-        }
-        
-## Fixture Commentary  [/fixtures{?user,token,t,id,order}]
-
-+ Parameters
-    
-    + user - YOUR USER
-    + token - YOUR TOKEN
-    + t - match_comments
-    + id - MATCH ID
-    + order - ASC or DESC
-     
- 
- 
- 
- 
-
-
-### TEST ENDPOINT [GET]  
-
-
-+ Request (application/json)
-
-+ Response 200 (application/json)
- 
-
-
-    + Headers
-
-            Location: /fixtures
- 
-    
-    + Body
-    
- {
-            "important": false,
-            "order": 2,
-            "goal": false,
-            "minute": 1,
-            "extra_minute": null,
-            "comment": "Casemiro  - Real Madrid -  won a free kick in defence."
-        },
-        {
-            "important": false,
-            "order": 3,
-            "goal": false,
-            "minute": 1,
-            "extra_minute": null,
-            "comment": "Fouled by Ivan Rakitic  - Barcelona"
-        },
-        {
-            "important": false,
-            "order": 4,
-            "goal": false,
-            "minute": 4,
-            "extra_minute": null,
-            "comment": "Shot blocked. Luis Suárez  - Barcelona -  shot with right foot from the right side of the box is blocked. Assist -  Lionel Messi."
-        },
-...
-
-
-## Fixture Events Summary [/fixtures{?user,token,t,id,____}]
-
-+ Parameters
-    
-    + user - YOUR USER
-    + token - YOUR TOKEN
-    + t - match_events
-    + id - MATCH ID
-    
- 
- 
- 
- 
-
-
-### TEST ENDPOINT [GET] 
-
-
-+ Request (application/json)
-
-+ Response 200 (application/json)
- 
-
-
-    + Headers
-
-            Location: /fixtures
- 
-    
-    + Body
-    
-{
-            "team_id": 121,
-            "type": "substitution",
-            "player_id": 186133,
-            "player_name": "A. Paco",
-            "related_player_id": 985,
-            "related_player_name": "L. Suarez",
-            "minute": 90,
-            "extra_minute": 2,
-            "reason": null,
-            "injuried": null,
-            "result": null
-        },
-        {
-            "team_id": 121,
-            "type": "yellowcard",
-            "player_id": 30030,
-            "player_name": "I. Rakitic",
-            "related_player_id": null,
-            "related_player_name": null,
-            "minute": 85,
-            "extra_minute": null,
-            "reason": "Foul",
-            "injuried": null,
-            "result": null
-        },
-        {
-            "team_id": 3506,
-            "type": "substitution",
-            "player_id": 73185,
-            "player_name": "M. Kovacic",
-            "related_player_id": 30327,
-            "related_player_name": "T. Kroos",
-            "minute": 84,
-            "extra_minute": null,
-            "reason": null,
-            "injuried": null,
-            "result": null
-        },
-...
-
-## Fixture Trends [/fixtures{?user,token,t,id,_____}]
-
-+ Parameters
-    
-    + user - YOUR USER
-    + token - YOUR TOKEN
-    + t - match_trends
-    + id - MATCH ID
-    
- 
- 
- 
- 
-
-
-### TEST ENDPOINT [GET]  
-
-
-+ Request (application/json)
-
-+ Response 200 (application/json)
- 
-
-
-    + Headers
-
-            Location: /fixtures
- 
-    
-    + Body
-    
-[]
-
-## Fixture Lineups [/fixtures{?user,token,t,id,______}]
-
-+ Parameters
-    
-    + user - YOUR USER
-    + token - YOUR TOKEN
-    + t - match_lineups
-    + id - MATCH ID
-    
- 
- 
- 
- 
-
-
-### TEST ENDPOINT [GET] 
-
-
-+ Request (application/json)
-
-+ Response 200 (application/json)
- 
-
-
-    + Headers
-
-            Location: /fixtures
- 
-    
-    + Body
-    
-{
-            "team_id": 121,
-            "player_id": 31322,
-            "player_name": "Marc-André ter Stegen",
-            "number": 1,
-            "position": "G",
-            "formation_position": 1,
-            "posx": null,
-            "posy": null,
-            "stats": {
-                "shots": {
-                    "shots_total": 0,
-                    "shots_on_goal": 0
-                },
-                "goals": {
-                    "scored": 0,
-                    "conceded": 2
-                },
-                "fouls": {
-                    "drawn": 0,
-                    "committed": 0
-                },
-                "cards": {
-                    "yellowcards": 0,
-                    "redcards": 0
-                },
-                "passing": {
-                    "total_crosses": 0,
-                    "crosses_accuracy": 0,
-                    "passes": 13,
-                    "passes_accuracy": 54
-                },
-                "other": {
-                    "assists": 0,
-                    "offsides": 0,
-                    "saves": 3,
-                    "pen_scored": 0,
-                    "pen_missed": 0,
-                    "pen_saved": 0,
-                    "tackles": 0,
-                    "blocks": 0,
-                    "interceptions": 0,
-                    "clearances": 0,
-                    "minutes_played": 90
-                }
-            }
-        },
-        {
-            "team_id": 121,
-            "player_id": 186077,
-            "player_name": "Sergi Roberto",
-            "number": 20,
-            "position": "D",
-            "formation_position": 2,
-            "posx": null,
-            "posy": null,
-            "stats": {
-                "shots": {
-                    "shots_total": 0,
-                    "shots_on_goal": 0
-                },
-                "goals": {
-                    "scored": 0,
-                    "conceded": 0
-                },
-                "fouls": {
-                    "drawn": 0,
-                    "committed": 1
-                },
-                "cards": {
-                    "yellowcards": 0,
-                    "redcards": 1
-                },
-                "passing": {
-                    "total_crosses": 1,
-                    "crosses_accuracy": 1,
-                    "passes": 34,
-                    "passes_accuracy": 94
-                },
-                "other": {
-                    "assists": 1,
-                    "offsides": 0,
-                    "saves": 0,
-                    "pen_scored": 0,
-                    "pen_missed": 0,
-                    "pen_saved": 0,
-                    "tackles": 0,
-                    "blocks": 0,
-                    "interceptions": 0,
-                    "clearances": 0,
-                    "minutes_played": 90
-                }
-            }
-        },
-        {
-            "team_id": 121,
-            "player_id": 3817,
-            "player_name": "Gerard Piqué",
-            "number": 3,
-            "position": "D",
-            "formation_position": 3,
-            "posx": null,
-            "posy": null,
-            "stats": {
-                "shots": {
-                    "shots_total": 1,
-                    "shots_on_goal": 0
-                },
-                "goals": {
-                    "scored": 0,
-                    "conceded": 0
-                },
-                "fouls": {
-                    "drawn": 1,
-                    "committed": 0
-                },
-                "cards": {
-                    "yellowcards": 0,
-                    "redcards": 0
-                },
-                "passing": {
-                    "total_crosses": 0,
-                    "crosses_accuracy": 0,
-                    "passes": 36,
-                    "passes_accuracy": 83
-                },
-                "other": {
-                    "assists": 0,
-                    "offsides": 0,
-                    "saves": 0,
-                    "pen_scored": 0,
-                    "pen_missed": 0,
-                    "pen_saved": 0,
-                    "tackles": 4,
-                    "blocks": 1,
-                    "interceptions": 0,
-                    "clearances": 5,
-                    "minutes_played": 90
-                }
-            }
-        },
-...
-
-## Fixture Bench [/fixtures{?user,token,t,id,_______}]
-
-+ Parameters
-    
-    + user - YOUR USER
-    + token - YOUR TOKEN
-    + t - match_bench
-    + id - MATCH ID
-   
- 
- 
- 
- 
-
-
-### TEST ENDPOINT [GET] 
-
-
-+ Request (application/json)
-
-+ Response 200 (application/json)
- 
-
-
-    + Headers
-
-            Location: /fixtures
- 
-    
-    + Body
-    
-{
-            "team_id": 121,
-            "player_id": 23780,
-            "player_name": "Jasper Cillessen",
-            "number": 13,
-            "position": "G",
-            "formation_position": null,
-            "posx": null,
-            "posy": null,
-            "stats": {
-                "shots": {
-                    "shots_total": null,
-                    "shots_on_goal": null
-                },
-                "goals": {
-                    "scored": null,
-                    "conceded": null
-                },
-                "fouls": {
-                    "drawn": null,
-                    "committed": null
-                },
-                "cards": {
-                    "yellowcards": null,
-                    "redcards": null
-                },
-                "passing": {
-                    "total_crosses": null,
-                    "crosses_accuracy": null,
-                    "passes": null,
-                    "passes_accuracy": null
-                },
-                "other": {
-                    "assists": null,
-                    "offsides": null,
-                    "saves": null,
-                    "pen_scored": null,
-                    "pen_missed": null,
-                    "pen_saved": null,
-                    "tackles": null,
-                    "blocks": null,
-                    "interceptions": null,
-                    "clearances": null,
-                    "minutes_played": null
-                }
-            }
-        },
-        {
-            "team_id": 121,
-            "player_id": 596,
-            "player_name": "Thomas Vermaelen",
-            "number": 25,
-            "position": "D",
-            "formation_position": null,
-            "posx": null,
-            "posy": null,
-            "stats": {
-                "shots": {
-                    "shots_total": null,
-                    "shots_on_goal": null
-                },
-                "goals": {
-                    "scored": null,
-                    "conceded": null
-                },
-                "fouls": {
-                    "drawn": null,
-                    "committed": null
-                },
-                "cards": {
-                    "yellowcards": null,
-                    "redcards": null
-                },
-                "passing": {
-                    "total_crosses": null,
-                    "crosses_accuracy": null,
-                    "passes": null,
-                    "passes_accuracy": null
-                },
-                "other": {
-                    "assists": null,
-                    "offsides": null,
-                    "saves": null,
-                    "pen_scored": null,
-                    "pen_missed": null,
-                    "pen_saved": null,
-                    "tackles": null,
-                    "blocks": null,
-                    "interceptions": null,
-                    "clearances": null,
-                    "minutes_played": null
-                }
-            }
-        },
-        {
-            "team_id": 121,
-            "player_id": 160148,
-            "player_name": "Nélson Semedo",
-            "number": 2,
-            "position": "D",
-            "formation_position": null,
-            "posx": null,
-            "posy": null,
-            "stats": {
-                "shots": {
-                    "shots_total": 0,
-                    "shots_on_goal": 0
-                },
-                "goals": {
-                    "scored": 0,
-                    "conceded": 0
-                },
-                "fouls": {
-                    "drawn": 1,
-                    "committed": 0
-                },
-                "cards": {
-                    "yellowcards": 0,
-                    "redcards": 0
-                },
-                "passing": {
-                    "total_crosses": 0,
-                    "crosses_accuracy": 0,
-                    "passes": 17,
-                    "passes_accuracy": 89
-                },
-                "other": {
-                    "assists": 0,
-                    "offsides": 0,
-                    "saves": 0,
-                    "pen_scored": 0,
-                    "pen_missed": 0,
-                    "pen_saved": 0,
-                    "tackles": 0,
-                    "blocks": 0,
-                    "interceptions": 1,
-                    "clearances": 1,
-                    "minutes_played": 44
-                }
-            }
-        },
-...
-
-
-## Fixture Sidelined [/fixtures{?user,token,t,id,________}]
-
-+ Parameters
-    
-    + user - YOUR USER
-    + token - YOUR TOKEN
-    + t - match_sidelined
-    + id - MATCH ID
-   
- 
- 
- 
- 
-
-
-### TEST ENDPOINT [GET] 
-
-
-+ Request (application/json)
-
-+ Response 200 (application/json)
- 
-
-
-    + Headers
-
-            Location: /fixtures
- 
-    
-    + Body
-    
- []
  
 ## Fixture Odds [/fixtures{?user,token,t,id,_________}]
 
