@@ -5693,7 +5693,188 @@ The Fixtures Season Endpoint gives you fixtures from a specific Season by ID
                 "updated_at": "2019-12-21T16:45:02.196280Z"
             } 
         }
-        
+
+
+## Fixtures by Stage / Team  [/fixtures{?user,token,t,stage_id,team_id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - stage
+    + stage_id - STAGE ID
+    + team_id - TEAM ID
+ 
+### GET Fixtures by Stage / Team [GET]  
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+ {
+            "id": 11352866,
+            "status": 3,
+            "pitch": null,
+            "referee_id": 16716,
+            "round_id": 159790,
+            "season_id": 15512,
+            "stage_id": 77441847,
+            "group_id": 207832,
+            "aggregate_id": null,
+            "winner_team_id": 18683,
+            "venue_id": 1353,
+            "leg": "1/1",
+            "deleted": false,
+            "time": {
+                "datetime": "2019-03-22 19:45:00",
+                "date": "2019-03-22",
+                "time": "19:45:00",
+                "minute": 90,
+                "timestamp": 1553283900,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 18683
+                },
+                "away": {
+                    "id": 18756
+                }
+            },
+            "league": {
+                "id": 1363
+            },
+            "scores": {
+                "home_score": 5,
+                "away_score": 0,
+                "ht_score": "2-0",
+                "ft_score": "5-0",
+                "et_score": null,
+                "ps_score": null
+            },
+            "standings": {
+                "home_position": 3,
+                "away_position": 2
+            },
+            "assistants": {
+                "first_assistant_id": 12895,
+                "second_assistant_id": 12899,
+                "fourth_assistant_id": null
+            }
+        },
+        {
+            "id": 11352868,
+            "status": 3,
+            "pitch": null,
+            "referee_id": 17830,
+            "round_id": 159791,
+            "season_id": 15512,
+            "stage_id": 77441847,
+            "group_id": 207832,
+            "aggregate_id": null,
+            "winner_team_id": 18683,
+            "venue_id": 3638,
+            "leg": "1/1",
+            "deleted": false,
+            "time": {
+                "datetime": "2019-03-25 19:45:00",
+                "date": "2019-03-25",
+                "time": "19:45:00",
+                "minute": 90,
+                "timestamp": 1553543100,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 18874
+                },
+                "away": {
+                    "id": 18683
+                }
+            },
+            "league": {
+                "id": 1363
+            },
+            "scores": {
+                "home_score": 1,
+                "away_score": 5,
+                "ht_score": "1-2",
+                "ft_score": "1-5",
+                "et_score": null,
+                "ps_score": null
+            },
+            "standings": {
+                "home_position": 3,
+                "away_position": 1
+            },
+            "assistants": {
+                "first_assistant_id": 17832,
+                "second_assistant_id": 17834,
+                "fourth_assistant_id": null
+            }
+        },
+        {
+            "id": 11352875,
+            "status": 3,
+            "pitch": null,
+            "referee_id": 14381,
+            "round_id": 159794,
+            "season_id": 15512,
+            "stage_id": 77441847,
+            "group_id": 207832,
+            "aggregate_id": null,
+            "winner_team_id": 18683,
+            "venue_id": 1353,
+            "leg": "1/1",
+            "deleted": false,
+            "time": {
+                "datetime": "2019-09-07 16:00:00",
+                "date": "2019-09-07",
+                "time": "16:00:00",
+                "minute": 90,
+                "timestamp": 1567872000,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 18683
+                },
+                "away": {
+                    "id": 18728
+                }
+            },
+            "league": {
+                "id": 1363
+            },
+            "scores": {
+                "home_score": 4,
+                "away_score": 0,
+                "ht_score": "1-0",
+                "ft_score": "4-0",
+                "et_score": null,
+                "ps_score": null
+            },
+            "standings": {
+                "home_position": 1,
+                "away_position": 4
+            },
+            "assistants": {
+                "first_assistant_id": 12785,
+                "second_assistant_id": 17901,
+                "fourth_assistant_id": null
+            }
+        }
+
 ##League Stats  [/stats{?user,token,id,t}]
 
 + Parameters
