@@ -9388,7 +9388,9 @@ The Match Inplay Odds Endpoint gives you Inplay-match odds for a specific match
             }
         }
                         
-## Player Info  [/players{?user,token,t,id}]
+## Player by ID  [/players{?user,token,t,id}]
+
+The Player by ID endpoint returns information of a single player
 
 + Parameters
     
@@ -9398,10 +9400,8 @@ The Match Inplay Odds Endpoint gives you Inplay-match odds for a specific match
     + id - PLAYER ID
     
  
-    
-    
-
-### TEST ENDPOINT [GET] 
+ 
+### GET Player by ID [GET] 
 
 
 + Request (application/json)
@@ -9417,25 +9417,275 @@ The Match Inplay Odds Endpoint gives you Inplay-match odds for a specific match
     
     + Body
     
-  {
-        "id": 5665,
-        "name": null,
-        "common_name": "Mikkel Andersen",
-        "firstname": null,
-        "lastname": null,
-        "birthday": null,
-        "birthcountry": null,
-        "birthplace": null,
-        "w": null,
-        "h": null,
-        "img": "https://cdn.soccersapi.com/images/soccer/players/50/5665.png",
+    {
+        "id": 671,
+        "name": "Simon Mignolet",
+        "common_name": "S. Mignolet",
+        "firstname": "Simon",
+        "lastname": "Mignolet",
+        "position":"Goalkeeper",
+        "birthday": "06/03/1988",
+        "birthcountry": "Belgium",
+        "birthplace": "Sint-Truiden",
+        "weight": "87 kg",
+        "height": "193 cm",
+        "img": "https://cdn.soccersapi.com/images/soccer/players/50/671.png",
         "country": {
-            "id": 38,
-            "name": null,
-            "cc": null
+            "id": 594,
+            "name": "Belgium",
+            "cc": "be"
         }
     }
     
+## Players by Country  [/players{?user,token,t,country_id}]
+
+The Player by ID endpoint returns information of a single player
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - bycountry
+    + country_id - COUNTRY ID
+    
+ 
+ 
+### GET Players by Country [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /players
+ 
+    
+    + Body
+    
+   {
+            "id": 73295,
+            "name": "Slavko Blagojević",
+            "common_name": "S. Blagojević",
+            "firstname": "Slavko",
+            "lastname": "Blagojević",
+            "birthday": "21/03/1987",
+            "birthcountry": "Croatia",
+            "birthplace": "Otok",
+            "w": "74 kg",
+            "h": "178 cm",
+            "img": "https://cdn.soccersapi.com/images/soccer/players/50/73295.png",
+            "country": {
+                "id": 304,
+                "name": "Croatia",
+                "cc": "hr"
+            }
+        },
+        {
+            "id": 442,
+            "name": "Nikola Kalinić",
+            "common_name": "N. Kalinić",
+            "firstname": "Nikola",
+            "lastname": "Kalinić",
+            "birthday": "05/01/1988",
+            "birthcountry": "Croatia",
+            "birthplace": "Solin",
+            "w": "78 kg",
+            "h": "187 cm",
+            "img": "https://cdn.soccersapi.com/images/soccer/players/50/442.png",
+            "country": {
+                "id": 304,
+                "name": "Croatia",
+                "cc": "hr"
+            }
+        },
+        {
+            "id": 52611,
+            "name": "Duje Ćaleta-Car",
+            "common_name": "D. Ćaleta-Car",
+            "firstname": "Duje",
+            "lastname": "Ćaleta-Car",
+            "birthday": "17/09/1996",
+            "birthcountry": "Croatia",
+            "birthplace": "Šibenik",
+            "w": "88 kg",
+            "h": "188 cm",
+            "img": "https://cdn.soccersapi.com/images/soccer/players/50/52611.png",
+            "country": {
+                "id": 304,
+                "name": "Croatia",
+                "cc": "hr"
+            }
+        },
+        {
+            "id": 458587,
+            "name": "Kristijan Bistrović",
+            "common_name": "K. Bistrović",
+            "firstname": "Kristijan",
+            "lastname": "Bistrović",
+            "birthday": "09/04/1998",
+            "birthcountry": "Croatia",
+            "birthplace": "Koprivnica",
+            "w": "84 kg",
+            "h": "188 cm",
+            "img": "https://cdn.soccersapi.com/images/soccer/players/50/458587.png",
+            "country": {
+                "id": 304,
+                "name": "Croatia",
+                "cc": "hr"
+            }
+        },
+        {
+            "id": 72785,
+            "name": "Josip Pivarić",
+            "common_name": "J. Pivarić",
+            "firstname": "Josip",
+            "lastname": "Pivarić",
+            "birthday": "30/01/1989",
+            "birthcountry": "Croatia",
+            "birthplace": "Zagreb",
+            "w": "70 kg",
+            "h": "176 cm",
+            "img": "https://cdn.soccersapi.com/images/soccer/players/50/72785.png",
+            "country": {
+                "id": 304,
+                "name": "Croatia",
+                "cc": "hr"
+            }
+        },
+        {
+            "id": 56730,
+            "name": "Filip Ozobić",
+            "common_name": "F. Ozobić",
+            "firstname": "Filip",
+            "lastname": "Ozobić",
+            "birthday": "08/04/1991",
+            "birthcountry": "Croatia",
+            "birthplace": "Bjelovar",
+            "w": "67 kg",
+            "h": "178 cm",
+            "img": "https://cdn.soccersapi.com/images/soccer/players/50/56730.png",
+            "country": {
+                "id": 304,
+                "name": "Croatia",
+                "cc": "hr"
+            }
+        }
+
+## Match TV Channels  [/fixtures{?user,token,t,id,___________}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - match_tvs
+    + id - MATCH ID
+   
+ 
+ 
+
+### GET Match TV Channels [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+ {
+            "id": "4496",
+            "name": "Arena Sport (BiH)",
+            "country": {
+                "id": 190362,
+                "name": "International",
+                "cc": null
+            }
+        },
+        {
+            "id": "4367",
+            "name": "Arena Sport",
+            "country": {
+                "id": 304,
+                "name": "Croatia",
+                "cc": "hr"
+            }
+        },
+        {
+            "id": "4368",
+            "name": "Arena Sport",
+            "country": {
+                "id": 334,
+                "name": "Serbia",
+                "cc": "rs"
+            }
+        },
+        {
+            "id": "4387",
+            "name": "beIN Sport",
+            "country": {
+                "id": 55,
+                "name": "France",
+                "cc": "fr"
+            }
+        },
+        {
+            "id": "4341",
+            "name": "beIN Sport",
+            "country": {
+                "id": 269,
+                "name": null,
+                "cc": null
+            }
+        },
+        {
+            "id": "111",
+            "name": "Bet365",
+            "country": {
+                "id": 190362,
+                "name": "International",
+                "cc": null
+            }
+        },
+        {
+            "id": "4343",
+            "name": "BetClic.fr",
+            "country": {
+                "id": 55,
+                "name": "France",
+                "cc": "fr"
+            }
+        },
+        {
+            "id": "4344",
+            "name": "Chance",
+            "country": {
+                "id": 190362,
+                "name": "International",
+                "cc": null
+            }
+        },
+        {
+            "id": "4425",
+            "name": "Digi Sport 1 (Hun)",
+            "country": {
+                "id": 190362,
+                "name": "International",
+                "cc": null
+            }
+        }
+ 
+
 ## Coach Info  [/coaches{?user,token,t,id}]
 
 + Parameters
@@ -9525,36 +9775,7 @@ The Match Inplay Odds Endpoint gives you Inplay-match odds for a specific match
  
 
 
-## Fixture TV  [/fixtures{?user,token,t,id,___________}]
 
-+ Parameters
-    
-    + user - YOUR USER
-    + token - YOUR TOKEN
-    + t - match_tvs
-    + id - MATCH ID
-   
- 
- 
-
-### TEST ENDPOINT [GET] 
-
-
-+ Request (application/json)
-
-+ Response 200 (application/json)
- 
-
-
-    + Headers
-
-            Location: /fixtures
- 
-    
-    + Body
-    
-  []
- 
 ## Referees Info [/referees{?user,token,t,id}]
 
 + Parameters
