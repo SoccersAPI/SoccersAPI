@@ -3534,6 +3534,8 @@ The Livescores Not Started Endpoint gives you a list of matches will play today 
  
 ## Fixtures by Date  [/fixtures{?user,token,t,d,page}]
 
+The Fixtures by Date Endpoint gives you fixtures from a specific date
+
 + Parameters
     
     + user - YOUR USER
@@ -3849,6 +3851,8 @@ The Livescores Not Started Endpoint gives you a list of matches will play today 
 
 ## Fixtures by Date / Country  [/fixtures{?user,token,t,d,country_id}]
 
+The Fixtures by Date / Country Endpoint fixtures from a single country on a specific date
+
 + Parameters
     
     + user - YOUR USER
@@ -4161,6 +4165,8 @@ The Livescores Not Started Endpoint gives you a list of matches will play today 
 
 ## Fixtures by Date / Season  [/fixtures{?user,token,t,d,season_id}]
 
+The Fixtures by Date / Season Endpoint gives you fixtures from a single season on a specific date
+
 + Parameters
     
     + user - YOUR USER
@@ -4400,6 +4406,249 @@ The Livescores Not Started Endpoint gives you a list of matches will play today 
             "weather_report": null
         }
  
+
+## Fixtures by Date / Stage  [/fixtures{?user,token,t,d,stage_id}]
+
+The Fixtures by Date / Stage Endpoint gives you fixtures from a single stage on a specific date
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - schedule
+    + d - YYY-MM-DD
+    + stage_id - STAGE ID
+ 
+ 
+### GET Fixtures by Date / Stage [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+  {
+            "id": 11900655,
+            "status": 0,
+            "pitch": null,
+            "referee_id": 15280,
+            "round_id": 169707,
+            "season_id": 16074,
+            "stage_id": 77443900,
+            "group_id": null,
+            "aggregate_id": null,
+            "winner_team_id": null,
+            "venue_id": 50,
+            "leg": "1/1",
+            "deleted": false,
+            "time": {
+                "datetime": "2019-12-21 12:30:00",
+                "date": "2019-12-21",
+                "time": "12:30:00",
+                "minute": null,
+                "timestamp": 1576931400,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 51,
+                    "name": "Everton",
+                    "short_code": "EVE",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/51.png",
+                    "form": null,
+                    "coach_id": 6971142,
+                    "color": null,
+                    "kit_colors": null
+                },
+                "away": {
+                    "id": 57,
+                    "name": "Arsenal",
+                    "short_code": "ARS",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/57.png",
+                    "form": null,
+                    "coach_id": 186,
+                    "color": null,
+                    "kit_colors": null
+                }
+            },
+            "league": {
+                "id": 46,
+                "name": "Premier League",
+                "type": "domestic",
+                "country_id": 500,
+                "country_name": "England",
+                "country_flag": ""
+            },
+            "scores": {
+                "home_score": 0,
+                "away_score": 0,
+                "ht_score": null,
+                "ft_score": null,
+                "et_score": null,
+                "ps_score": null
+            },
+            "standings": {
+                "home_position": 16,
+                "away_position": 10
+            },
+            "assistants": {
+                "first_assistant_id": 12749,
+                "second_assistant_id": 12056,
+                "fourth_assistant_id": null
+            },
+            "weather_report": null
+        },
+        {
+            "id": 11900652,
+            "status": 0,
+            "pitch": null,
+            "referee_id": 15307,
+            "round_id": 169707,
+            "season_id": 16074,
+            "stage_id": 77443900,
+            "group_id": null,
+            "aggregate_id": null,
+            "winner_team_id": null,
+            "venue_id": 418,
+            "leg": "1/1",
+            "deleted": false,
+            "time": {
+                "datetime": "2019-12-21 15:00:00",
+                "date": "2019-12-21",
+                "time": "15:00:00",
+                "minute": null,
+                "timestamp": 1576940400,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 90,
+                    "name": "AFC Bournemouth",
+                    "short_code": "BOU",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/90.png",
+                    "form": null,
+                    "coach_id": 523949,
+                    "color": null,
+                    "kit_colors": null
+                },
+                "away": {
+                    "id": 65,
+                    "name": "Burnley",
+                    "short_code": "BUR",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/65.png",
+                    "form": null,
+                    "coach_id": 455499,
+                    "color": null,
+                    "kit_colors": null
+                }
+            },
+            "league": {
+                "id": 46,
+                "name": "Premier League",
+                "type": "domestic",
+                "country_id": 500,
+                "country_name": "England",
+                "country_flag": ""
+            },
+            "scores": {
+                "home_score": 0,
+                "away_score": 0,
+                "ht_score": null,
+                "ft_score": null,
+                "et_score": null,
+                "ps_score": null
+            },
+            "standings": {
+                "home_position": 14,
+                "away_position": 12
+            },
+            "assistants": {
+                "first_assistant_id": 12121,
+                "second_assistant_id": 12125,
+                "fourth_assistant_id": null
+            },
+            "weather_report": null
+        },
+        {
+            "id": 11900653,
+            "status": 0,
+            "pitch": null,
+            "referee_id": 15331,
+            "round_id": 169707,
+            "season_id": 16074,
+            "stage_id": 77443900,
+            "group_id": null,
+            "aggregate_id": null,
+            "winner_team_id": null,
+            "venue_id": 43,
+            "leg": "1/1",
+            "deleted": false,
+            "time": {
+                "datetime": "2019-12-21 15:00:00",
+                "date": "2019-12-21",
+                "time": "15:00:00",
+                "minute": null,
+                "timestamp": 1576940400,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 53,
+                    "name": "Aston Villa",
+                    "short_code": "AVA",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/53.png",
+                    "form": null,
+                    "coach_id": 524275,
+                    "color": null,
+                    "kit_colors": null
+                },
+                "away": {
+                    "id": 103,
+                    "name": "Southampton",
+                    "short_code": "SOU",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/103.png",
+                    "form": null,
+                    "coach_id": 524335,
+                    "color": null,
+                    "kit_colors": null
+                }
+            },
+            "league": {
+                "id": 46,
+                "name": "Premier League",
+                "type": "domestic",
+                "country_id": 500,
+                "country_name": "England",
+                "country_flag": ""
+            },
+            "scores": {
+                "home_score": 0,
+                "away_score": 0,
+                "ht_score": null,
+                "ft_score": null,
+                "et_score": null,
+                "ps_score": null
+            },
+            "standings": {
+                "home_position": 17,
+                "away_position": 18
+            },
+            "assistants": {
+                "first_assistant_id": 12064,
+                "second_assistant_id": 12128,
+                "fourth_assistant_id": null
+            },
+            "weather_report": null
+        }
 
 ## League Stats  [/stats{?user,token,id,t}]
 
