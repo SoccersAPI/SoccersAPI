@@ -3532,6 +3532,631 @@ The Livescores Not Started Endpoint gives you a list of matches will play today 
         } 
  
  
+## Fixtures by Date  [/fixtures{?user,token,t,d,page}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - schedule
+    + d - YYY-MM-DD
+    + page - PAGE NUMBER
+   
+ 
+    
+    
+
+### GET Fixtures by Date [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+ 
+        {
+            "id": 11979505,
+            "status": 3,
+            "pitch": null,
+            "referee_id": 13638,
+            "round_id": 181790,
+            "season_id": 16556,
+            "stage_id": 77445585,
+            "group_id": null,
+            "aggregate_id": null,
+            "winner_team_id": 9934,
+            "venue_id": 10100,
+            "leg": "1/1",
+            "deleted": false,
+            "time": {
+                "datetime": "2019-11-19 01:00:00",
+                "date": "2019-11-19",
+                "time": "01:00:00",
+                "minute": 90,
+                "timestamp": 1574125200,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 14375,
+                    "name": "Atletico Mitre",
+                    "short_code": null,
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/14375.png",
+                    "form": null,
+                    "coach_id": 37252548,
+                    "color": "#EAEA15",
+                    "kit_colors": "#0A0A0A,#FFDF1B,#D446BA,#00C1BA,#C40010,#0046A8,#0A0A0A"
+                },
+                "away": {
+                    "id": 9934,
+                    "name": "Platense",
+                    "short_code": null,
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/9934.png",
+                    "form": null,
+                    "coach_id": 1872620,
+                    "color": "#D6003D",
+                    "kit_colors": "#D6003D,#D6003D,#D6003D,#00FFFF,#FF0000,#0000FF,#3D4A4E"
+                }
+            },
+            "league": {
+                "id": 683,
+                "name": "Primera B Nacional",
+                "type": "domestic",
+                "country_id": 82,
+                "country_name": "Argentina",
+                "country_flag": ""
+            },
+            "scores": {
+                "home_score": 0,
+                "away_score": 1,
+                "ht_score": "0-0",
+                "ft_score": "0-1",
+                "et_score": null,
+                "ps_score": null
+            },
+            "standings": {
+                "home_position": 23,
+                "away_position": 7
+            },
+            "assistants": {
+                "first_assistant_id": null,
+                "second_assistant_id": null,
+                "fourth_assistant_id": null
+            },
+            "weather_report": {
+                "code": "clouds",
+                "type": "overcast clouds",
+                "temperature": {
+                    "fahrenheit": {
+                        "temp": 79.11
+                    },
+                    "celcius": {
+                        "temp": 26.2
+                    }
+                },
+                "clouds": "100%",
+                "humidity": "48%",
+                "pressure": 1011,
+                "wind": {
+                    "speed": "5.17 m/s",
+                    "degree": 107
+                },
+                "coordinates": {
+                    "lat": -27.8,
+                    "lon": -64.26
+                },
+                "updated_at": "2019-11-19T02:45:03.249207Z"
+            }
+        },
+        {
+            "id": 12002839,
+            "status": 3,
+            "pitch": null,
+            "referee_id": 16068,
+            "round_id": 184457,
+            "season_id": 16686,
+            "stage_id": 77445961,
+            "group_id": 243267,
+            "aggregate_id": null,
+            "winner_team_id": null,
+            "venue_id": 11258,
+            "leg": "1/1",
+            "deleted": false,
+            "time": {
+                "datetime": "2019-11-19 01:00:00",
+                "date": "2019-11-19",
+                "time": "01:00:00",
+                "minute": 90,
+                "timestamp": 1574125200,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 18809,
+                    "name": "Jamaica",
+                    "short_code": "JAM",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/18809.png",
+                    "form": null,
+                    "coach_id": 474798,
+                    "color": "#FFDF1B",
+                    "kit_colors": "#FFDF1B,#FFDF1B,#FFDF1B,#00C1BA,#C40010,#0046A8,#0A0A0A"
+                },
+                "away": {
+                    "id": 18915,
+                    "name": "Guyana",
+                    "short_code": "GUY",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/18915.png",
+                    "form": null,
+                    "coach_id": 37356418,
+                    "color": "#339063",
+                    "kit_colors": "#339063,#339063,#D446BA,#00C1BA,#C40010,#0046A8,#339063"
+                }
+            },
+            "league": {
+                "id": 1779,
+                "name": "CONCACAF Nations League",
+                "type": "cup_international",
+                "country_id": 24143382,
+                "country_name": null,
+                "country_flag": ""
+            },
+            "scores": {
+                "home_score": 1,
+                "away_score": 1,
+                "ht_score": "0-1",
+                "ft_score": "1-1",
+                "et_score": null,
+                "ps_score": null
+            },
+            "standings": {
+                "home_position": 1,
+                "away_position": 2
+            },
+            "assistants": {
+                "first_assistant_id": 21353,
+                "second_assistant_id": 21010,
+                "fourth_assistant_id": null
+            },
+            "weather_report": {
+                "code": "clouds",
+                "type": "few clouds",
+                "temperature": {
+                    "fahrenheit": {
+                        "temp": 75.69
+                    },
+                    "celcius": {
+                        "temp": 24.3
+                    }
+                },
+                "clouds": "20%",
+                "humidity": "94%",
+                "pressure": 1011,
+                "wind": {
+                    "speed": "2.24 m/s",
+                    "degree": null
+                },
+                "coordinates": {
+                    "lat": 18.47,
+                    "lon": -77.92
+                },
+                "updated_at": "2019-11-19T02:45:03.344062Z"
+            }
+        },
+        {
+            "id": 12014867,
+            "status": 3,
+            "pitch": null,
+            "referee_id": null,
+            "round_id": null,
+            "season_id": 16011,
+            "stage_id": 77443631,
+            "group_id": null,
+            "aggregate_id": 20844,
+            "winner_team_id": 230802,
+            "venue_id": 1621,
+            "leg": "2/2",
+            "deleted": false,
+            "time": {
+                "datetime": "2019-11-19 01:00:00",
+                "date": "2019-11-19",
+                "time": "01:00:00",
+                "minute": 90,
+                "timestamp": 1574125200,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 230802,
+                    "name": "Monterrey W",
+                    "short_code": null,
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/230802.png",
+                    "form": null,
+                    "coach_id": 37252548,
+                    "color": "#0046A8",
+                    "kit_colors": "#F0F0F0,#0046A8,#F0F0F0,#F0F0F0,#C40010,#0046A8,#0046A8"
+                },
+                "away": {
+                    "id": 230801,
+                    "name": "Atlas W",
+                    "short_code": null,
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/230801.png",
+                    "form": null,
+                    "coach_id": 37252548,
+                    "color": "#0A0A0A",
+                    "kit_colors": "#0A0A0A,#C40010,#0A0A0A,#C40010,#C40010,#0046A8,#0A0A0A"
+                }
+            },
+            "league": {
+                "id": 1617,
+                "name": "Liga Mx Women",
+                "type": "domestic",
+                "country_id": 496,
+                "country_name": "Mexico",
+                "country_flag": ""
+            },
+            "scores": {
+                "home_score": 1,
+                "away_score": 0,
+                "ht_score": "0-0",
+                "ft_score": "1-0",
+                "et_score": null,
+                "ps_score": null
+            },
+            "standings": {
+                "home_position": 1,
+                "away_position": 2
+            },
+            "assistants": {
+                "first_assistant_id": null,
+                "second_assistant_id": null,
+                "fourth_assistant_id": null
+            },
+            "weather_report": {
+                "code": "clear",
+                "type": "clear sky",
+                "temperature": {
+                    "fahrenheit": {
+                        "temp": 66.06
+                    },
+                    "celcius": {
+                        "temp": 18.9
+                    }
+                },
+                "clouds": "5%",
+                "humidity": "56%",
+                "pressure": 1014,
+                "wind": {
+                    "speed": "4.7 m/s",
+                    "degree": 120
+                },
+                "coordinates": {
+                    "lat": 25.68,
+                    "lon": -100.26
+                },
+                "updated_at": "2019-11-19T02:45:03.522773Z"
+            }
+        } 
+
+
+## Fixtures by Date / Country  [/fixtures{?user,token,t,d,country_id}]
+
++ Parameters
+    
+    + user - YOUR USER
+    + token - YOUR TOKEN
+    + t - schedule
+    + d - YYY-MM-DD
+    + country_id - COUNTRY_ID
+ 
+ 
+### GET Fixtures by Date / Country [GET] 
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+ 
+
+
+    + Headers
+
+            Location: /fixtures
+ 
+    
+    + Body
+    
+ 
+        {
+            "id": 11952698,
+            "status": 3,
+            "pitch": null,
+            "referee_id": null,
+            "round_id": 178623,
+            "season_id": 16460,
+            "stage_id": 77445325,
+            "group_id": null,
+            "aggregate_id": null,
+            "winner_team_id": 2052,
+            "venue_id": 142211,
+            "leg": "1/1",
+            "deleted": false,
+            "time": {
+                "datetime": "2019-11-19 19:30:00",
+                "date": "2019-11-19",
+                "time": "19:30:00",
+                "minute": 90,
+                "timestamp": 1574191800,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 2052,
+                    "name": "Hartley Wintney",
+                    "short_code": null,
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/2052.png",
+                    "form": null,
+                    "coach_id": 9949385,
+                    "color": "#FF8040",
+                    "kit_colors": "#FF8040,#FF8040,#D446BA,#00C1BA,#C40010,#0046A8,#3D4A4E"
+                },
+                "away": {
+                    "id": 1365,
+                    "name": "Poole Town",
+                    "short_code": null,
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/1365.png",
+                    "form": null,
+                    "coach_id": 1552304,
+                    "color": "#107BAF",
+                    "kit_colors": "#0080C0,#0080C0,#0080C0,#00C1BA,#C40010,#0046A8,#0080C0"
+                }
+            },
+            "league": {
+                "id": 107,
+                "name": "Non League Premier: Southern",
+                "type": "domestic",
+                "country_id": 500,
+                "country_name": "England",
+                "country_flag": ""
+            },
+            "scores": {
+                "home_score": 3,
+                "away_score": 0,
+                "ht_score": "2-0",
+                "ft_score": "3-0",
+                "et_score": null,
+                "ps_score": null
+            },
+            "standings": {
+                "home_position": 17,
+                "away_position": 8
+            },
+            "assistants": {
+                "first_assistant_id": null,
+                "second_assistant_id": null,
+                "fourth_assistant_id": null
+            },
+            "weather_report": {
+                "code": "clouds",
+                "type": "broken clouds",
+                "temperature": {
+                    "fahrenheit": {
+                        "temp": 40.95
+                    },
+                    "celcius": {
+                        "temp": 5
+                    }
+                },
+                "clouds": "75%",
+                "humidity": "87%",
+                "pressure": 1015,
+                "wind": {
+                    "speed": "11.41 m/s",
+                    "degree": 140
+                },
+                "coordinates": {
+                    "lat": 51.31,
+                    "lon": -0.9
+                },
+                "updated_at": "2019-11-19T21:30:09.361176Z"
+            }
+        },
+        {
+            "id": 11926150,
+            "status": 3,
+            "pitch": null,
+            "referee_id": null,
+            "round_id": 175496,
+            "season_id": 16346,
+            "stage_id": 77444980,
+            "group_id": null,
+            "aggregate_id": null,
+            "winner_team_id": 1142,
+            "venue_id": 471,
+            "leg": "1/1",
+            "deleted": false,
+            "time": {
+                "datetime": "2019-11-19 19:45:00",
+                "date": "2019-11-19",
+                "time": "19:45:00",
+                "minute": 90,
+                "timestamp": 1574192700,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 1142,
+                    "name": "Altrincham",
+                    "short_code": null,
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/1142.png",
+                    "form": null,
+                    "coach_id": 457023,
+                    "color": "#CA1313",
+                    "kit_colors": "#F0F0F0,#C40010,#D446BA,#00C1BA,#C40010,#0046A8,#C40010"
+                },
+                "away": {
+                    "id": 362,
+                    "name": "Gateshead",
+                    "short_code": "GTH",
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/362.png",
+                    "form": null,
+                    "coach_id": 781,
+                    "color": "#F0F0F0",
+                    "kit_colors": "#F0F0F0,#F0F0F0,#EEEEEE,#EEEEEE,#5C8FAE,#FFDF1B,#0A0A0A"
+                }
+            },
+            "league": {
+                "id": 58,
+                "name": "Vanarama National League North",
+                "type": "domestic",
+                "country_id": 500,
+                "country_name": "England",
+                "country_flag": ""
+            },
+            "scores": {
+                "home_score": 3,
+                "away_score": 0,
+                "ht_score": "2-0",
+                "ft_score": "3-0",
+                "et_score": null,
+                "ps_score": null
+            },
+            "standings": {
+                "home_position": 18,
+                "away_position": 11
+            },
+            "assistants": {
+                "first_assistant_id": null,
+                "second_assistant_id": null,
+                "fourth_assistant_id": null
+            },
+            "weather_report": {
+                "code": "clouds",
+                "type": "overcast clouds",
+                "temperature": {
+                    "fahrenheit": {
+                        "temp": 40.62
+                    },
+                    "celcius": {
+                        "temp": 4.8
+                    }
+                },
+                "clouds": "99%",
+                "humidity": "87%",
+                "pressure": 1013,
+                "wind": {
+                    "speed": "6.93 m/s",
+                    "degree": 150
+                },
+                "coordinates": {
+                    "lat": 53.38,
+                    "lon": -2.35
+                },
+                "updated_at": "2019-11-19T21:30:04.255166Z"
+            }
+        },
+        {
+            "id": 11926183,
+            "status": 3,
+            "pitch": null,
+            "referee_id": null,
+            "round_id": 175499,
+            "season_id": 16346,
+            "stage_id": 77444980,
+            "group_id": null,
+            "aggregate_id": null,
+            "winner_team_id": 222,
+            "venue_id": 1173,
+            "leg": "1/1",
+            "deleted": false,
+            "time": {
+                "datetime": "2019-11-19 19:45:00",
+                "date": "2019-11-19",
+                "time": "19:45:00",
+                "minute": 90,
+                "timestamp": 1574192700,
+                "timezone": "UTC"
+            },
+            "teams": {
+                "home": {
+                    "id": 222,
+                    "name": "Boston United",
+                    "short_code": null,
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/222.png",
+                    "form": null,
+                    "coach_id": 458049,
+                    "color": "#D97B22",
+                    "kit_colors": "#FF8000,#FF8000,#0A0A0A,#0A0A0A,#C40010,#0046A8,#0A0A0A"
+                },
+                "away": {
+                    "id": 536,
+                    "name": "Blyth Spartans",
+                    "short_code": null,
+                    "img": "https://cdn.soccersapi.com/images/soccer/teams/150/536.png",
+                    "form": null,
+                    "coach_id": 455535,
+                    "color": "#00AA55",
+                    "kit_colors": "#F0F0F0,#00AA55,#D446BA,#00C1BA,#C40010,#0046A8,#00AA55"
+                }
+            },
+            "league": {
+                "id": 58,
+                "name": "Vanarama National League North",
+                "type": "domestic",
+                "country_id": 500,
+                "country_name": "England",
+                "country_flag": ""
+            },
+            "scores": {
+                "home_score": 2,
+                "away_score": 0,
+                "ht_score": "1-0",
+                "ft_score": "2-0",
+                "et_score": null,
+                "ps_score": null
+            },
+            "standings": {
+                "home_position": 8,
+                "away_position": 21
+            },
+            "assistants": {
+                "first_assistant_id": null,
+                "second_assistant_id": null,
+                "fourth_assistant_id": null
+            },
+            "weather_report": {
+                "code": "drizzle",
+                "type": "light intensity drizzle",
+                "temperature": {
+                    "fahrenheit": {
+                        "temp": 41.9
+                    },
+                    "celcius": {
+                        "temp": 5.5
+                    }
+                },
+                "clouds": "90%",
+                "humidity": "81%",
+                "pressure": 1008,
+                "wind": {
+                    "speed": "6.93 m/s",
+                    "degree": 20
+                },
+                "coordinates": {
+                    "lat": 42.36,
+                    "lon": -71.06
+                },
+                "updated_at": "2019-11-19T21:30:05.825009Z"
+            }
+        }
 
 ## League Stats  [/stats{?user,token,id,t}]
 
@@ -4235,160 +4860,7 @@ The Livescores Not Started Endpoint gives you a list of matches will play today 
         "img": "https://cdn.soccersapi.com/images/soccer/venues/380.jpg"
     }
     
-## Fixtures by Date  [/fixtures{?user,token,t,d,page}]
 
-+ Parameters
-    
-    + user - YOUR USER
-    + token - YOUR TOKEN
-    + t - schedule
-    + d - YYY-MM-DD
-    + page - PAGE NUMBER
-   
- 
-    
-    
-
-### TEST ENDPOINT [GET] 
-
-
-+ Request (application/json)
-
-+ Response 200 (application/json)
- 
-
-
-    + Headers
-
-            Location: /fixtures
- 
-    
-    + Body
-    
- {
-            "id": 11999895,
-            "status": "0",
-            "time": {
-                "datetime": "2019-11-03 11:00:00",
-                "date": "2019-11-03",
-                "time": "11:00:00",
-                "minute": "",
-                "timestamp": 1572775200,
-                "timezone": "UTC"
-            },
-            "teams": {
-                "home": {
-                    "id": 17356,
-                    "name": "UE Santa Coloma"
-                },
-                "away": {
-                    "id": 17388,
-                    "name": "Carroi"
-                }
-            },
-            "league": {
-                "id": 931,
-                "name": "Primera División",
-                "country_id": 2969,
-                "country_name": "Andorra",
-                "country_flag": "https://cdn.soccersapi.com/images/countries/30/ad.png"
-            },
-            "scores": {
-                "home_score": "0",
-                "away_score": "0",
-                "ht_score": "",
-                "ft_score": "",
-                "et_score": ""
-            },
-            "venue_id": null,
-            "referee_id": null,
-            "round_id": 184129,
-            "season_id": 16666,
-            "stage_id": 77445901
-        },
-        {
-            "id": 11999896,
-            "status": "0",
-            "time": {
-                "datetime": "2019-11-03 13:00:00",
-                "date": "2019-11-03",
-                "time": "13:00:00",
-                "minute": "",
-                "timestamp": 1572782400,
-                "timezone": "UTC"
-            },
-            "teams": {
-                "home": {
-                    "id": 17339,
-                    "name": "Atlètic Club d'Escaldes"
-                },
-                "away": {
-                    "id": 17361,
-                    "name": "Ordino"
-                }
-            },
-            "league": {
-                "id": 931,
-                "name": "Primera División",
-                "country_id": 2969,
-                "country_name": "Andorra",
-                "country_flag": "https://cdn.soccersapi.com/images/countries/30/ad.png"
-            },
-            "scores": {
-                "home_score": "0",
-                "away_score": "0",
-                "ht_score": "",
-                "ft_score": "",
-                "et_score": ""
-            },
-            "venue_id": null,
-            "referee_id": null,
-            "round_id": 184129,
-            "season_id": 16666,
-            "stage_id": 77445901
-        },
-        {
-            "id": 11999898,
-            "status": "3",
-            "time": {
-                "datetime": "2019-11-03 15:00:00",
-                "date": "2019-11-03",
-                "time": "15:00:00",
-                "minute": "90",
-                "timestamp": 1572789600,
-                "timezone": "UTC"
-            },
-            "teams": {
-                "home": {
-                    "id": 17351,
-                    "name": "Engordany"
-                },
-                "away": {
-                    "id": 17341,
-                    "name": "Inter Club d'Escaldes"
-                }
-            },
-            "league": {
-                "id": 931,
-                "name": "Primera División",
-                "country_id": 2969,
-                "country_name": "Andorra",
-                "country_flag": "https://cdn.soccersapi.com/images/countries/30/ad.png"
-            },
-            "scores": {
-                "home_score": "1",
-                "away_score": "1",
-                "ht_score": "0-1",
-                "ft_score": "1-1",
-                "et_score": ""
-            },
-            "venue_id": null,
-            "referee_id": null,
-            "round_id": 184129,
-            "season_id": 16666,
-            "stage_id": 77445901
-        },
-...
 
 
 
